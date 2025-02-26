@@ -1,1 +1,2 @@
-# Student-Mental-Wellness-Academic-Support-System
+# Student Mental Wellness Academic Support
+System
