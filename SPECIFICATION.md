@@ -132,7 +132,7 @@
 * Containerization for deployment flexibility
 * Resource usage monitoring with scaling triggers
 ### Constraints and Assumptions
-####Technical Constraints
+#### Technical Constraints
 * Compatible with standard web browsers and mobile devices
 * Development within established web frameworks
 * Reliance on standard database technologies
@@ -148,7 +148,7 @@
 * Availability of validated mental health assessment tools
 * User willingness to engage with digital mental health resources
 ### Future Enhancements
-#####Planned Expansions
+##### Planned Expansions
 * Integration with wearable technology for physiological stress indicators
 * Machine learning improvements to recommendation algorithms
 * Expanded community support features
