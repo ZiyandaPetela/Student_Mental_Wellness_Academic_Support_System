@@ -15,8 +15,6 @@
 
 
 ## Documentation
-[link text](URL)
-
 - [SPECIFICATION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/SPECIFICATION.md) - Detailed system specifications and requirements
 - [ARCHITECTURE.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ARCHITECTURE.md) - System architecture and C4 model diagrams
 
