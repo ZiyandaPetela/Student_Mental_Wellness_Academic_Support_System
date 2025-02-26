@@ -1,6 +1,10 @@
 # Student Mental Wellness Academic Support System
 * A web application that identifies students struggling with mental health during exams and provides personalized support to help them succeed academically despite their challenges.
 # Description
+## Project Overview
+The purpose of the Student Mental Wellness Academic Support System is to address the crucial relationship that exists between students' academic success and mental health, especially during stressful times like exams.  This web application seeks to offer specialized support to assist students in overcoming the major obstacles that many students encounter, including stress, anxiety, and emotional difficulties.  Students may handle their academic obligations while preserving their wellbeing thanks to the system's individualized mental health resources, efficient study techniques, and self-assessment tools.
+* Students from a variety of educational institutions who might be dealing with mental health concerns that affect their academic performance are the focus of this system.  It acts as a preventative measure, creating a safe space where students can get the support they require without turning to destructive coping strategies like cheating or burnout.  The system's ultimate goals are to increase student engagement, boost academic achievement, and promote a healthier learning environment by treating mental health issues in an academic setting.
+
 ## Introduction
 * Studies have consistently shown that students' academic performance and mental health are significantly correlated.  For example, mental health problems can have a negative impact on students' academic performance, according to a study published in BMC Public Health.
   
@@ -14,15 +18,9 @@
 *  Once completed,**The Student Mental Wellness Academic Support System** will feature personalized mental health advice based on self-assessment tests, allowing students to better understand and manage their stress and anxiety levels. It will include efficient study techniques tailored to individual needs, along with a comprehensive resource library containing articles and guides on mental health management. An online support community will enable students to connect and share experiences, while progress tracking tools will help them monitor their mental health over time. Additionally, the system will provide quick access to emergency resources for those in immediate need of assistance, fostering a supportive environment that promotes academic success and well-being
 
 
-## Project Overview
-[1-2 paragraphs explaining the purpose of the system, the problem it solves, and who it's for]
 
 ## Documentation
 - [SPECIFICATION.md](SPECIFICATION.md) - Detailed system specifications and requirements
 - [ARCHITECTURE.md](ARCHITECTURE.md) - System architecture and C4 model diagrams
 
-## Key Features
-[Brief bullet points of 4-6 main features]
 
-## Domain
-[Brief description of the educational/academic context]
