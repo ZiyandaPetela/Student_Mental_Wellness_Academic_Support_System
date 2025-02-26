@@ -23,4 +23,7 @@
    * Absence of data-driven approaches to mental health resource allocation
 * The **Student Mental Wellness Academic Support System** aims to tackle this critical issue of mental health among students, which significantly impacts their academic performance. Many students experience stress, anxiety, and emotional difficulties, particularly during exam periods. These challenges can hinder their concentration, lead to burnout, and result in poor grades.
 *  The purpose of the system is to provide tailored mental health support, effective study techniques, and resources to help students manage their mental health and succeed academically. 
-* The Student Mental Health Assessment System addresses these challenges by providing a accessible, private platform for self-assessment, personalized recommendations, and appropriate escalation pathways when necessary.
+* By offering personalized mental health advice and easy access to self-assessment tools, the system empowers students to recognize their mental health needs and seek appropriate support without fear of stigma. Additionally, the system will create a supportive online community where students can share their experiences and resources, fostering a sense of belonging and encouraging help-seeking behavior.
+* Furthermore, the system will leverage data analytics to identify trends and allocate resources effectively, ensuring that mental health support is both proactive and responsive to student needs. By bridging the gap between available resources and student requirements, the Student Mental Wellness Academic Support System will create a more supportive educational environment that enhances both academic success and overall well-being.
+
+
