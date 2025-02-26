@@ -1,5 +1,6 @@
 # Student Mental Wellness Academic Support System
 * A web application that identifies students struggling with mental health during exams and provides personalized support to help them succeed academically despite their challenges.
+# Description
 ## Introduction
 * Studies have consistently shown that students' academic performance and mental health are significantly correlated.  For example, mental health problems can have a negative impact on students' academic performance, according to a study published in BMC Public Health.
   
