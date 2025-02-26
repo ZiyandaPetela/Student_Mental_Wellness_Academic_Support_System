@@ -13,14 +13,13 @@
 * furthermore, the system is designed to be adaptable and scalable, allowing it to cater to varying student populations across different educational contexts in the future.
 
 ## Problem Statement
-The **Student Mental Wellness Academic Support System** aims to tackle the critical issue of mental health among students, which significantly impacts their academic performance. Many students experience stress, anxiety, and emotional difficulties, particularly during exam periods. These challenges can hinder their concentration, lead to burnout, and result in poor grades. The system's purpose is to provide tailored mental health support, effective study techniques, and resources to help students manage their mental health and succeed academically.
-Students across educational institutions face significant mental health challenges that directly impact their academic performance, retention rates, and overall wellbeing. According to recent studies, over 60% of college students report experiencing overwhelming anxiety, while 40% struggle with depression severe enough to affect their academic functioning. Despite these statistics, many institutions lack adequate resources to identify at-risk students early, provide timely interventions, or scale support services to meet demand.
-The current limitations include:
-
-Insufficient early detection of mental health issues
-Limited accessibility to mental health resources
-Stigma preventing students from seeking help
-Overburdened counseling services with long wait times
-Lack of personalized support between counseling sessions
-Absence of data-driven approaches to mental health resource allocation
-The Student Mental Health Assessment System addresses these challenges by providing a accessible, private platform for self-assessment, personalized recommendations, and appropriate escalation pathways when necessary.
+* Students across educational institutions face significant mental health challenges that directly impact their academic performance, retention rates, and overall wellbeing. According to recent studies, over 60% of college students report experiencing overwhelming anxiety, while 40% struggle with depression severe enough to affect their academic functioning. Despite these statistics, many institutions lack adequate resources to identify at-risk students early, provide timely interventions, or scale support services to meet demand.
+* The current limitations include:
+   * Insufficient early detection of mental health issues
+   * Limited accessibility to mental health resources
+   * Stigma preventing students from seeking help
+   * Overburdened counseling services with long wait times
+   * Lack of personalized support between counseling sessions
+   * Absence of data-driven approaches to mental health resource allocation
+* The **Student Mental Wellness Academic Support System** aims to tackle this critical issue of mental health among students, which significantly impacts their academic performance. Many students experience stress, anxiety, and emotional difficulties, particularly during exam periods. These challenges can hinder their concentration, lead to burnout, and result in poor grades. The system's purpose is to provide tailored mental health support, effective study techniques, and resources to help students manage their mental health and succeed academically.
+* The Student Mental Health Assessment System addresses these challenges by providing a accessible, private platform for self-assessment, personalized recommendations, and appropriate escalation pathways when necessary.
