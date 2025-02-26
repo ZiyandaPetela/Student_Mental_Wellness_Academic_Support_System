@@ -100,4 +100,57 @@
 * Integration with institutional crisis support services
 * Geolocation-based emergency service information
 * Clear protocols for immediate assistance
-
+### Non-Functional Requirements
+#### Security and Privacy
+* Compliance with educational data privacy regulations (FERPA/GDPR/applicable local laws)
+* End-to-end encryption for all personal and mental health data
+* Anonymized data storage with separation of identifiable information
+* Regular security audits and vulnerability assessments
+* Transparent privacy policies and consent management
+#### Accessibility
+* Compliance with WCAG 2.1 AA standards for web accessibility
+* Support for screen readers and assistive technologies
+* Color schemes designed for users with color vision deficiencies
+* Keyboard navigation for all functions
+* Responsive design for access across different devices and screen sizes
+#### Performance
+* Page load times under 3 seconds on standard connections
+* Support for concurrent users during peak periods (exam times)
+* Graceful degradation of non-essential features during high traffic
+* Offline functionality for key resources
+* Efficient database queries to ensure quick assessment feedback
+#### Reliability
+* System availability of 99.5% during academic terms
+* Automatic backups of all user data
+* Fault tolerance with graceful error handling
+* Comprehensive logging for troubleshooting
+* Recovery procedures for data restoration
+#### Scalability
+* Modular architecture to allow feature expansion
+* Database design that accommodates growing user numbers
+* API-first approach for potential institutional integrations
+* Containerization for deployment flexibility
+* Resource usage monitoring with scaling triggers
+### Constraints and Assumptions
+####Technical Constraints
+* Compatible with standard web browsers and mobile devices
+* Development within established web frameworks
+* Reliance on standard database technologies
+* Implementation without specialized hardware requirements
+#### Business Constraints
+* Development timeline aligned with academic calendar
+* Resource limitations of individual development
+* Prioritization of core features for initial release
+* Ethical considerations for mental health support
+#### Assumptions
+* Students have regular access to internet-connected devices
+* Institutional support for system implementation
+* Availability of validated mental health assessment tools
+* User willingness to engage with digital mental health resources
+### Future Enhancements
+#####Planned Expansions
+* Integration with wearable technology for physiological stress indicators
+* Machine learning improvements to recommendation algorithms
+* Expanded community support features
+* Additional language support
+* Mobile application development
