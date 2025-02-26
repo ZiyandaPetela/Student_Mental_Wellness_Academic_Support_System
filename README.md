@@ -9,7 +9,7 @@
   
 * It has been observed that students' mental health poses a significant challenge, particularly during exam periods, and can have a major effect on their academic performance.  Stress, anxiety, and emotional difficulties are common among students, which may hinder concentration, cause burnout, and produce poor grades.
  
-* In order to ensure academic success, the #Student Mental Wellness & Academic Support System was created to assist students in managing exam stress and preserving their mental health.
+* In order to ensure academic success, the **Student Mental Wellness & Academic Support System** will be created to assist students in managing exam stress and preserving their mental health.
 *  It offers individualized mental health advice, recommends efficient study techniques, and includes a self-assessment test to gauge stress and anxiety levels. It wil be helping students manage academic stress and succeed without resorting to copying
 *  Once completed,**The Student Mental Wellness Academic Support System** will feature personalized mental health advice based on self-assessment tests, allowing students to better understand and manage their stress and anxiety levels. It will include efficient study techniques tailored to individual needs, along with a comprehensive resource library containing articles and guides on mental health management. An online support community will enable students to connect and share experiences, while progress tracking tools will help them monitor their mental health over time. Additionally, the system will provide quick access to emergency resources for those in immediate need of assistance, fostering a supportive environment that promotes academic success and well-being
 
