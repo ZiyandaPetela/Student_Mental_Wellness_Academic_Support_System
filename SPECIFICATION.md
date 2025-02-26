@@ -21,5 +21,6 @@
    * Overburdened counseling services with long wait times
    * Lack of personalized support between counseling sessions
    * Absence of data-driven approaches to mental health resource allocation
-* The **Student Mental Wellness Academic Support System** aims to tackle this critical issue of mental health among students, which significantly impacts their academic performance. Many students experience stress, anxiety, and emotional difficulties, particularly during exam periods. These challenges can hinder their concentration, lead to burnout, and result in poor grades. The system's purpose is to provide tailored mental health support, effective study techniques, and resources to help students manage their mental health and succeed academically.
+* The **Student Mental Wellness Academic Support System** aims to tackle this critical issue of mental health among students, which significantly impacts their academic performance. Many students experience stress, anxiety, and emotional difficulties, particularly during exam periods. These challenges can hinder their concentration, lead to burnout, and result in poor grades.
+*  The purpose of the system is to provide tailored mental health support, effective study techniques, and resources to help students manage their mental health and succeed academically. 
 * The Student Mental Health Assessment System addresses these challenges by providing a accessible, private platform for self-assessment, personalized recommendations, and appropriate escalation pathways when necessary.
