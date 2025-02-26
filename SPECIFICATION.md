@@ -39,3 +39,70 @@
    * Minimal infrastructure is required since the system primarily involves frontend development for the interface and backend development for processing results and storing recommendations.
    * The project is scalable, allowing future enhancements like trend tracking, professional counseling integration, and real-time chat support.
 
+###  Functional Requirements
+#### User Management
+##### User Registration and Authentication
+* Students must be able to create accounts using institutional email addresses
+* The system shall support secure login with multi-factor authentication
+* User profiles shall store basic academic information and mental health preferences
+##### User Roles and Permissions
+* Student: Access to self-assessment tools, resources, and personalized recommendations
+* Counselor/Support Staff: Limited view of aggregated, anonymized data for institutional insights
+* Administrator: System management and content oversight
+#### Self-Assessment Module
+##### Mental Health Assessment
+* Implementation of standardized, validated mental health screening tools
+* Customizable assessment frequency based on student needs and stress periods
+* Dynamic question flow based on previous responses
+##### Academic Impact Analysis
+* Assessment of how mental health issues are affecting specific academic activities
+* Correlation of mental health metrics with academic performance indicators
+* Identification of specific academic challenges related to mental health concerns
+#### Personalized Recommendation Engine
+##### Tailored Mental Health Resources
+* Algorithm-based matching of resources to assessment results
+* Customized mental health management strategies based on user profile
+* Adaptation of recommendations based on user feedback and progress
+##### Study Technique Suggestions
+* Customized study approaches aligned with identified mental health needs
+* Time management strategies that incorporate mental wellness breaks
+* Concentration and focus techniques for different mental health challenges
+#### Resource Library
+##### Mental Health Content
+* Curated articles, videos, and interactive tools for mental wellness
+* Evidence-based coping strategies categorized by specific challenges
+* Regular updates with current mental health research and resources
+##### Academic Support Materials
+* Study guides optimized for different learning styles and mental health needs
+* Exam preparation strategies with mental wellness components
+* Stress management techniques specific to academic contexts
+#### Community Support Features
+##### Peer Connection Platform
+* Anonymous discussion forums organized by topic and challenge
+* Moderated peer support groups with confidentiality protections
+* Success story sharing with privacy controls
+##### Virtual Support Sessions
+* Scheduled group support sessions on common challenges
+* Peer-led study groups with mental wellness components
+* Option to request individual support from qualified staff
+#### Progress Tracking
+##### Mental Wellness Monitoring
+* Longitudinal tracking of self-assessment results
+* Visual representation of mental wellness trends
+* Goal setting and milestone acknowledgment
+##### Academic Performance Correlation
+* Optional integration with academic performance data
+* Visualization of the relationship between mental wellness and academic outcomes
+* Identification of improvement patterns and areas needing additional support
+
+
+
+2.7 Emergency Resources
+
+Crisis Intervention Access
+
+One-click access to emergency mental health resources
+Integration with institutional crisis support services
+Geolocation-based emergency service information
+Clear protocols for immediate assistance
+
