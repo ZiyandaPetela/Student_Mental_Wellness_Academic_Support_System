@@ -94,15 +94,10 @@
 * Optional integration with academic performance data
 * Visualization of the relationship between mental wellness and academic outcomes
 * Identification of improvement patterns and areas needing additional support
-
-
-
-2.7 Emergency Resources
-
-Crisis Intervention Access
-
-One-click access to emergency mental health resources
-Integration with institutional crisis support services
-Geolocation-based emergency service information
-Clear protocols for immediate assistance
+#### Emergency Resources
+##### Crisis Intervention Access
+* One-click access to emergency mental health resources
+* Integration with institutional crisis support services
+* Geolocation-based emergency service information
+* Clear protocols for immediate assistance
 
