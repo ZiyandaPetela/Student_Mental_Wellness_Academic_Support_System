@@ -191,3 +191,47 @@ graph TD
     end
 
 ```
+```mermaid
+graph TD
+    title[C4 Model: Container Diagram]
+    Student["Student\n[Person]"]
+    MentalHealthProfessional["Mental Health Professional\n[Person]"]
+    Administrator["System Administrator\n[Person]"]
+    
+    subgraph "Student Mental Wellness & Academic Support System"
+        WebApp["Web Application\n[Container: JavaScript/React]"]
+        MobileApp["Mobile Application\n[Container: React Native]"]
+        APIGateway["API Gateway\n[Container: Node.js/Express]"]
+        AuthService["Authentication Service\n[Container: Node.js/Passport]"]
+        AssessmentService["Assessment Service\n[Container: Python/Flask]"]
+        RecommendationEngine["Recommendation Engine\n[Container: Python/TensorFlow]"]
+        UserDatabase["User Database\n[Container: MongoDB]"]
+        ContentDatabase["Content Database\n[Container: PostgreSQL]"]
+        AnalyticsService["Analytics Service\n[Container: Python/Pandas]"]
+    end
+    
+    EmailSystem["Email Notification System\n[Software System]"]
+    ResourceDB["External Resource Database\n[Software System]"]
+    
+    Student -->|Uses| WebApp
+    Student -->|Uses| MobileApp
+    MentalHealthProfessional -->|Manages content via| WebApp
+    Administrator -->|Administers| WebApp
+    
+    WebApp -->|API calls| APIGateway
+    MobileApp -->|API calls| APIGateway
+    
+    APIGateway -->|Authenticates| AuthService
+    APIGateway -->|Requests assessments| AssessmentService
+    APIGateway -->|Gets recommendations| RecommendationEngine
+    APIGateway -->|Analyzes data| AnalyticsService
+    
+    AuthService -->|Stores user data| UserDatabase
+    AssessmentService -->|Reads/writes assessment data| UserDatabase
+    RecommendationEngine -->|Reads user history| UserDatabase
+    RecommendationEngine -->|Reads content| ContentDatabase
+    AnalyticsService -->|Reads anonymized data| UserDatabase
+    
+    APIGateway -->|Sends emails| EmailSystem
+    RecommendationEngine -->|Retrieves resources| ResourceDB
+```
