@@ -10,22 +10,6 @@ C4Context
     student -> webApp : "Completes self-assessment quiz"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 graph TD
     title[C4 Model: Context Diagram]
     Student["Student\n[Person]"]
@@ -34,11 +18,26 @@ graph TD
     SMWASS["Student Mental Wellness &\nAcademic Support System\n[Software System]"]
     EmailSystem["Email Notification System\n[Software System]"]
     ResourceDB["External Resource Database\n[Software System]"]
-     Student -->|Uses for self-assessment, receives recommendations| SMWASS
+    
+    Student -->|Uses for self-assessment, receives recommendations| SMWASS
     MentalHealthProfessional -->|Provides content, reviews anonymized data| SMWASS
     Administrator -->|Manages and maintains| SMWASS
     SMWASS -->|Sends notifications| EmailSystem
     SMWASS -->|Retrieves resources| ResourceDB
+    
     subgraph "Enterprise Boundary"
         SMWASS
     end
+
+
+
+
+
+
+
+
+
+
+
+
+
