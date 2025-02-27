@@ -3,12 +3,12 @@
 ```mermaid
 graph TD
     title[C4 Model: Context Diagram]
-    Student["Student\n[Person]"]
-    MentalHealthProfessional["Mental Health Professional\n[Person]"]
+    Student["Student [Person]"]
+    MentalHealthProfessional["Mental Health Professional [Person]"]
     Administrator["System Administrator [Person]"]
-    SMWASS["Student Mental Wellness &\nAcademic Support System\n[Software System]"]
-    EmailSystem["Email Notification System\n[Software System]"]
-    ResourceDB["External Resource Database\n[Software System]"]
+    SMWASS["Student Mental Wellness &\nAcademic Support System [Software System]"]
+    EmailSystem["Email Notification System [Software System]"]
+    ResourceDB["External Resource Database [Software System]"]
     
     Student -->|Uses for self-assessment, receives recommendations| SMWASS
     MentalHealthProfessional -->|Provides content, reviews anonymized data| SMWASS
