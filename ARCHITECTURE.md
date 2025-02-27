@@ -235,3 +235,84 @@ graph TD
     APIGateway -->|Sends emails| EmailSystem
     RecommendationEngine -->|Retrieves resources| ResourceDB
 ```
+```mermaid
+graph TD
+    title[C4 Model: Component Diagram - Web Application]
+    
+    Student["Student\n[Person]"]
+    
+    subgraph "Web Application Container"
+        UserInterface["User Interface\n[Component: React]"]
+        AuthComponent["Authentication Component\n[Component: React/Auth0]"]
+        AssessmentComponent["Assessment Component\n[Component: React]"]
+        DashboardComponent["Dashboard Component\n[Component: React/D3.js]"]
+        ResourceComponent["Resource Component\n[Component: React]"]
+        NotificationComponent["Notification Component\n[Component: React]"]
+        SchedulerComponent["Scheduler Component\n[Component: React]"]
+        APIClient["API Client\n[Component: Axios]"]
+    end
+    
+    APIGateway["API Gateway\n[Container]"]
+    
+    Student -->|Views and interacts with| UserInterface
+    
+    UserInterface -->|User login/registration| AuthComponent
+    UserInterface -->|Take assessments| AssessmentComponent
+    UserInterface -->|View progress| DashboardComponent
+    UserInterface -->|Access resources| ResourceComponent
+    UserInterface -->|Manage notifications| NotificationComponent
+    UserInterface -->|Create study schedules| SchedulerComponent
+    
+    AuthComponent -->|API calls| APIClient
+    AssessmentComponent -->|API calls| APIClient
+    DashboardComponent -->|API calls| APIClient
+    ResourceComponent -->|API calls| APIClient
+    NotificationComponent -->|API calls| APIClient
+    SchedulerComponent -->|API calls| APIClient
+    
+    APIClient -->|HTTP requests| APIGateway
+```
+```mermaid
+graph TD
+    title[C4 Model: Component Diagram - API Gateway]
+    
+    WebApp["Web Application\n[Container]"]
+    MobileApp["Mobile Application\n[Container]"]
+    
+    subgraph "API Gateway Container"
+        RouterComponent["Router Component\n[Component: Express.js]"]
+        AuthMiddleware["Authentication Middleware\n[Component: JWT]"]
+        UserController["User Controller\n[Component: Node.js]"]
+        AssessmentController["Assessment Controller\n[Component: Node.js]"]
+        RecommendationController["Recommendation Controller\n[Component: Node.js]"]
+        ResourceController["Resource Controller\n[Component: Node.js]"]
+        NotificationController["Notification Controller\n[Component: Node.js]"]
+        SchedulerController["Scheduler Controller\n[Component: Node.js]"]
+        LoggingMiddleware["Logging Middleware\n[Component: Winston]"]
+    end
+    
+    AuthService["Authentication Service\n[Container]"]
+    AssessmentService["Assessment Service\n[Container]"]
+    RecommendationEngine["Recommendation Engine\n[Container]"]
+    ContentDatabase["Content Database\n[Container]"]
+    EmailSystem["Email Notification System\n[Software System]"]
+    
+    WebApp -->|HTTP requests| RouterComponent
+    MobileApp -->|HTTP requests| RouterComponent
+    
+    RouterComponent -->|Validates tokens| AuthMiddleware
+    RouterComponent -->|Routes user requests| UserController
+    RouterComponent -->|Routes assessment requests| AssessmentController
+    RouterComponent -->|Routes recommendation requests| RecommendationController
+    RouterComponent -->|Routes resource requests| ResourceController
+    RouterComponent -->|Routes notification requests| NotificationController
+    RouterComponent -->|Routes scheduler requests| SchedulerController
+    RouterComponent -->|Logs all requests| LoggingMiddleware
+    
+    UserController -->|Authenticates users| AuthService
+    AssessmentController -->|Processes assessments| AssessmentService
+    RecommendationController -->|Gets recommendations| RecommendationEngine
+    ResourceController -->|Retrieves content| ContentDatabase
+    NotificationController -->|Sends notifications| EmailSystem
+    SchedulerController -->|Manages schedules| ContentDatabase
+   ``` 
