@@ -1,3 +1,5 @@
+### C4 Model: Context Diagram
+
 ```mermaid
 graph TD
     title[C4 Model: Context Diagram]
