@@ -6,7 +6,7 @@ graph TD
     Student["Student [Person]"]
     MentalHealthProfessional["Mental Health Professional [Person]"]
     Administrator["System Administrator [Person]"]
-    SMWASS["Student Mental Wellness &\nAcademic Support System [Software System]"]
+    SMWASS["Student Mental Wellness & Academic Support System [Software System]"]
     EmailSystem["Email Notification System [Software System]"]
     ResourceDB["External Resource Database [Software System]"]
     
