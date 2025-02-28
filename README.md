@@ -18,4 +18,24 @@
 - [SPECIFICATION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/SPECIFICATION.md) - Detailed system specifications and requirements
 - [ARCHITECTURE.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ARCHITECTURE.md) - System architecture and C4 model diagrams
 
+# Student Mental Wellness Academic Support System
 
+## Introduction
+Studies have consistently shown that students' academic performance and mental health are significantly correlated. Mental health problems can negatively impact students' academic performance, as documented by research published in BMC Public Health and emphasized by the National Association of School Psychologists.
+
+Students' mental health poses a significant challenge, particularly during exam periods. Stress, anxiety, and emotional difficulties are common among students, which may hinder concentration, cause burnout, and result in poor grades.
+
+## Project Description
+The Student Mental Wellness Academic Support System is a web application that identifies students struggling with mental health during exams and provides personalized support to help them succeed academically despite their challenges.
+
+Once completed, the system will feature:
+- Personalized mental health advice based on self-assessment tests
+- Efficient study techniques tailored to individual needs
+- A comprehensive resource library with articles and guides on mental health management
+- An online support community for students to connect and share experiences
+- Progress tracking tools to monitor mental health over time
+- Quick access to emergency resources for those in immediate need of assistance
+
+## Documentation
+- [System Specification](SPECIFICATION.md)
+- [Architecture Documentation](ARCHITECTURE.md)
