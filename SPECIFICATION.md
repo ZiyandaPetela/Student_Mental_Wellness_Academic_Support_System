@@ -1,5 +1,5 @@
 # System Specification
-## Project Title
+1.0 Project Title
 **Student Mental Wellness Academic Support System**
 ## Domain
 **Education**
