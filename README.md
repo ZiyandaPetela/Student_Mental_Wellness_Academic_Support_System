@@ -14,7 +14,7 @@
 * Students from a variety of educational institutions who might be dealing with mental health concerns that affect their academic performance are the focus of this system.  It acts as a preventative measure, creating a safe space where students can get the support they require without turning to destructive coping strategies like cheating or burnout.  The system's ultimate goals are to increase student engagement, boost academic achievement, and promote a healthier learning environment by treating mental health issues in an academic setting.
 
 
-## Documentation
+## Links to:
 - [SPECIFICATION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/SPECIFICATION.md) - Detailed system specifications and requirements
 - [ARCHITECTURE.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ARCHITECTURE.md) - System architecture and C4 model diagrams
 
