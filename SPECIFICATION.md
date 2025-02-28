@@ -40,9 +40,35 @@
    * The project aligns with current web accessibility standards and responsive design practices
    * AI or rule-based algorithms can efficiently analyze responses and generate tailored well-being tips without requiring complex machine learning models.
    * The system is web-based and mobile-compatible, ensuring accessibility for students from different devices.
-   * Cloud-based databases such as Firebase or PostgreSQL allow secure storage of anonymous assessment data while maintaining privacy.
-   * Minimal infrastructure is required since the system primarily involves frontend development for the interface and backend development for processing results and storing recommendations.
-   * The project is scalable for future enhancementslike trend tracking, professional counseling integration, and real-time chat support.
+   * Cloud-based databases such as Firebase or PostgreSQL allow secure storage while maintaining privacy.
+   * Minimal infrastructure is required (primarily frontend and backend development)
+   * The project is scalable for future enhancements like trend tracking, professional counseling integration, and real-time chat support.
+
+## 4.0 User Personas
+### 4.1 Stressed First-Year Student
+Alex, 18: Recently started university and feels overwhelmed by coursework, social pressures, and living away from home. Experiences anxiety before tests and has trouble sleeping before deadlines. Needs guidance on study techniques and stress management.
+### 4.2 High-Achieving Student with Anxiety
+Priya, 21: Junior with excellent grades who struggles with perfectionism and constant worry about maintaining her GPA. Experiences panic attacks during exam periods. Needs tools to manage anxiety and maintain perspective.
+### 4.3Student with Depression
+Marcus, 20: Sophomore who has been experiencing low motivation, difficulty concentrating, and feelings of hopelessness. His grades have been declining. Needs support staying engaged with coursework and connecting to professional resources.
+4.4 Working Student
+Jamal, 25: Part-time student balancing full-time work with studies. Feels constant time pressure and exhaustion. Needs efficient study strategies and time management tools that incorporate wellbeing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###  Functional Requirements
 #### User Management
