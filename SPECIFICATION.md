@@ -30,18 +30,19 @@
 * By offering personalized mental health advice and easy access to self-assessment tools, the system empowers students to recognize their mental health needs and seek appropriate support without fear of stigma. 
 * Furthermore, the system will leverage data analytics to identify trends and allocate resources effectively, ensuring that mental health support is both proactive and responsive to student needs. By bridging the gap between available resources and student requirements, the Student Mental Wellness Academic Support System will create a more supportive educational environment that enhances both academic success and overall well-being.
   
-## Individual Scope
-* The Student Mental Wellness & Academic Support System is feasible because it utilizes well-established web development frameworks, technologies and psychological assessment methods to provide students with personalized support.
+## 3.0 Individual Scope
+* The Student Mental Wellness & Academic Support System is feasible because:
+  * It utilizes well-established web development frameworks, technologies and psychological assessment methods to provide students with personalized support.
    * The core functionality can be implemented with a modular approach, allowing for incremental development
    * The self-assessment quiz follows standard mental health evaluation frameworks, making it easy to implement using structured forms and logic-based analysis.
    * The initial version can focus on key features (assessment, resources, and basic recommendations) with the potential for expansio
-   * User authentication and basic data storage needs are manageable for a single develope
+   * User authentication and basic data storage needs are manageable for a single developer
    * The project aligns with current web accessibility standards and responsive design practices
    * AI or rule-based algorithms can efficiently analyze responses and generate tailored well-being tips without requiring complex machine learning models.
    * The system is web-based and mobile-compatible, ensuring accessibility for students from different devices.
    * Cloud-based databases such as Firebase or PostgreSQL allow secure storage of anonymous assessment data while maintaining privacy.
    * Minimal infrastructure is required since the system primarily involves frontend development for the interface and backend development for processing results and storing recommendations.
-   * The project is scalable, allowing future enhancements like trend tracking, professional counseling integration, and real-time chat support.
+   * The project is scalable for future enhancementslike trend tracking, professional counseling integration, and real-time chat support.
 
 ###  Functional Requirements
 #### User Management
