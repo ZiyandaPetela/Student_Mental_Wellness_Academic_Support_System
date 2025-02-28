@@ -1,7 +1,8 @@
 # System Specification
-1.0 Project Title
+## 1.0 Project Information
+#### 1.0 Project Title
 **Student Mental Wellness Academic Support System**
-## Domain
+## 1.2 Domain
 **Education**
 * The domain of this project is **Education**.
 * This system operates at the intersection of educational technology and mental health support, focused specifically on the academic environment.
