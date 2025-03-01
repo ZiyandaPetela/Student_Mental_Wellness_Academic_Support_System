@@ -16,7 +16,7 @@
 
 ## 2.0 Problem Statement
 * Students across educational institutions face significant mental health challenges that directly impact their academic performance, retention rates, and overall wellbeing. According to recent studies:
-   * Over 60% of college students report experiencing overwhelming anxietY
+   * Over 60% of college students report experiencing overwhelming anxiety
    * 40% struggle with depression severe enough to affect their academic functioning
 * Despite these statistics, many institutions lack adequate resources to identify at-risk students early, provide timely interventions, or scale support services to meet demand.
 * The current limitations include:
@@ -36,7 +36,7 @@
   * It utilizes well-established web development frameworks, technologies and psychological assessment methods to provide students with personalized support.
    * The core functionality can be implemented with a modular approach, allowing for incremental development
    * The self-assessment quiz follows standard mental health evaluation frameworks, making it easy to implement using structured forms and logic-based analysis.
-   * The initial version can focus on key features (assessment, resources, and basic recommendations) with the potential for expansio
+   * The initial version can focus on key features (assessment, resources, and basic recommendations) with the potential for expansion
    * User authentication and basic data storage needs are manageable for a single developer
    * The project aligns with current web accessibility standards and responsive design practices
    * AI or rule-based algorithms can efficiently analyze responses and generate tailored well-being tips without requiring complex machine learning models.
