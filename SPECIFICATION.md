@@ -70,7 +70,7 @@ time management tools that incorporate wellbeing.
 #### Mental Health Assessment
 * Implementation of standardized, validated mental health screening tools
 * Customizable assessment frequency based on student needs and stress periods
-* Dynamic question flow based on previous responses
+
 #### Academic Impact Analysis
 * Assessment of how mental health issues are affecting specific academic activities
 * Correlation of mental health metrics with academic performance indicators
@@ -102,12 +102,7 @@ time management tools that incorporate wellbeing.
 * Optional integration with academic performance data
 * Visualization of the relationship between mental wellness and academic outcomes
 * Identification of improvement patterns and areas needing additional support
-### 5.6 Emergency Resources
-#### Crisis Intervention Access
-* One-click access to emergency mental health resources
-* Integration with institutional crisis support services
-* Geolocation-based emergency service information
- *Clear protocols for immediate assistance
+
 ## 6.0 Non-Functional Requirements
 ### 6.1 Security and Privacy
 * Compliance with educational data privacy regulations (POPI/ASASA/applicable local laws)
@@ -125,7 +120,6 @@ time management tools that incorporate wellbeing.
 * Page load times under 3 seconds on standard connections
 * Support for concurrent users during peak periods (exam times)
 * Graceful degradation of non-essential features during high traffic
-* Offline functionality for key resources
 * Efficient database queries to ensure quick assessment feedback
 ### 6.4 Reliability
 * System availability of 99.5% during academic terms
