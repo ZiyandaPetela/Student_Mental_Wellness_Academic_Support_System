@@ -47,33 +47,18 @@
 
 ## 4.0 User Personas
 ### 4.1 Stressed First-Year Student
-Alex, 18: Recently started university and feels overwhelmed by coursework, social pressures, and living away from home. Experiences anxiety before tests and has trouble sleeping before deadlines. Needs guidance on study techniques and stress management.
+* Student who recently started university and feels overwhelmed by coursework, social pressures, and living away from home. Experiences anxiety before tests and has trouble sleeping before deadlines. Needs guidance on study techniques and stress management.
 ### 4.2 High-Achieving Student with Anxiety
-Priya, 21: Junior with excellent grades who struggles with perfectionism and constant worry about maintaining her GPA. Experiences panic attacks during exam periods. Needs tools to manage anxiety and maintain perspective.
-### 4.3Student with Depression
-Marcus, 20: Sophomore who has been experiencing low motivation, difficulty concentrating, and feelings of hopelessness. His grades have been declining. Needs support staying engaged with coursework and connecting to professional resources.
-4.4 Working Student
-Jamal, 25: Part-time student balancing full-time work with studies. Feels constant time pressure and exhaustion. Needs efficient study strategies and time management tools that incorporate wellbeing.
+* Student with excellent grades who struggles with perfectionism and constant worry about maintaining his/her GPA. Experiences panic attacks during exam periods. Needs tools to manage anxiety and maintain perspective.
+### 4.3 Student with Depression
+* Student who has been experiencing low motivation, difficulty concentrating, and feelings of hopelessness. His/her grades have been declining. Needs support staying engaged with coursework and connecting to professional resources.
+### 4.4 Working Studen
+* Part-time student balancing full-time work with studies. Feels constant time pressure and exhaustion. Needs efficient study strategies and 
+time management tools that incorporate wellbeing.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###  Functional Requirements
-#### User Management
-##### User Registration and Authentication
+## 5.0 Functional Requirements
+### 5.1 User Management
+#### User Registration and Authentication
 * Students must be able to create accounts using institutional email addresses
 * The system shall support secure login with multi-factor authentication
 * User profiles shall store basic academic information and mental health preferences
@@ -81,33 +66,67 @@ Jamal, 25: Part-time student balancing full-time work with studies. Feels consta
 * Student: Access to self-assessment tools, resources, and personalized recommendations
 * Counselor/Support Staff: Limited view of aggregated, anonymized data for institutional insights
 * Administrator: System management and content oversight
-#### Self-Assessment Module
-##### Mental Health Assessment
+### 5.2 Self-Assessment Module
+#### Mental Health Assessment
 * Implementation of standardized, validated mental health screening tools
 * Customizable assessment frequency based on student needs and stress periods
 * Dynamic question flow based on previous responses
-##### Academic Impact Analysis
+#### Academic Impact Analysis
 * Assessment of how mental health issues are affecting specific academic activities
 * Correlation of mental health metrics with academic performance indicators
 * Identification of specific academic challenges related to mental health concerns
-#### Personalized Recommendation Engine
-##### Tailored Mental Health Resources
+### 5.3 Personalized Recommendation Engine
+#### Tailored Mental Health Resources
 * Algorithm-based matching of resources to assessment results
 * Customized mental health management strategies based on user profile
 * Adaptation of recommendations based on user feedback and progress
-##### Study Technique Suggestions
+#####Study Technique Suggestions
 * Customized study approaches aligned with identified mental health needs
 * Time management strategies that incorporate mental wellness breaks
 * Concentration and focus techniques for different mental health challenges
-#### Resource Library
-##### Mental Health Content
+### 5.4 Resource Library
+#### Mental Health Content
 * Curated articles, videos, and interactive tools for mental wellness
 * Evidence-based coping strategies categorized by specific challenges
 * Regular updates with current mental health research and resources
-##### Academic Support Materials
+#### Academic Support Materials
 * Study guides optimized for different learning styles and mental health needs
 * Exam preparation strategies with mental wellness components
 * Stress management techniques specific to academic contexts
+### 5.5 Progress Tracking
+#### Mental Wellness Monitoring
+* Longitudinal tracking of self-assessment results
+* Visual representation of mental wellness trends
+* Goal setting and milestone acknowledgment
+# Academic Performance Correlation
+* Optional integration with academic performance data
+* Visualization of the relationship between mental wellness and academic outcomes
+* Identification of improvement patterns and areas needing additional support
+### 5.6 Emergency Resources
+#### Crisis Intervention Access
+* One-click access to emergency mental health resources
+* Integration with institutional crisis support services
+* Geolocation-based emergency service information
+ *Clear protocols for immediate assistance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### Community Support Features
 ##### Peer Connection Platform
 * Anonymous discussion forums organized by topic and challenge
