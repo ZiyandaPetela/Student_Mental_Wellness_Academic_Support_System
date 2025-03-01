@@ -9,9 +9,10 @@
 * The system addresses the mental health challenges that students face, particularly during high-pressure periods such as exams.
 * By providing resources and personalized support, such as self-assessment tools and community forums, the system aims to foster a healthier learning environment and improve academic performance.
 * Additionally, it seeks to promote awareness of mental health resources and encourage students to prioritize their well-being, ultimately leading to better academic outcomes, higher retention rates, and enhanced engagement.
-* Finally, the system will measure its impact by tracking user feedback and academic performance metrics, ensuring continuous improvement and effectiveness in supporting students
-* Collaboration with educational institutions will be key to integrating this system into existing support services, ensuring it effectively meets the diverse needs of students. My initial focus will be on incorporating the system into my current university, where I can tailor the resources and support to fit the specific needs of the student population. Engaging with university stakeholders, such as faculty, counselors, and student organizations, will be crucial in gaining support and insights for implementation. 
-* Furthermore, the system is designed to be adaptable and scalable, allowing it to cater to varying student populations across different educational contexts in the future.
+* The system will measure its impact by tracking user feedback and academic performance metrics, ensuring continuous improvement and effectiveness in supporting students
+*  Furthermore, the system is designed to be adaptable and scalable, allowing it to cater to varying student populations across different educational contexts in the future.
+* Finally, My initial focus will be on incorporating the system into my current university, where I can tailor the resources and support to fit the specific needs of the student population.
+
 
 ## 2.0 Problem Statement
 * Students across educational institutions face significant mental health challenges that directly impact their academic performance, retention rates, and overall wellbeing. According to recent studies:
