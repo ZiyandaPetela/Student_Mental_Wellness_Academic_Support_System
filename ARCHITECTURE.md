@@ -4,7 +4,7 @@
 Student Mental Wellness & Academic Support System
 
 ## Domain
-**Education**
+Domain for the system: **Education**
 
 This system operates at the intersection of educational technology and mental health support, focused specifically on the academic environment. It targets higher education institutions, including universities and colleges, where academic pressure and stress are particularly high.
 
