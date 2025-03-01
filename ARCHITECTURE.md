@@ -1,18 +1,17 @@
-### C4 Model: Context Diagram
 # Architecture Documentation
 
 ## Project Title
 Student Mental Wellness & Academic Support System
 
 ## Domain
-**Education and Mental Health**
+**Education**
 
 This system operates at the intersection of educational technology and mental health support, focused specifically on the academic environment. It targets higher education institutions, including universities and colleges, where academic pressure and stress are particularly high.
 
 ## Problem Statement
 Students face significant mental health challenges, especially during examination periods, which directly impact their academic performance. Current educational systems often fail to adequately address the connection between mental wellbeing and academic success. Students experiencing stress, anxiety, and emotional difficulties struggle with concentration, experience burnout, and ultimately achieve lower grades than their potential would suggest.
 
-The Student Mental Wellness & Academic Support System aims to bridge this gap by providing timely intervention, personalized support, and practical strategies to help students manage their mental health while improving their academic outcomes.
+The **Student Mental Wellness & Academic Support System** aims to bridge this gap by providing timely intervention, personalized support, and practical strategies to help students manage their mental health while improving their academic outcomes.
 
 ## Individual Scope
 This project is feasible for individual implementation due to its modular architecture and focused scope:
