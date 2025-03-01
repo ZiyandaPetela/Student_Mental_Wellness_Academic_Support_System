@@ -6,7 +6,7 @@ Studies have consistently shown that students' academic performance and mental h
 * In order to ensure academic success, the **Student Mental Wellness & Academic Support System** will be created to assist students in managing exam stress and preserving their mental health.
 
 ## Project Description
-The Student Mental Wellness Academic Support System is a web application that identifies students struggling with mental health during exams and provides personalized support to help them succeed academically despite their challenges. It offers individualized mental health advice, recommends efficient study techniques, and includes a self-assessment test to gauge stress and anxiety levels. It wil be helping students manage academic stress and succeed without resorting to copying
+The **Student Mental Wellness Academic Support System** is a web application that identifies students struggling with mental health during exams and provides personalized support to help them succeed academically despite their challenges. It offers individualized mental health advice, recommends efficient study techniques, and includes a self-assessment test to gauge stress and anxiety levels. It wil be helping students manage academic stress and succeed without resorting to copying
 
 Once completed, the system will feature:
 - Personalized mental health advice based on self-assessment tests, allowing students to better understand and manage their stress and anxiety levels. 
@@ -15,8 +15,8 @@ Once completed, the system will feature:
 - An online support community for students to connect and share experiences
 - Progress tracking tools to monitor mental health over time
 - Quick access to emergency resources for those in immediate need of assistance
-* Fostering a supportive environment that promotes academic success and well-being.
-*  Students from a variety of educational institutions who might be dealing with mental health concerns that affect their academic performance are the focus of this system.  It acts as a preventative measure, creating a safe space where students can get the support they require without turning to destructive coping strategies like cheating or burnout.  The system's ultimate goals are to increase student engagement, boost academic achievement, and promote a healthier learning environment by treating mental health issues in an academic setting.
+-Fostering a supportive environment that promotes academic success and well-being.
+-Students from a variety of educational institutions who might be dealing with mental health concerns that affect their academic performance are the focus of this system.  It acts as a preventative measure, creating a safe space where students can get the support they require without turning to destructive coping strategies like cheating or burnout.  The system's ultimate goals are to increase student engagement, boost academic achievement, and promote a healthier learning environment by treating mental health issues in an academic setting.
 ## Links to:
 - [SPECIFICATION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/SPECIFICATION.md) - Detailed system specifications and requirements
 - [ARCHITECTURE.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ARCHITECTURE.md) - System architecture and C4 model diagrams
