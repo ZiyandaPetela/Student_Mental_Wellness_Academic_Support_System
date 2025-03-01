@@ -109,25 +109,25 @@ time management tools that incorporate wellbeing.
 * Geolocation-based emergency service information
  *Clear protocols for immediate assistance
 ## 6.0 Non-Functional Requirements
-### Security and Privacy
+### 6.1 Security and Privacy
 * Compliance with educational data privacy regulations (POPI/ASASA/applicable local laws)
 * End-to-end encryption for all personal and mental health data
 * Anonymized data storage with separation of identifiable information
 * Regular security audits and vulnerability assessments
 * Transparent privacy policies and consent management
-### Accessibility
+### 6.2 Accessibility
 * Compliance with WCAG 2.1 AA standards for web accessibility
 * Support for screen readers and assistive technologies
 * Color schemes designed for users with color vision deficiencies
 * Keyboard navigation for all functions
 * Responsive design for access across different devices and screen sizes
-### Performance
+### 6.3 Performance
 * Page load times under 3 seconds on standard connections
 * Support for concurrent users during peak periods (exam times)
 * Graceful degradation of non-essential features during high traffic
 * Offline functionality for key resources
 * Efficient database queries to ensure quick assessment feedback
-### Reliability
+### 6.4 Reliability
 * System availability of 99.5% during academic terms
 * Automatic backups of all user data
 * Fault tolerance with graceful error handling
