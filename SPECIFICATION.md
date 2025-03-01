@@ -52,7 +52,7 @@
 * Student with excellent grades who struggles with perfectionism and constant worry about maintaining his/her GPA. Experiences panic attacks during exam periods. Needs tools to manage anxiety and maintain perspective.
 ### 4.3 Student with Depression
 * Student who has been experiencing low motivation, difficulty concentrating, and feelings of hopelessness. His/her grades have been declining. Needs support staying engaged with coursework and connecting to professional resources.
-### 4.4 Working Studen
+### 4.4 Working Student
 * Part-time student balancing full-time work with studies. Feels constant time pressure and exhaustion. Needs efficient study strategies and 
 time management tools that incorporate wellbeing.
 
@@ -80,7 +80,7 @@ time management tools that incorporate wellbeing.
 * Algorithm-based matching of resources to assessment results
 * Customized mental health management strategies based on user profile
 * Adaptation of recommendations based on user feedback and progress
-#####Study Technique Suggestions
+#### Study Technique Suggestions
 * Customized study approaches aligned with identified mental health needs
 * Time management strategies that incorporate mental wellness breaks
 * Concentration and focus techniques for different mental health challenges
@@ -98,7 +98,7 @@ time management tools that incorporate wellbeing.
 * Longitudinal tracking of self-assessment results
 * Visual representation of mental wellness trends
 * Goal setting and milestone acknowledgment
-# Academic Performance Correlation
+#### Academic Performance Correlation
 * Optional integration with academic performance data
 * Visualization of the relationship between mental wellness and academic outcomes
 * Identification of improvement patterns and areas needing additional support
