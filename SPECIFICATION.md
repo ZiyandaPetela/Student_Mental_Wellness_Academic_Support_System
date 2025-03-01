@@ -108,75 +108,32 @@ time management tools that incorporate wellbeing.
 * Integration with institutional crisis support services
 * Geolocation-based emergency service information
  *Clear protocols for immediate assistance
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Community Support Features
-##### Peer Connection Platform
-* Anonymous discussion forums organized by topic and challenge
-* Moderated peer support groups with confidentiality protections
-* Success story sharing with privacy controls
-##### Virtual Support Sessions
-* Scheduled group support sessions on common challenges
-* Peer-led study groups with mental wellness components
-* Option to request individual support from qualified staff
-#### Progress Tracking
-##### Mental Wellness Monitoring
-* Longitudinal tracking of self-assessment results
-* Visual representation of mental wellness trends
-* Goal setting and milestone acknowledgment
-##### Academic Performance Correlation
-* Optional integration with academic performance data
-* Visualization of the relationship between mental wellness and academic outcomes
-* Identification of improvement patterns and areas needing additional support
-#### Emergency Resources
-##### Crisis Intervention Access
-* One-click access to emergency mental health resources
-* Integration with institutional crisis support services
-* Geolocation-based emergency service information
-* Clear protocols for immediate assistance
-### Non-Functional Requirements
-#### Security and Privacy
-* Compliance with educational data privacy regulations (FERPA/GDPR/applicable local laws)
+## 6.0 Non-Functional Requirements
+### Security and Privacy
+* Compliance with educational data privacy regulations (POPI/ASASA/applicable local laws)
 * End-to-end encryption for all personal and mental health data
 * Anonymized data storage with separation of identifiable information
 * Regular security audits and vulnerability assessments
 * Transparent privacy policies and consent management
-#### Accessibility
+### Accessibility
 * Compliance with WCAG 2.1 AA standards for web accessibility
 * Support for screen readers and assistive technologies
 * Color schemes designed for users with color vision deficiencies
 * Keyboard navigation for all functions
 * Responsive design for access across different devices and screen sizes
-#### Performance
+### Performance
 * Page load times under 3 seconds on standard connections
 * Support for concurrent users during peak periods (exam times)
 * Graceful degradation of non-essential features during high traffic
 * Offline functionality for key resources
 * Efficient database queries to ensure quick assessment feedback
-#### Reliability
+### Reliability
 * System availability of 99.5% during academic terms
 * Automatic backups of all user data
 * Fault tolerance with graceful error handling
 * Comprehensive logging for troubleshooting
 * Recovery procedures for data restoration
-#### Scalability
+### Scalability
 * Modular architecture to allow feature expansion
 * Database design that accommodates growing user numbers
 * API-first approach for potential institutional integrations
