@@ -133,32 +133,20 @@ time management tools that incorporate wellbeing.
 * Fault tolerance with graceful error handling
 * Comprehensive logging for troubleshooting
 * Recovery procedures for data restoration
-### Scalability
-* Modular architecture to allow feature expansion
-* Database design that accommodates growing user numbers
-* API-first approach for potential institutional integrations
-* Containerization for deployment flexibility
-* Resource usage monitoring with scaling triggers
-### Constraints and Assumptions
-#### Technical Constraints
+## 7.0 Constraints and Assumptions
+### 7.1 Technical Constraints
 * Compatible with standard web browsers and mobile devices
 * Development within established web frameworks
 * Reliance on standard database technologies
 * Implementation without specialized hardware requirements
-#### Business Constraints
+### 7.2 Business Constraints
 * Development timeline aligned with academic calendar
 * Resource limitations of individual development
 * Prioritization of core features for initial release
 * Ethical considerations for mental health support
-#### Assumptions
+### 7.3 Assumptions
 * Students have regular access to internet-connected devices
 * Institutional support for system implementation
 * Availability of validated mental health assessment tools
 * User willingness to engage with digital mental health resources
-### Future Enhancements
-##### Planned Expansions
-* Integration with wearable technology for physiological stress indicators
-* Machine learning improvements to recommendation algorithms
-* Expanded community support features
-* Additional language support
-* Mobile application development
+
