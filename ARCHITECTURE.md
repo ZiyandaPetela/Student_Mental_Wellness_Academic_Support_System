@@ -31,14 +31,12 @@ This project is feasible for individual implementation due to its modular archit
 ### Context Diagram
 The context diagram shows the overall system and its interactions with external actors and systems:
 - **Primary Users**: Students seeking mental health support and academic guidance
-- **Secondary Users**: Mental health professionals who provide content and review anonymized data
+- **Secondary Users**: Content administrators who develop and manage general well-being, stress management, and mindfulness resources
 - **System Administrators**: Technical staff who maintain the system
-- **External Systems**: Email notification system and external resource databases
-
+- **External Systems**: Email notification system and external resource databases, and referral services for students with serious mental health concerns
 ### Container Diagram
 The container diagram breaks down the system into its major components:
 - **Web Application**: Primary interface for students and administrators
-- **Mobile Application**: Alternative access point optimized for mobile devices
 - **API Gateway**: Central access point for all services
 - **Authentication Service**: Handles user registration, login, and security
 - **Assessment Service**: Manages and processes mental health self-assessments
@@ -46,6 +44,7 @@ The container diagram breaks down the system into its major components:
 - **User Database**: Stores user profiles and assessment history
 - **Content Database**: Stores educational resources and recommendation content
 - **Analytics Service**: Processes anonymized data for system improvement
+- **Referral Service**: Provides information on professional mental health resources for students whose assessment results indicate serious concerns
 
 ### Component Diagrams
 The component diagrams detail the internal workings of key containers:
@@ -59,6 +58,8 @@ The component diagrams detail the internal workings of key containers:
 - **Notification Component**: Manages user alerts and reminders
 - **Scheduler Component**: Helps students create balanced study schedules
 - **API Client**: Communicates with backend services
+- **Disclaimer Component**: Clearly communicates system limitations and when to seek professional help
+- **Referral Component**: Provides resources for professional mental health services when needed
 
 #### API Gateway Components
 - **Router Component**: Directs requests to appropriate controllers
@@ -70,6 +71,7 @@ The component diagrams detail the internal workings of key containers:
 - **Notification Controller**: Sends alerts and reminders
 - **Scheduler Controller**: Manages study schedule creation and updates
 - **Logging Middleware**: Records system activity
+- **Referral Controller**: Manages access to mental health referral resources
 
 ## End-to-End Components
 The system implements a complete end-to-end architecture covering all aspects of the student mental wellness journey:
@@ -78,16 +80,21 @@ The system implements a complete end-to-end architecture covering all aspects of
 - Registration and profile creation
 - Initial mental health assessment
 - Preference setting for study habits and notification frequency
+- Clear disclaimer about system limitations and scope
 
 ### 2. Assessment Process
 - Regular self-assessment prompts
 - Standardized mental health measurement tools
 - Real-time feedback on assessment results
+- Dynamic question flow based on previous responses
+- Automatic flagging of concerning responses with referral to professional resources
+  
 
 ### 3. Recommendation Pipeline
 - Data analysis of assessment results
 - Pattern recognition for effective interventions
 - Personalized recommendation generation
+- General well-being, stress management, and mindfulness content delivery
 
 ### 4. Resource Delivery Mechanism
 - Context-aware content presentation
@@ -108,7 +115,11 @@ The system implements a complete end-to-end architecture covering all aspects of
 - Timely reminders for assessments
 - Study schedule alerts
 - Positive reinforcement messages
+### 8. Referral System
 
+Threshold-based identification of users who may need professional support
+Database of campus and community mental health resources
+Clear guidance on how to access professional services
 ## Technical Stack
 
 ### Frontend
@@ -138,7 +149,7 @@ The system implements a complete end-to-end architecture covering all aspects of
    - Student logs in and completes mental health assessment
    - Data is securely stored in user database
    - Assessment service processes results
-
+   - High-concern results trigger referral recommendations
 2. **Recommendation Generation**:
    - Recommendation engine analyzes assessment results
    - System matches user needs with appropriate resources
@@ -153,7 +164,11 @@ The system implements a complete end-to-end architecture covering all aspects of
    - Student inputs academic commitments and availability
    - System generates balanced study schedule with breaks
    - Notifications remind students of scheduled activities
+5. Referral Process:
 
+- System identifies concerning assessment results
+- Referral information is presented to the student
+- Clear guidance provided on accessing professional services
 ## Security Considerations
 
 - **Data Encryption**: All personal health data encrypted at rest and in transit
@@ -173,17 +188,19 @@ The system implements a complete end-to-end architecture covering all aspects of
 graph TD
     title[C4 Model: Context Diagram]
     Student["Student [Person]"]
-    MentalHealthProfessional["Mental Health Professional [Person]"]
+    ContentAdmin["Content Administrator [Person]"]
     Administrator["System Administrator [Person]"]
     SMWASS["Student Mental Wellness & Academic Support System [Software System]"]
     EmailSystem["Email Notification System [Software System]"]
     ResourceDB["External Resource Database [Software System]"]
+    ReferralServices["Mental Health Referral Services [Software System]"]
     
     Student -->|Uses for self-assessment, receives recommendations| SMWASS
-    MentalHealthProfessional -->|Provides content, reviews anonymized data| SMWASS
+    ContentAdmin -->|Manages wellness and academic content| SMWASS
     Administrator -->|Manages and maintains| SMWASS
     SMWASS -->|Sends notifications| EmailSystem
     SMWASS -->|Retrieves resources| ResourceDB
+    SMWASS -->|Provides referrals when needed| ReferralServices
     
     subgraph "Enterprise Boundary"
         SMWASS
