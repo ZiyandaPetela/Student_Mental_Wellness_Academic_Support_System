@@ -9,7 +9,7 @@ Studies have consistently shown that students' academic performance and mental h
 The **Student Mental Wellness Academic Support System** is a web application that identifies students struggling with mental health during exams and provides personalized support to help them succeed academically despite their challenges. It offers individualized mental health advice, recommends efficient study techniques, and includes a self-assessment test to gauge stress and anxiety levels. It will help students manage academic stress and succeed with integrity.
 
 Once completed, the system will feature:
-- Personalized mental health advice based on self-assessment tests, allowing students to better understand and manage their stress and anxiety levels. 
+- Personalized mental health advice based on self-assessment results and structured recommendations., allowing students to better understand and manage their stress and anxiety levels. 
 - Efficient study techniques tailored to individual needs
 - A comprehensive resource library with articles and guides on mental health management
 - An online support community for students to connect and share experiences
