@@ -295,7 +295,7 @@ classDiagram
     AssessmentProcessor --> ScoringModule: uses
     AssessmentProcessor --> ValidationModule: uses
     AssessmentProcessor ..> AssessmentResult: creates
-
+```
 ## End-to-End Components
 The system implements a complete end-to-end architecture covering all aspects of the student mental wellness journey:
 
