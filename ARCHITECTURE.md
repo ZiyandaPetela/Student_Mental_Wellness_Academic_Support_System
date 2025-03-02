@@ -341,4 +341,105 @@ The system implements a complete end-to-end architecture covering all aspects of
 - Containerized services for consistent deployment
 -Automated testing to ensure functionality
 
-
+```mermaid
+flowchart TD
+    Student["👨‍🎓 Student [Person]"]:::personStyle
+    ContentAdmin["👩‍💼 Content Admin [Person]"]:::personStyle
+    Administrator["👨‍💻 Admin [Person]"]:::personStyle
+    
+    subgraph WebApp["💻 Web Application Container"]
+        UIComponent["🖥️ User Interface [React]"]:::componentStyle
+        AdminComponent["⚙️ Admin Portal [React]"]:::componentStyle
+        AssessmentComponent["📝 Assessment [React]"]:::componentStyle
+        ResourceComponent["📚 Resource [React]"]:::componentStyle
+        DisclaimerComponent["⚠️ Disclaimer [React]"]:::componentStyle
+        ReferralComponent["🔄 Referral [React]"]:::componentStyle
+        NotificationComponent["🔔 Notification [React]"]:::componentStyle
+        APIClient["🔌 API Client [Axios]"]:::componentStyle
+    end
+    
+    subgraph APIService["🔌 API Service Container"]
+        Router["🔀 Router [Express]"]:::componentStyle
+        AuthController["🔑 Auth Controller [Node.js]"]:::componentStyle
+        AssessmentController["📊 Assessment Controller [Node.js]"]:::componentStyle
+        RecommendationController["🧩 Recommendation Controller [Node.js]"]:::componentStyle
+        ReferralController["🏥 Referral Controller [Node.js]"]:::componentStyle
+        NotificationController["📨 Notification Controller [Node.js]"]:::componentStyle
+    end
+    
+    subgraph NotificationService["📨 Notification Service"]
+        EmailService["✉️ Email Service [Node.js]"]:::componentStyle
+        NotificationQueue["📋 Queue [Redis]"]:::componentStyle
+        TemplateEngine["📝 Template Engine [Handlebars]"]:::componentStyle
+    end
+    
+    subgraph AssessmentEngine["📊 Assessment Engine"]
+        AssessmentProcessor["🧮 Processor [Python]"]:::componentStyle
+        ScoringModule["📈 Scoring [Python]"]:::componentStyle
+        ValidationModule["✅ Validation [Python]"]:::componentStyle
+    end
+    
+    subgraph RecommendationEngine["🧩 Recommendation Engine"]
+        RecommendationProcessor["🔍 Processor [Python]"]:::componentStyle
+        ContentMatcher["🔗 Content Matcher [Python]"]:::componentStyle
+        PriorityModule["⭐ Priority [Python]"]:::componentStyle
+    end
+    
+    Database["🗄️ Database [MongoDB]"]:::databaseStyle
+    EmailSystem["✉️ Email System [External]"]:::externalSystemStyle
+    ReferralServices["🏥 Referral Services [External]"]:::externalSystemStyle
+    
+    %% User interactions
+    Student -->|"Uses"| UIComponent
+    ContentAdmin -->|"Manages content via"| AdminComponent
+    Administrator -->|"Configures system via"| AdminComponent
+    
+    %% Web Application Components
+    UIComponent -->|"Displays"| AssessmentComponent
+    UIComponent -->|"Shows"| ResourceComponent
+    UIComponent -->|"Includes"| DisclaimerComponent
+    UIComponent -->|"Provides"| ReferralComponent
+    UIComponent -->|"Shows"| NotificationComponent
+    
+    AdminComponent -->|"Makes API calls via"| APIClient
+    AssessmentComponent -->|"Submits data via"| APIClient
+    ResourceComponent -->|"Fetches content via"| APIClient
+    ReferralComponent -->|"Requests referrals via"| APIClient
+    NotificationComponent -->|"Gets alerts via"| APIClient
+    
+    %% API Service Components
+    APIClient -->|"Sends requests to"| Router
+    
+    Router -->|"Routes auth requests to"| AuthController
+    Router -->|"Routes assessment data to"| AssessmentController
+    Router -->|"Routes recommendation requests to"| RecommendationController
+    Router -->|"Routes referral requests to"| ReferralController
+    Router -->|"Routes notification requests to"| NotificationController
+    
+    %% Controller to Service connections
+    AssessmentController -->|"Sends data for processing to"| AssessmentProcessor
+    RecommendationController -->|"Requests recommendations from"| RecommendationProcessor
+    ReferralController -->|"Connects with"| ReferralServices
+    NotificationController -->|"Queues messages in"| NotificationQueue
+    
+    %% Assessment Engine components
+    AssessmentProcessor -->|"Uses for scoring"| ScoringModule
+    AssessmentProcessor -->|"Validates with"| ValidationModule
+    AssessmentProcessor -->|"Stores results in"| Database
+    
+    %% Recommendation Engine components
+    RecommendationProcessor -->|"Matches content using"| ContentMatcher
+    RecommendationProcessor -->|"Prioritizes with"| PriorityModule
+    RecommendationProcessor -->|"Stores recommendations in"| Database
+    ContentMatcher -->|"Retrieves resources from"| Database
+    
+    %% Notification Service components
+    NotificationQueue -->|"Triggers"| EmailService
+    EmailService -->|"Formats using"| TemplateEngine
+    EmailService -->|"Sends via"| EmailSystem
+    
+    classDef personStyle fill:#08427B,stroke:#052E56,color:#fff
+    classDef componentStyle fill:#85BBF0,stroke:#5591D2,color:#000
+    classDef databaseStyle fill:#438DD5,stroke:#2E6295,color:#fff
+    classDef externalSystemStyle fill:#999999,stroke:#6B6B6B,color:#fff
+ ```
