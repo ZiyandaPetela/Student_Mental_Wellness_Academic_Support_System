@@ -346,6 +346,5 @@ graph TD
     subgraph "Enterprise Boundary"
         SMWASS
     end
-
 ```
 
