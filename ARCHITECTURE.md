@@ -113,18 +113,15 @@ flowchart TD
 The component diagrams detail the internal workings of key containers:
 
 #### Web Application Components
-- **User Interface**: Main presentation layer
-- **Authentication Component**: Handles login/registration
-- **Assessment Component**: Delivers self-assessment tools
-- **Dashboard Component**: Visualizes progress and recommendations
-- **Resource Component**: Provides access to educational and mental health content
-- **Notification Component**: Manages user alerts and reminders
-- **Scheduler Component**: Helps students create balanced study schedules
-- **API Client**: Communicates with backend services
-- **Disclaimer Component**: Clearly communicates system limitations and when to seek professional help
-- **Referral Component**: Provides resources for professional mental health services when needed
-
-#### API Gateway Components
+- **User Interface**: Provides the main presentation layer for student interaction
+- **Admin Portal (React)**: Specialized interface for content administrators and system management
+- **Assessment Component (React)**: Delivers self-assessment tools and questionnaires
+- **Resource Component (React)**: Provides access to educational and mental health content
+- **Disclaimer Component (React)**: Clearly communicates system limitations and appropriate use guidelines
+- **Referral Component (React)**: Facilitates connections to professional mental health services
+- **Notification Component (React)**: Manages user alerts, reminders, and communications
+- **API Client (Axios)**: Handles all communication with backend services
+#### API Service Container
 - **Router Component**: Directs requests to appropriate controllers
 - **Authentication Middleware**: Validates user tokens
 - **User Controller**: Handles user-related operations
@@ -135,6 +132,25 @@ The component diagrams detail the internal workings of key containers:
 - **Scheduler Controller**: Manages study schedule creation and updates
 - **Logging Middleware**: Records system activity
 - **Referral Controller**: Manages access to mental health referral resources
+- **Router (Express)**: Directs incoming requests to appropriate controllers
+- **Auth Controller (Node.js)**: Manages user authentication and authorization
+- **Assessment Controller (Node.js)**: Processes assessment data and requests
+- **Recommendation Controller (Node.js)**: Handles personalized recommendation generation
+- **Referral Controller (Node.js)**: Manages professional service referral
+- **Notification Controller (Node.js)**: Coordinates system notifications and alerts
+#### Notification Service
+- **Email Service (Node.js)**: Processes and sends email communications
+- **Notification Queue (Redis)**: Manages asynchronous notification processing
+- **Template Engine (Handlebars)**: Formats messages using standardized templates
+#### Assessment Engine
+- **Processor (Python)**: Coordinates assessment data processing
+- **Scoring Module (Python)**: Analyzes and evaluates assessment responses
+- **Validation Module (Python)**: Ensures data integrity and consistency
+#### Recommendation Engine
+- **Processor (Python)**: Orchestrates the recommendation generation process
+- **Content Matcher (Python)**: Aligns user needs with appropriate resources
+- **Priority Module (Python)**: Determines recommendation urgency and relevance
+
 ```mermaid
 flowchart TD
     Student["👨‍🎓 Student [Person]"]:::personStyle
