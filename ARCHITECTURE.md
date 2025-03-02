@@ -253,7 +253,48 @@ flowchart TD
     classDef databaseStyle fill:#438DD5,stroke:#2E6295,color:#fff
     classDef externalSystemStyle fill:#999999,stroke:#6B6B6B,color:#fff
  ```
+### Code Diagrams
+The code diagrams illustrate the implementation details of key components in the system:
 
+#### Assessment Engine Code Structure
+This diagram shows the classes and relationships within the Assessment Engine component:
+
+```mermaid
+classDiagram
+    class AssessmentProcessor {
+        -scoringModule: ScoringModule
+        -validationModule: ValidationModule
+        +processAssessment(assessmentData: object): AssessmentResult
+        -validateInput(data: object): boolean
+        -calculateScores(validData: object): Scores
+        -generateFeedback(scores: Scores): Feedback
+    }
+    
+    class ScoringModule {
+        -scoringAlgorithms: Map~string, function~
+        +calculateScore(type: string, responses: array): number
+        -normalizeScore(rawScore: number, scale: Scale): number
+        -identifyRiskFactors(scores: object): RiskFactors
+    }
+    
+    class ValidationModule {
+        +validateData(data: object, schema: Schema): ValidationResult
+        -checkCompleteness(data: object): boolean
+        -detectAnomalies(responses: array): AnomalyReport
+    }
+    
+    class AssessmentResult {
+        +userId: string
+        +timestamp: Date
+        +scores: object
+        +riskFactors: array
+        +recommendations: array
+        +referralNeeded: boolean
+    }
+    
+    AssessmentProcessor --> ScoringModule: uses
+    AssessmentProcessor --> ValidationModule: uses
+    AssessmentProcessor ..> AssessmentResult: creates
 
 ## End-to-End Components
 The system implements a complete end-to-end architecture covering all aspects of the student mental wellness journey:
@@ -341,4 +382,4 @@ The system implements a complete end-to-end architecture covering all aspects of
 - Cloud-based hosting for reliability
 - Containerized services for consistent deployment
 - Automated testing to ensure functionality
-
+ ```
