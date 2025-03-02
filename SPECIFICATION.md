@@ -39,7 +39,7 @@
    * The initial version can focus on key features (assessment, resources, and basic recommendations) with the potential for expansion
    * User authentication and basic data storage needs are manageable for a single developer
    * The project aligns with current web accessibility standards and responsive design practices
-   * AI or rule-based algorithms will analyze responses and generate tailored well-being tips without requiring complex machine learning models.
+   * The system will analyze responses using predefined logic and structured decision-making to generate tailored well-being tips.
    * The system is web-based and mobile-compatible, ensuring accessibility for students from different devices.
    * Cloud-based databases such as Firebase or PostgreSQL allow secure storage while maintaining privacy.
    * Minimal infrastructure is required (primarily frontend and backend development)
