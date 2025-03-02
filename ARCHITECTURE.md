@@ -245,68 +245,41 @@ The system implements a complete end-to-end architecture covering all aspects of
 - Registration and profile creation
 - Initial mental health assessment
 - Preference setting for study habits and notification frequency
-- Clear disclaimer about system limitations and scope
-
+- Assessment data is stored securely with appropriate privacy measures
+- Historical data allows tracking of progress over time
 ### 2. Assessment Process
 - Regular self-assessment prompts
 - Standardized mental health measurement tools
 - Real-time feedback on assessment results
 - Dynamic question flow based on previous responses
-- Automatic flagging of concerning responses with referral to professional resources
-  
-
-### 3. Recommendation Pipeline
-- Data analysis of assessment results
-- Pattern recognition for effective interventions
-- Personalized recommendation generation
-- General well-being, stress management, and mindfulness content delivery
-
-### 4. Resource Delivery Mechanism
-- Context-aware content presentation
-- Categorized mental health and study resources
-- Bookmarking and saving functionality
-
-### 5. Progress Tracking System
+### 3.Content Data Flow
+- Wellness resources are created and managed by content administrators
+- Content is categorized and tagged for appropriate recommendation matching
+- Resources focus on general well-being, stress management, and effective study techniques
+### 4.Referral Workflow
+- System identifies concerning assessment results
+- Student is presented with appropriate mental health referral resources
+- Clear guidance is provided on how to access professional services
+### 5. Notification Framework
+- Timely reminders for assessments
+- Study schedule alerts
+- Positive reinforcement messages
+### 6. Progress Tracking System
 - Longitudinal data visualization
 - Trend analysis of mental health metrics
 - Academic performance correlation insights
 
-### 6. Study Schedule Management
-- Calendar integration
-- Balanced study session planning
-- Break and self-care activity scheduling
-
-### 7. Notification Framework
-- Timely reminders for assessments
-- Study schedule alerts
-- Positive reinforcement messages
-### 8. Referral System
-
-Threshold-based identification of users who may need professional support
-Database of campus and community mental health resources
-Clear guidance on how to access professional services
-## Technical Stack
+## Technical Implementation
 
 ### Frontend
-- **Framework**: React (Web), React Native (Mobile)
-- **State Management**: Redux
-- **UI Components**: Material-UI
-- **Data Visualization**: D3.js
+- **Framework**: React (Web)
+- Responsive design for all device types
+- Accessibility-compliant interface
 
 ### Backend
-- **API Framework**: Node.js with Express
-- **Authentication**: JWT with Passport.js
-- **Assessment Processing**: Python with Flask
-- **Recommendation Engine**: Python with TensorFlow
-
-### Databases
-- **User Data**: MongoDB (NoSQL for flexible user profiles)
-- **Content Data**: PostgreSQL (Relational for structured content)
-
-### DevOps
-- **Containerization**: Docker
-- **CI/CD**: GitHub Actions
-- **Monitoring**: Prometheus and Grafana
+- Node.js API service for core operations
+- Python-based engines for assessment processing and recommendation generation
+- MongoDB for flexible data storage
 
 ## Data Flow
 
@@ -342,13 +315,16 @@ Clear guidance on how to access professional services
 - **Compliance**: Design aligned with relevant health data protection regulations
 - **Anonymization**: Personal identifiers removed from analytics data
 
-## Scalability Considerations
+## Additional Considerations
+### Scalability
+- Modular architecture allowing for future expansion
+- Database design that accommodates growing user numbers
+- API-first approach enabling potential mobile applications in the future
+### Deployment
+- Cloud-based hosting for reliability
+- Containerized services for consistent deployment
+-Automated testing to ensure functionality
 
-- **Microservices Architecture**: Allows independent scaling of components
-- **Database Sharding**: Prepared for growth in user base
-- **Caching Layer**: Redis implementation for frequently accessed resources
-- **Content Delivery Network**: For efficient delivery of static resources
-- **Horizontal Scaling**: Ability to add server instances during peak periods
 ```mermaid
 graph TD
     title[C4 Model: Context Diagram]
