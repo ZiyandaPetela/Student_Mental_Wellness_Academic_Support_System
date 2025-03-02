@@ -200,59 +200,60 @@ flowchart TD
     ReferralServices["🏥 Referral Services [External]"]:::externalSystemStyle
     
     %% User interactions
-    Student --> UIComponent
-    ContentAdmin --> AdminComponent
-    Administrator --> AdminComponent
+    Student -->|"Uses"| UIComponent
+    ContentAdmin -->|"Manages content via"| AdminComponent
+    Administrator -->|"Configures system via"| AdminComponent
     
     %% Web Application Components
-    UIComponent --> AssessmentComponent
-    UIComponent --> ResourceComponent
-    UIComponent --> DisclaimerComponent
-    UIComponent --> ReferralComponent
-    UIComponent --> NotificationComponent
+    UIComponent -->|"Displays"| AssessmentComponent
+    UIComponent -->|"Shows"| ResourceComponent
+    UIComponent -->|"Includes"| DisclaimerComponent
+    UIComponent -->|"Provides"| ReferralComponent
+    UIComponent -->|"Shows"| NotificationComponent
     
-    AdminComponent --> APIClient
-    AssessmentComponent --> APIClient
-    ResourceComponent --> APIClient
-    ReferralComponent --> APIClient
-    NotificationComponent --> APIClient
+    AdminComponent -->|"Makes API calls via"| APIClient
+    AssessmentComponent -->|"Submits data via"| APIClient
+    ResourceComponent -->|"Fetches content via"| APIClient
+    ReferralComponent -->|"Requests referrals via"| APIClient
+    NotificationComponent -->|"Gets alerts via"| APIClient
     
     %% API Service Components
-    APIClient --> Router
+    APIClient -->|"Sends requests to"| Router
     
-    Router --> AuthController
-    Router --> AssessmentController
-    Router --> RecommendationController
-    Router --> ReferralController
-    Router --> NotificationController
+    Router -->|"Routes auth requests to"| AuthController
+    Router -->|"Routes assessment data to"| AssessmentController
+    Router -->|"Routes recommendation requests to"| RecommendationController
+    Router -->|"Routes referral requests to"| ReferralController
+    Router -->|"Routes notification requests to"| NotificationController
     
     %% Controller to Service connections
-    AssessmentController --> AssessmentProcessor
-    RecommendationController --> RecommendationProcessor
-    ReferralController --> ReferralServices
-    NotificationController --> NotificationQueue
+    AssessmentController -->|"Sends data for processing to"| AssessmentProcessor
+    RecommendationController -->|"Requests recommendations from"| RecommendationProcessor
+    ReferralController -->|"Connects with"| ReferralServices
+    NotificationController -->|"Queues messages in"| NotificationQueue
     
     %% Assessment Engine components
-    AssessmentProcessor --> ScoringModule
-    AssessmentProcessor --> ValidationModule
-    AssessmentProcessor --> Database
+    AssessmentProcessor -->|"Uses for scoring"| ScoringModule
+    AssessmentProcessor -->|"Validates with"| ValidationModule
+    AssessmentProcessor -->|"Stores results in"| Database
     
     %% Recommendation Engine components
-    RecommendationProcessor --> ContentMatcher
-    RecommendationProcessor --> PriorityModule
-    RecommendationProcessor --> Database
-    ContentMatcher --> Database
+    RecommendationProcessor -->|"Matches content using"| ContentMatcher
+    RecommendationProcessor -->|"Prioritizes with"| PriorityModule
+    RecommendationProcessor -->|"Stores recommendations in"| Database
+    ContentMatcher -->|"Retrieves resources from"| Database
     
     %% Notification Service components
-    NotificationQueue --> EmailService
-    EmailService --> TemplateEngine
-    EmailService --> EmailSystem
+    NotificationQueue -->|"Triggers"| EmailService
+    EmailService -->|"Formats using"| TemplateEngine
+    EmailService -->|"Sends via"| EmailSystem
     
     classDef personStyle fill:#08427B,stroke:#052E56,color:#fff
     classDef componentStyle fill:#85BBF0,stroke:#5591D2,color:#000
     classDef databaseStyle fill:#438DD5,stroke:#2E6295,color:#fff
     classDef externalSystemStyle fill:#999999,stroke:#6B6B6B,color:#fff
-```    
+ ```
+
 
 ## End-to-End Components
 The system implements a complete end-to-end architecture covering all aspects of the student mental wellness journey:
