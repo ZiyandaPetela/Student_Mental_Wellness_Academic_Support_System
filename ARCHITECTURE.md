@@ -359,4 +359,141 @@ graph TD
     NotificationController -->|Sends notifications| EmailSystem
     SchedulerController -->|Manages schedules| ContentDatabase
     ReferralController -->|Gets referrals| ReferralService
-   ``` 
+   ```
+
+```mermaid 
+combined
+graph TD
+    %% Context Level
+    subgraph Context["Context Level"]
+        Student["Student [Person]"]
+        ContentAdmin["Content Administrator [Person]"]
+        Administrator["System Administrator [Person]"]
+        SMWASS["Student Mental Wellness & Academic Support System [Software System]"]
+        EmailSystem["Email Notification System [Software System]"]
+        ResourceDB["External Resource Database [Software System]"]
+        ReferralServices["Mental Health Referral Services [Software System]"]
+        
+        Student -->|Uses for self-assessment, receives recommendations| SMWASS
+        ContentAdmin -->|Manages wellness and academic content| SMWASS
+        Administrator -->|Manages and maintains| SMWASS
+        SMWASS -->|Sends notifications| EmailSystem
+        SMWASS -->|Retrieves resources| ResourceDB
+        SMWASS -->|Provides referrals when needed| ReferralServices
+    end
+    
+    %% Container Level
+    subgraph Containers["Container Level"]
+        subgraph "Student Mental Wellness & Academic Support System"
+            WebApp["Web Application\n[Container: JavaScript/React]"]
+            APIGateway["API Gateway\n[Container: Node.js/Express]"]
+            AuthService["Authentication Service\n[Container: Node.js/Passport]"]
+            AssessmentService["Assessment Service\n[Container: Python/Flask]"]
+            RecommendationEngine["Recommendation Engine\n[Container: Python/TensorFlow]"]
+            UserDB["User Database\n[Container: MongoDB]"]
+            ContentDB["Content Database\n[Container: PostgreSQL]"]
+            AnalyticsService["Analytics Service\n[Container: Python/Pandas]"]
+            ReferralService["Referral Service\n[Container: Node.js]"]
+        end
+        
+        Student -->|Uses| WebApp
+        ContentAdmin -->|Manages content via| WebApp
+        Administrator -->|Administers| WebApp
+        
+        WebApp -->|API calls| APIGateway
+        
+        APIGateway -->|Authenticates| AuthService
+        APIGateway -->|Requests assessments| AssessmentService
+        APIGateway -->|Gets recommendations| RecommendationEngine
+        APIGateway -->|Analyzes data| AnalyticsService
+        APIGateway -->|Gets referrals| ReferralService
+        
+        AuthService -->|Stores user data| UserDB
+        AssessmentService -->|Reads/writes assessment data| UserDB
+        RecommendationEngine -->|Reads user history| UserDB
+        RecommendationEngine -->|Reads content| ContentDB
+        AnalyticsService -->|Reads anonymized data| UserDB
+        ReferralService -->|Accesses referral resources| ResourceDB
+        
+        APIGateway -->|Sends emails| EmailSystem
+        RecommendationEngine -->|Retrieves resources| ResourceDB
+    end
+    
+    %% Component Level - Web Application
+    subgraph WebComponents["Component Level - Web Application"]
+        subgraph "Web Application Container"
+            UI["User Interface\n[Component: React]"]
+            AuthComp["Authentication Component\n[Component: React/Auth0]"]
+            AssessComp["Assessment Component\n[Component: React]"]
+            DashboardComp["Dashboard Component\n[Component: React/D3.js]"]
+            ResourceComp["Resource Component\n[Component: React]"]
+            NotifComp["Notification Component\n[Component: React]"]
+            SchedulerComp["Scheduler Component\n[Component: React]"]
+            AccessLayer["Accessibility Layer\n[Component: React/ARIA]"]
+            APIClientComp["API Client\n[Component: Axios]"]
+            DisclaimerComp["Disclaimer Component\n[Component: React]"]
+            ReferralComp["Referral Component\n[Component: React]"]
+        end
+        
+        UI -->|Implements accessibility standards| AccessLayer
+        AccessLayer -->|Enhances| AuthComp
+        AccessLayer -->|Enhances| AssessComp
+        AccessLayer -->|Enhances| DashboardComp
+        AccessLayer -->|Enhances| ResourceComp
+        AccessLayer -->|Enhances| NotifComp
+        AccessLayer -->|Enhances| SchedulerComp
+        AccessLayer -->|Enhances| DisclaimerComp
+        AccessLayer -->|Enhances| ReferralComp
+        
+        AuthComp -->|API calls| APIClientComp
+        AssessComp -->|API calls| APIClientComp
+        DashboardComp -->|API calls| APIClientComp
+        ResourceComp -->|API calls| APIClientComp
+        NotifComp -->|API calls| APIClientComp
+        SchedulerComp -->|API calls| APIClientComp
+        ReferralComp -->|API calls| APIClientComp
+        
+        APIClientComp -->|HTTP requests| APIGateway
+    end
+    
+    %% Component Level - API Gateway
+    subgraph APIComponents["Component Level - API Gateway"]
+        subgraph "API Gateway Container"
+            RouterComp["Router Component\n[Component: Express.js]"]
+            AuthMiddleware["Authentication Middleware\n[Component: JWT]"]
+            UserCtrl["User Controller\n[Component: Node.js]"]
+            AssessCtrl["Assessment Controller\n[Component: Node.js]"]
+            RecCtrl["Recommendation Controller\n[Component: Node.js]"]
+            ResCtrl["Resource Controller\n[Component: Node.js]"]
+            NotifCtrl["Notification Controller\n[Component: Node.js]"]
+            SchedCtrl["Scheduler Controller\n[Component: Node.js]"]
+            LogMiddleware["Logging Middleware\n[Component: Winston]"]
+            ReferralCtrl["Referral Controller\n[Component: Node.js]"]
+        end
+        
+        WebApp -->|HTTP requests| RouterComp
+        
+        RouterComp -->|Validates tokens| AuthMiddleware
+        RouterComp -->|Routes user requests| UserCtrl
+        RouterComp -->|Routes assessment requests| AssessCtrl
+        RouterComp -->|Routes recommendation requests| RecCtrl
+        RouterComp -->|Routes resource requests| ResCtrl
+        RouterComp -->|Routes notification requests| NotifCtrl
+        RouterComp -->|Routes scheduler requests| SchedCtrl
+        RouterComp -->|Routes referral requests| ReferralCtrl
+        RouterComp -->|Logs all requests| LogMiddleware
+        
+        UserCtrl -->|Authenticates users| AuthService
+        AssessCtrl -->|Processes assessments| AssessmentService
+        RecCtrl -->|Gets recommendations| RecommendationEngine
+        ResCtrl -->|Retrieves content| ContentDB
+        NotifCtrl -->|Sends notifications| EmailSystem
+        SchedCtrl -->|Manages schedules| ContentDB
+        ReferralCtrl -->|Gets referrals| ReferralService
+    end
+    
+    %% Link visualization levels
+    SMWASS -.-> WebApp
+    WebApp -.-> UI
+    APIGateway -.-> RouterComp
+     ```
