@@ -361,8 +361,8 @@ graph TD
     ReferralController -->|Gets referrals| ReferralService
    ```
 
-```mermaid 
-combined
+
+```mermaid
 graph TD
     %% Context Level
     subgraph Context["Context Level"]
