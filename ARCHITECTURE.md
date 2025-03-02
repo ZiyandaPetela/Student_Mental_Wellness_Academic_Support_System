@@ -1,4 +1,4 @@
-# Architecture Documentation
+# Architecture
 
 ## Project Title
 Student Mental Wellness & Academic Support System
