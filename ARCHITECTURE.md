@@ -135,7 +135,108 @@ The component diagrams detail the internal workings of key containers:
 - **Scheduler Controller**: Manages study schedule creation and updates
 - **Logging Middleware**: Records system activity
 - **Referral Controller**: Manages access to mental health referral resources
-
+```mermaid
+flowchart TD
+    Student["👨‍🎓 Student [Person]"]:::personStyle
+    ContentAdmin["👩‍💼 Content Admin [Person]"]:::personStyle
+    Administrator["👨‍💻 Admin [Person]"]:::personStyle
+    
+    subgraph WebApp["💻 Web Application Container"]
+        UIComponent["🖥️ User Interface [React]"]:::componentStyle
+        AdminComponent["⚙️ Admin Portal [React]"]:::componentStyle
+        AssessmentComponent["📝 Assessment [React]"]:::componentStyle
+        ResourceComponent["📚 Resource [React]"]:::componentStyle
+        DisclaimerComponent["⚠️ Disclaimer [React]"]:::componentStyle
+        ReferralComponent["🔄 Referral [React]"]:::componentStyle
+        NotificationComponent["🔔 Notification [React]"]:::componentStyle
+        APIClient["🔌 API Client [Axios]"]:::componentStyle
+    end
+    
+    subgraph APIService["🔌 API Service Container"]
+        Router["🔀 Router [Express]"]:::componentStyle
+        AuthController["🔑 Auth Controller [Node.js]"]:::componentStyle
+        AssessmentController["📊 Assessment Controller [Node.js]"]:::componentStyle
+        RecommendationController["🧩 Recommendation Controller [Node.js]"]:::componentStyle
+        ReferralController["🏥 Referral Controller [Node.js]"]:::componentStyle
+        NotificationController["📨 Notification Controller [Node.js]"]:::componentStyle
+    end
+    
+    subgraph NotificationService["📨 Notification Service"]
+        EmailService["✉️ Email Service [Node.js]"]:::componentStyle
+        NotificationQueue["📋 Queue [Redis]"]:::componentStyle
+        TemplateEngine["📝 Template Engine [Handlebars]"]:::componentStyle
+    end
+    
+    subgraph AssessmentEngine["📊 Assessment Engine"]
+        AssessmentProcessor["🧮 Processor [Python]"]:::componentStyle
+        ScoringModule["📈 Scoring [Python]"]:::componentStyle
+        ValidationModule["✅ Validation [Python]"]:::componentStyle
+    end
+    
+    subgraph RecommendationEngine["🧩 Recommendation Engine"]
+        RecommendationProcessor["🔍 Processor [Python]"]:::componentStyle
+        ContentMatcher["🔗 Content Matcher [Python]"]:::componentStyle
+        PriorityModule["⭐ Priority [Python]"]:::componentStyle
+    end
+    
+    Database["🗄️ Database [MongoDB]"]:::databaseStyle
+    EmailSystem["✉️ Email System [External]"]:::externalSystemStyle
+    ReferralServices["🏥 Referral Services [External]"]:::externalSystemStyle
+    
+    %% User interactions
+    Student --> UIComponent
+    ContentAdmin --> AdminComponent
+    Administrator --> AdminComponent
+    
+    %% Web Application Components
+    UIComponent --> AssessmentComponent
+    UIComponent --> ResourceComponent
+    UIComponent --> DisclaimerComponent
+    UIComponent --> ReferralComponent
+    UIComponent --> NotificationComponent
+    
+    AdminComponent --> APIClient
+    AssessmentComponent --> APIClient
+    ResourceComponent --> APIClient
+    ReferralComponent --> APIClient
+    NotificationComponent --> APIClient
+    
+    %% API Service Components
+    APIClient --> Router
+    
+    Router --> AuthController
+    Router --> AssessmentController
+    Router --> RecommendationController
+    Router --> ReferralController
+    Router --> NotificationController
+    
+    %% Controller to Service connections
+    AssessmentController --> AssessmentProcessor
+    RecommendationController --> RecommendationProcessor
+    ReferralController --> ReferralServices
+    NotificationController --> NotificationQueue
+    
+    %% Assessment Engine components
+    AssessmentProcessor --> ScoringModule
+    AssessmentProcessor --> ValidationModule
+    AssessmentProcessor --> Database
+    
+    %% Recommendation Engine components
+    RecommendationProcessor --> ContentMatcher
+    RecommendationProcessor --> PriorityModule
+    RecommendationProcessor --> Database
+    ContentMatcher --> Database
+    
+    %% Notification Service components
+    NotificationQueue --> EmailService
+    EmailService --> TemplateEngine
+    EmailService --> EmailSystem
+    
+    classDef personStyle fill:#08427B,stroke:#052E56,color:#fff
+    classDef componentStyle fill:#85BBF0,stroke:#5591D2,color:#000
+    classDef databaseStyle fill:#438DD5,stroke:#2E6295,color:#fff
+    classDef externalSystemStyle fill:#999999,stroke:#6B6B6B,color:#fff
+```    
 
 ## End-to-End Components
 The system implements a complete end-to-end architecture covering all aspects of the student mental wellness journey:
