@@ -359,7 +359,7 @@ graph TD
     NotificationController -->|Sends notifications| EmailSystem
     SchedulerController -->|Manages schedules| ContentDatabase
     ReferralController -->|Gets referrals| ReferralService
-   ```
+ ```
 
 
 ```mermaid
