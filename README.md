@@ -16,7 +16,7 @@ Once completed, the system will feature:
 - Progress tracking tools to monitor mental health over time
 - Quick access to emergency resources for those in immediate need of assistance.
 - A supportive environment that promotes academic success and well-being.
-- - Support for students from various educational institutions facing mental health challenges that affect their academic performance are the focus of this system.  It acts as a preventive measure, creating a safe space where students can get the support they require without turning to destructive coping strategies like cheating or burnout.  The system's ultimate goals are to increase student engagement, boost academic achievement, and promote a healthier learning environment by treating mental health issues in an academic setting.
+- Support for students from various educational institutions facing mental health challenges that affect their academic performance are the focus of this system.  It acts as a preventive measure, creating a safe space where students can get the support they require without turning to destructive coping strategies like cheating or burnout.  The system's ultimate goals are to increase student engagement, boost academic achievement, and promote a healthier learning environment by treating mental health issues in an academic setting.
 ## Links to:
 - [SPECIFICATION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/SPECIFICATION.md) - Detailed system specifications and Requirements 
 - [ARCHITECTURE.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ARCHITECTURE.md) - System architecture and C4 model diagrams
