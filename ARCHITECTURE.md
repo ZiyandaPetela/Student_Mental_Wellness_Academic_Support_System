@@ -33,7 +33,7 @@ The context diagram shows the overall system and its interactions with external 
 - **Primary Users**: Students seeking mental health support and academic guidance
 - **Secondary Users**: Content administrators who develop and manage general well-being, stress management, and mindfulness resources
 - **System Administrators**: Technical staff who maintain the system
-- **External Systems**: Email notification system and external resource databases, and referral services for students with serious mental health concerns
+- **External Systems**: Email notification system aand referral services for students with serious mental health concerns
 ### Container Diagram
 The container diagram breaks down the system into its major components:
 - **Web Application**: Primary interface for students and administrators
@@ -364,20 +364,64 @@ graph TD
 
 ```mermaid
 graph TD
-    Student["Student [Person]"]
-    ContentAdmin["Content Administrator [Person]"]
-    Administrator["System Administrator [Person]"]
-    SMWASS["Student Mental Wellness & Academic Support System [Software System]"]
-    EmailSystem["Email Notification System [Software System]"]
-    ReferralServices["Mental Health Referral Services [Software System]"]
+    Student["👨‍🎓 Student<br>[Person]"]:::personStyle
+    ContentAdmin["👩‍💼 Content Administrator<br>[Person]"]:::personStyle
+    Administrator["👨‍💻 System Administrator<br>[Person]"]:::personStyle
+    SMWASS["🧠 Student Mental Wellness<br>& Academic Support System<br>[Software System]"]:::mainSystemStyle
+    EmailSystem["✉️ Email Notification System<br>[Software System]"]:::externalSystemStyle
+    ReferralServices["🏥 Mental Health Referral Services<br>[Software System]"]:::externalSystemStyle
     
-    Student -->|Uses for self-assessment, receives recommendations| SMWASS
+    Student -->|Uses for self-assessment,<br>receives recommendations| SMWASS
     ContentAdmin -->|Manages wellness content| SMWASS
     Administrator -->|Manages and maintains| SMWASS
     SMWASS -->|Sends notifications| EmailSystem
     SMWASS -->|Provides referrals when needed| ReferralServices
     
-    subgraph "Enterprise Boundary"
+    subgraph EnterpriseBoundary["Enterprise Boundary"]
         SMWASS
     end
+    
+    classDef personStyle fill:#08427B,stroke:#052E56,color:#fff,shape:circle
+    classDef mainSystemStyle fill:#1168BD,stroke:#0B4884,color:#fff
+    classDef externalSystemStyle fill:#999999,stroke:#6B6B6B,color:#fff
+    classDef boundaryStyle fill:none,stroke:#888888,color:#fff,stroke-dasharray:5 5
+    
+    class EnterpriseBoundary boundaryStyle
+```
+```mermaid
+flowchart TD
+    Student["👨‍🎓 Student<br>[Person]"]:::personStyle
+    ContentAdmin["👩‍💼 Content Administrator<br>[Person]"]:::personStyle
+    Administrator["👨‍💻 System Administrator<br>[Person]"]:::personStyle
+    EmailSystem["✉️ Email Notification System<br>[Software System]"]:::externalSystemStyle
+    ReferralServices["🏥 Mental Health Referral Services<br>[Software System]"]:::externalSystemStyle
+    
+    subgraph SMWASS["🧠 Student Mental Wellness & Academic Support System"]
+        WebApp["💻 Web Application<br>[Container: JavaScript/React]"]:::containerStyle
+        API["🔌 API Service<br>[Container: Node.js/Express]"]:::containerStyle
+        AssessmentEngine["📊 Assessment Engine<br>[Container: Python]"]:::containerStyle
+        RecommendationEngine["🧩 Recommendation Engine<br>[Container: Python]"]:::containerStyle
+        NotificationService["📨 Notification Service<br>[Container: Node.js]"]:::containerStyle
+        Database["🗄️ Database<br>[Container: MongoDB]"]:::containerStyle
+    end
+    
+    Student -->|"Uses for self-assessment,<br>receives recommendations"| WebApp
+    ContentAdmin -->|"Manages wellness content"| WebApp
+    Administrator -->|"Manages and maintains"| WebApp
+    Administrator -->|"Configures and monitors"| API
+    
+    WebApp -->|"Makes API requests"| API
+    API -->|"Processes assessments"| AssessmentEngine
+    API -->|"Generates recommendations"| RecommendationEngine
+    API -->|"Triggers notifications"| NotificationService
+    AssessmentEngine -->|"Stores/retrieves data"| Database
+    RecommendationEngine -->|"Stores/retrieves data"| Database
+    NotificationService -->|"Sends email notifications"| EmailSystem
+    API -->|"Provides referrals when needed"| ReferralServices
+    
+    classDef personStyle fill:#08427B,stroke:#052E56,color:#fff
+    classDef containerStyle fill:#438DD5,stroke:#2E6295,color:#fff
+    classDef externalSystemStyle fill:#999999,stroke:#6B6B6B,color:#fff
+    
+    style SMWASS fill:none,stroke:#1168BD,color:#1168BD,stroke-width:2px
 ```
