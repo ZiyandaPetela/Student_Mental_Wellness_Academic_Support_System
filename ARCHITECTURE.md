@@ -33,7 +33,7 @@ The context diagram shows the overall system and its interactions with external 
 - **Primary Users**: Students seeking mental health support and academic guidance
 - **Secondary Users**: Content administrators who develop and manage general well-being, stress management, and mindfulness resources
 - **System Administrators**: Technical staff who maintain the system
-- **External Systems**: Email notification system aand referral services for students with serious mental health concerns
+- **External Systems**: Email notification system and referral services for students with serious mental health concerns.
 ```mermaid
 graph TD
     Student["👨‍🎓 Student<br>[Person]"]:::personStyle
@@ -264,7 +264,7 @@ The system implements a complete end-to-end architecture covering all aspects of
 - Preference setting for study habits and notification frequency
 - Assessment data is stored securely with appropriate privacy measures
 - Historical data allows tracking of progress over time
-### 2. Assessment Process
+### 2.Assessment Process
 - Regular self-assessment prompts
 - Standardized mental health measurement tools
 - Real-time feedback on assessment results
@@ -277,11 +277,11 @@ The system implements a complete end-to-end architecture covering all aspects of
 - System identifies concerning assessment results
 - Student is presented with appropriate mental health referral resources
 - Clear guidance is provided on how to access professional services
-### 5. Notification Framework
+### 5.Notification Framework
 - Timely reminders for assessments
 - Study schedule alerts
 - Positive reinforcement messages
-### 6. Progress Tracking System
+### 6.Progress Tracking System
 - Longitudinal data visualization
 - Trend analysis of mental health metrics
 - Academic performance correlation insights
@@ -340,5 +340,5 @@ The system implements a complete end-to-end architecture covering all aspects of
 ### Deployment
 - Cloud-based hosting for reliability
 - Containerized services for consistent deployment
--Automated testing to ensure functionality
+- Automated testing to ensure functionality
 
