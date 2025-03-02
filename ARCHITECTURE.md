@@ -496,4 +496,4 @@ graph TD
     SMWASS -.-> WebApp
     WebApp -.-> UI
     APIGateway -.-> RouterComp
-     ```
+```
