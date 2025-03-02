@@ -11,7 +11,7 @@
 * Additionally, it seeks to promote awareness of mental health resources and encourage students to prioritize their well-being, ultimately leading to better academic outcomes, higher retention rates, and enhanced engagement.
 * The system will measure its impact by tracking user feedback and academic performance metrics, ensuring continuous improvement and effectiveness in supporting students
 *  Furthermore, the system is designed to be adaptable and scalable, allowing it to cater to varying student populations across different educational contexts in the future.
-* Finally, My initial focus will be on incorporating the system into my current university, where I can tailor the resources and support to fit the specific needs of the student population.
+* Finally, my initial focus will be on incorporating the system into my current university, where I can tailor the resources and support to fit the specific needs of the student population.
 
 
 ## 2.0 Problem Statement
@@ -39,7 +39,7 @@
    * The initial version can focus on key features (assessment, resources, and basic recommendations) with the potential for expansion
    * User authentication and basic data storage needs are manageable for a single developer
    * The project aligns with current web accessibility standards and responsive design practices
-   * AI or rule-based algorithms can efficiently analyze responses and generate tailored well-being tips without requiring complex machine learning models.
+   * AI or rule-based algorithms will analyze responses and generate tailored well-being tips without requiring complex machine learning models.
    * The system is web-based and mobile-compatible, ensuring accessibility for students from different devices.
    * Cloud-based databases such as Firebase or PostgreSQL allow secure storage while maintaining privacy.
    * Minimal infrastructure is required (primarily frontend and backend development)
@@ -59,7 +59,7 @@ time management tools that incorporate wellbeing.
 ## 5.0 Functional Requirements
 ### 5.1 User Management
 #### User Registration and Authentication
-* Students must be able to create accounts using institutional email addresses
+* Students shall create accounts using institutional email addresses
 * The system shall support secure login with multi-factor authentication
 * User profiles shall store basic academic information and mental health preferences
 ##### User Roles and Permissions
