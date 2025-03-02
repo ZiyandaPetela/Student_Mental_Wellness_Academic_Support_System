@@ -207,6 +207,11 @@ graph TD
     end
 
 ```
+
+
+
+
+
 ```mermaid
 graph TD
     title[C4 Model: Container Diagram]
@@ -252,9 +257,15 @@ graph TD
     APIGateway -->|Sends emails| EmailSystem
     RecommendationEngine -->|Retrieves resources| ResourceDB
 ```
+
+
+
+
+
+
 ```mermaid
 graph TD
-    title[C4 Model: Component Diagram - Web Application]
+    title[C4 Model: Component Diagram - Web Application with Accessibility]
     
     Student["Student\n[Person]"]
     
@@ -266,19 +277,25 @@ graph TD
         ResourceComponent["Resource Component\n[Component: React]"]
         NotificationComponent["Notification Component\n[Component: React]"]
         SchedulerComponent["Scheduler Component\n[Component: React]"]
+        AccessibilityLayer["Accessibility Layer\n[Component: React/ARIA]"]
         APIClient["API Client\n[Component: Axios]"]
+        DisclaimerComponent["Disclaimer Component\n[Component: React]"]
+        ReferralComponent["Referral Component\n[Component: React]"]
     end
     
     APIGateway["API Gateway\n[Container]"]
     
     Student -->|Views and interacts with| UserInterface
     
-    UserInterface -->|User login/registration| AuthComponent
-    UserInterface -->|Take assessments| AssessmentComponent
-    UserInterface -->|View progress| DashboardComponent
-    UserInterface -->|Access resources| ResourceComponent
-    UserInterface -->|Manage notifications| NotificationComponent
-    UserInterface -->|Create study schedules| SchedulerComponent
+    UserInterface -->|Implements accessibility standards| AccessibilityLayer
+    AccessibilityLayer -->|Enhances| AuthComponent
+    AccessibilityLayer -->|Enhances| AssessmentComponent
+    AccessibilityLayer -->|Enhances| DashboardComponent
+    AccessibilityLayer -->|Enhances| ResourceComponent
+    AccessibilityLayer -->|Enhances| NotificationComponent
+    AccessibilityLayer -->|Enhances| SchedulerComponent
+    AccessibilityLayer -->|Enhances| DisclaimerComponent
+    AccessibilityLayer -->|Enhances| ReferralComponent
     
     AuthComponent -->|API calls| APIClient
     AssessmentComponent -->|API calls| APIClient
@@ -286,15 +303,22 @@ graph TD
     ResourceComponent -->|API calls| APIClient
     NotificationComponent -->|API calls| APIClient
     SchedulerComponent -->|API calls| APIClient
+    ReferralComponent -->|API calls| APIClient
     
     APIClient -->|HTTP requests| APIGateway
 ```
+
+
+
+
+
+
+
 ```mermaid
 graph TD
     title[C4 Model: Component Diagram - API Gateway]
     
     WebApp["Web Application\n[Container]"]
-    MobileApp["Mobile Application\n[Container]"]
     
     subgraph "API Gateway Container"
         RouterComponent["Router Component\n[Component: Express.js]"]
@@ -306,6 +330,7 @@ graph TD
         NotificationController["Notification Controller\n[Component: Node.js]"]
         SchedulerController["Scheduler Controller\n[Component: Node.js]"]
         LoggingMiddleware["Logging Middleware\n[Component: Winston]"]
+        ReferralController["Referral Controller\n[Component: Node.js]"]
     end
     
     AuthService["Authentication Service\n[Container]"]
@@ -313,9 +338,9 @@ graph TD
     RecommendationEngine["Recommendation Engine\n[Container]"]
     ContentDatabase["Content Database\n[Container]"]
     EmailSystem["Email Notification System\n[Software System]"]
+    ReferralService["Referral Service\n[Container]"]
     
     WebApp -->|HTTP requests| RouterComponent
-    MobileApp -->|HTTP requests| RouterComponent
     
     RouterComponent -->|Validates tokens| AuthMiddleware
     RouterComponent -->|Routes user requests| UserController
@@ -324,6 +349,7 @@ graph TD
     RouterComponent -->|Routes resource requests| ResourceController
     RouterComponent -->|Routes notification requests| NotificationController
     RouterComponent -->|Routes scheduler requests| SchedulerController
+    RouterComponent -->|Routes referral requests| ReferralController
     RouterComponent -->|Logs all requests| LoggingMiddleware
     
     UserController -->|Authenticates users| AuthService
@@ -332,4 +358,5 @@ graph TD
     ResourceController -->|Retrieves content| ContentDatabase
     NotificationController -->|Sends notifications| EmailSystem
     SchedulerController -->|Manages schedules| ContentDatabase
+    ReferralController -->|Gets referrals| ReferralService
    ``` 
