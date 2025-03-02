@@ -366,11 +366,15 @@ graph TD
 graph TD
     Student["Student [Person]"]
     ContentAdmin["Content Administrator [Person]"]
+    Administrator["System Administrator [Person]"]
     SMWASS["Student Mental Wellness & Academic Support System [Software System]"]
+    EmailSystem["Email Notification System [Software System]"]
     ReferralServices["Mental Health Referral Services [Software System]"]
     
     Student -->|Uses for self-assessment, receives recommendations| SMWASS
     ContentAdmin -->|Manages wellness content| SMWASS
+    Administrator -->|Manages and maintains| SMWASS
+    SMWASS -->|Sends notifications| EmailSystem
     SMWASS -->|Provides referrals when needed| ReferralServices
     
     subgraph "Enterprise Boundary"
