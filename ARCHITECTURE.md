@@ -80,7 +80,7 @@ flowchart TD
     ReferralServices["🏥 Mental Health Referral Services<br>[Software System]"]:::externalSystemStyle
     
     subgraph SMWASS["🧠 Student Mental Wellness & Academic Support System"]
-        WebApp["💻 Web Application<br>[Container: JavaScript/React]"]:::containerStyle
+        WebApp["💻 Web Application<br>[Container: React]"]:::containerStyle
         API["🔌 API Service<br>[Container: Node.js/Express]"]:::containerStyle
         AssessmentEngine["📊 Assessment Engine<br>[Container: Python]"]:::containerStyle
         RecommendationEngine["🧩 Recommendation Engine<br>[Container: Python]"]:::containerStyle
@@ -382,4 +382,3 @@ The system implements a complete end-to-end architecture covering all aspects of
 - Cloud-based hosting for reliability
 - Containerized services for consistent deployment
 - Automated testing to ensure functionality
- ```
