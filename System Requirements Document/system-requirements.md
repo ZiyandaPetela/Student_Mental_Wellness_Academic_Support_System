@@ -1,7 +1,3 @@
-# System Requirements Document (SRD)
-
-## 1. Stakeholder Analysis
-(See `stakeholder-analysis.md` for details.)
 
 ## 2. Functional Requirements
 
