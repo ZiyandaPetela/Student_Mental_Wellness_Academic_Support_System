@@ -28,7 +28,7 @@
 ## 5 Progress Tracking
 - **FR11:** -The system shall track and visualize mental wellness trends over time.
      - **Acceptance Criteria**: Trends must be displayed in a user-friendly dashboard with graphs and charts.
--**FR12:**- The system shall allow students to set mental wellness goals and track progress.
+- **FR12:**- The system shall allow students to set mental wellness goals and track progress.
     - **Acceptance Criteria**: Students must receive notifications when they achieve milestones.
 
 # 2. Non-Functional Requirements
