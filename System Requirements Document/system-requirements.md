@@ -26,53 +26,53 @@
 - **FR10:** - The system shall provide study guides and exam preparation strategies with mental wellness components.
      - Acceptance Criteria: Study guides must include tips for managing stress during exams.
 ## 5 Progress Tracking
-**FR11:** -The system shall track and visualize mental wellness trends over time.
+- **FR11:** -The system shall track and visualize mental wellness trends over time.
      - **Acceptance Criteria**: Trends must be displayed in a user-friendly dashboard with graphs and charts.
-- **FR2:**- The system shall allow students to set mental wellness goals and track progress.
+-**FR12:**- The system shall allow students to set mental wellness goals and track progress.
     - **Acceptance Criteria**: Students must receive notifications when they achieve milestones.
 
 # 2. Non-Functional Requirements
 
 ## 2.1 Usability
-1. The system shall comply with **WCAG 2.1 AA standards** for accessibility.
+- **NRF1:**- The system shall comply with **WCAG 2.1 AA standards** for accessibility.
    - **Acceptance Criteria**: All features must be accessible via keyboard navigation and screen readers.
-2. The system shall provide a user-friendly interface with intuitive navigation.
+- **NRF2:** The system shall provide a user-friendly interface with intuitive navigation.
    - **Acceptance Criteria**: 90% of users must rate the interface as "easy to use" in a post-launch survey.
 ## 2.2 Deployability
-3. The system shall be deployable on **Windows and Linux servers**.
+- **NRF3:**-The system shall be deployable on **Windows and Linux servers**.
     - **Acceptance Criteria**: The system must pass deployment tests on both Windows and Linux environments.
-4. The system shall support **containerized deployment** using Docker.
+- **NRF4:**-The system shall support **containerized deployment** using Docker.
     - **Acceptance Criteria**: The system must run successfully in a Docker container on both development and production environments.
-5. The system shall include **automated deployment scripts** for continuous integration/continuous deployment (CI/CD).
+- **NRF5:**-The system shall include **automated deployment scripts** for continuous integration/continuous deployment (CI/CD).
     - **Acceptance Criteria**: Deployment scripts must reduce deployment time by 50% compared to manual deployment.
 ## 2.3 Security
-6. All user data shall be encrypted using **AES-256**.
+- **NRF6:**- All user data shall be encrypted using **AES-256**.
    - **Acceptance Criteria**: Data encryption must be verified through a security audit.
-7. The system shall comply with **educational data privacy regulations** (e.g., POPI, FERPA).
+- **NRF7:**-The system shall comply with **educational data privacy regulations** (e.g., POPI, FERPA).
    - **Acceptance Criteria**: A compliance report must be generated and reviewed by legal experts.
 
 ## 2.4 Performance
-8. The system shall load pages within **3 seconds** on standard connections.
+- **NRF8:**-The system shall load pages within **3 seconds** on standard connections.
    - **Acceptance Criteria**: 95% of page loads must complete within 3 seconds under normal load.
-9. The system shall process assessment results within **2 seconds**.
+- **NRF9:**-The system shall process assessment results within **2 seconds**.
    - **Acceptance Criteria**: 95% of assessments must be processed within 2 seconds.
 
 ## 2.5 Scalability
-10. The system shall support **1,000 concurrent users** during peak hours.
+- **NRF10:**-The system shall support **1,000 concurrent users** during peak hours.
    - **Acceptance Criteria**: The system must handle 1,000 concurrent users without performance degradation.
-11. The system shall be scalable to accommodate future enhancements (e.g., trend tracking, real-time chat support).
+- **NRF11:**- The system shall be scalable to accommodate future enhancements (e.g., trend tracking, real-time chat support).
      - **Acceptance Criteria**: The system must support a 20% increase in users without requiring major architectural changes.
 
 ## 2.6 Reliability
-12. The system shall maintain **99.5% availability** during academic terms.
+- **NRF12:**-The system shall maintain **99.5% availability** during academic terms.
     - **Acceptance Criteria**: Downtime must not exceed 0.5% during academic terms.
-13. The system shall perform **automatic backups** of all user data.
+- **NRF13:**- The system shall perform **automatic backups** of all user data.
     - **Acceptance Criteria**: Backups must occur daily and be stored securely offsite.
 
 ## 2.7 Maintainability
-14. Documentation shall include an **API guide** for future integrations.
+- **NRF14:**- Documentation shall include an **API guide** for future integrations.
     - **Acceptance Criteria**: API documentation must cover all endpoints with examples.
-15. The system shall support **modular updates** without requiring a full system restart.
+- **NRF15:**- The system shall support **modular updates** without requiring a full system restart.
     - **Acceptance Criteria**: Updates to individual modules must not disrupt system functionality.
 
 
