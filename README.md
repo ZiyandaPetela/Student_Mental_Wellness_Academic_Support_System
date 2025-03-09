@@ -20,9 +20,9 @@ Once completed, the system will feature:
 ## Links to:
 - [SPECIFICATION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/SPECIFICATION.md) - Detailed system specifications and Requirements 
 - [ARCHITECTURE.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ARCHITECTURE.md) - System architecture and C4 model diagrams
-- [Stakeholder Analysis](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/stakeholder-analysis.md) - Stakeholders, roles, concerns, and success metrics.
-- [System Requirements (SRD)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/system-requirements.md) - Functional/non-functional requirements with acceptance criteria. 
-- [Reflection](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/reflection.md)  - Challenges in balancing stakeholder needs. |
+- [Stakeholder Analysis.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/stakeholder-analysis.md) - Stakeholders, roles, concerns, and success metrics.
+- [System Requirements.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/system-requirements.md) - Functional/non-functional requirements with acceptance criteria. 
+- [Reflection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/reflection.md)  - Challenges in balancing stakeholder needs. |
 
 
 
