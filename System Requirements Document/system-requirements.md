@@ -7,7 +7,7 @@
      - **Acceptance Criteria**: Registration must include validation of institutional email domains.
    - The system shall support secure login with multi-factor authentication.
      - **Acceptance Criteria**: Login must support at least two authentication factors (e.g., password + OTP).
-     - The system shall store user profiles with basic academic information and mental health preferences.
+   - The system shall store user profiles with basic academic information and mental health preferences.
       - **Acceptance Criteria**: Profiles must include fields for academic year, major, and mental health preferences.
 
 ### 2.2 Self-Assessment Module
