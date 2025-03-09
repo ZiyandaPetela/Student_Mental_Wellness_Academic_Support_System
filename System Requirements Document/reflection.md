@@ -3,7 +3,7 @@
 ## Introduction
 As I work on developing the **Student Mental Wellness & Academic Support System**, I’ve encountered several challenges in balancing the needs of different stakeholders. Each group has unique priorities, and ensuring the system meets everyone's expectations requires careful consideration, trade-offs, and creative problem-solving. This reflection outlines the challenges I’ve faced so far, how I plan to address them, and the lessons I’m learning throughout the process.
 
----
+
 
 ## Challenges I’m Facing
 
@@ -23,7 +23,7 @@ As I work on developing the **Student Mental Wellness & Academic Support System*
 - With some stakeholders (e.g., students, parents) there are concerns about the **stigma** associated with using mental health tools, which could reduce system adoption.
 - Ensuring the system is **non-intrusive** and **encouraging** is critical to overcoming this challenge.
 
----
+
 
 ## How I Plan to Address These Challenges
 
@@ -43,7 +43,7 @@ As I work on developing the **Student Mental Wellness & Academic Support System*
 - I am planning on conducting **user testing** with students and counselors to ensure the system is intuitive and non-intrusive.
 - I plan to add features like **anonymous self-assessments** and **positive reinforcement messages** to reduce stigma and encourage adoption.
 
----
+
 
 ## Conclusion
 Balancing the needs of different stakeholders is one of the most challenging aspects of developing the **Student Mental Wellness & Academic Support System**. By prioritizing core features, ensuring compliance with data privacy regulations, and designing a scalable and user-centric system, I aim to address the diverse needs of all stakeholders.
