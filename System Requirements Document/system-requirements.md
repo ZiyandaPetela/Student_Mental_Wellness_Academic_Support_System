@@ -8,11 +8,11 @@
 - **FR3**: The system shall store user profiles with academic year, major, and mental health preferences.
      - **Acceptance Criteria**:Profiles include mandatory fields for academic and wellness data.
 ## 2 Self-Assessment Module
-- **FR4:** The system shall implement PHQ-9 for depression ans GAD-7 for anxiety assessments with real-time feedback. 
+- **FR4:** -The system shall implement PHQ-9 for depression ans GAD-7 for anxiety assessments with real-time feedback. 
    - **Acceptance Criteria**: Assessments must include validated tools and provide real-time feedback.
-- **FR5:** The system shall allow students to customize the frequency of assessments based on their needs.
+- **FR5:** -The system shall allow students to customize the frequency of assessments based on their needs.
    - **Acceptance Criteria**: Users can set reminders (daily/weekly/monthly).
-6. The system shall assess how mental health issues are affecting specific academic activities (e.g., attendance, grades).
+- **FR6** -The system shall assess how mental health issues are affecting specific academic activities (e.g., attendance, grades).
     - **Acceptance Criteria**: The system must correlate mental health metrics with academic performance indicators.
 
 ## 3 Personalized Recommendation Engine
