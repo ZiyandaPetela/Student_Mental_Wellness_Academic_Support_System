@@ -8,7 +8,7 @@ As I work on developing the **Student Mental Wellness & Academic Support System*
 ## Challenges I’m Facing
 
 ### 1. **Conflicting Priorities**
-- On **Students** I am stucked between choosing features like instant notifications and personalized recommendations, but on  **IT team** I am concerned about system performance and bandwidth limitations, especially during peak usage (e.g., exam periods).
+- On **Students** I am stuck between choosing features like instant notifications and personalized recommendations, but on  **IT team** I am concerned about system performance and bandwidth limitations, especially during peak usage (e.g., exam periods).
 - At **Counselors** wanted to emphasize the importance of early detection of mental health issues, while on **university administrators** I am thinking of focusing on cost-effectiveness and scalability.
 
 ### 2. **Data Privacy vs. Personalization**
