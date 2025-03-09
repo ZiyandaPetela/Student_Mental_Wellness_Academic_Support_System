@@ -7,7 +7,7 @@ confirm/check this thing of example in thi document
 2. The system shall support secure login with multi-factor authentication.
      - **Acceptance Criteria**: Login must support at least two authentication factors (e.g., password + OTP).
 3. The system shall store user profiles with basic academic information and mental health preferences.
-    - **Acceptance Criteria**: Profiles must include fields for academic year, major, and mental health preferences.
+     - **Acceptance Criteria**: Profiles must include fields for academic year, major, and mental health preferences.
 
 ## 1.2 Self-Assessment Module
 4. The system shall implement standardized mental health screening tools (e.g., PHQ-9 for depression, GAD-7 for anxiety).
@@ -15,7 +15,7 @@ confirm/check this thing of example in thi document
 5. The system shall allow students to customize the frequency of assessments based on their needs.
    - **Acceptance Criteria**: Students must be able to set assessment reminders (e.g., weekly, monthly).
 6. The system shall assess how mental health issues are affecting specific academic activities (e.g., attendance, grades).
-  - **Acceptance Criteria**: The system must correlate mental health metrics with academic performance indicators.
+    - **Acceptance Criteria**: The system must correlate mental health metrics with academic performance indicators.
 
 ## 1.3 Personalized Recommendation Engine
 7. The system shall provide personalized mental health resources based on assessment results.
@@ -63,11 +63,11 @@ confirm/check this thing of example in thi document
 10. The system shall support **1,000 concurrent users** during peak hours.
    - **Acceptance Criteria**: The system must handle 1,000 concurrent users without performance degradation.
 11. The system shall be scalable to accommodate future enhancements (e.g., trend tracking, real-time chat support).
-   - **Acceptance Criteria**: The system must support a 20% increase in users without requiring major architectural changes.
+     - **Acceptance Criteria**: The system must support a 20% increase in users without requiring major architectural changes.
 
 ## 2.6 Reliability
 12. The system shall maintain **99.5% availability** during academic terms.
-   - **Acceptance Criteria**: Downtime must not exceed 0.5% during academic terms.
+    - **Acceptance Criteria**: Downtime must not exceed 0.5% during academic terms.
 13. The system shall perform **automatic backups** of all user data.
     - **Acceptance Criteria**: Backups must occur daily and be stored securely offsite.
 
