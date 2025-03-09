@@ -20,6 +20,9 @@ Once completed, the system will feature:
 ## Links to:
 - [SPECIFICATION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/SPECIFICATION.md) - Detailed system specifications and Requirements 
 - [ARCHITECTURE.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ARCHITECTURE.md) - System architecture and C4 model diagrams
+- [Stakeholder Analysis](docs/stakeholder-analysis.md) - Stakeholders, roles, concerns, and success metrics.
+- [System Requirements (SRD)](docs/system-requirements.md) - Functional/non-functional requirements with acceptance criteria. 
+- [Reflection](docs/reflection.md)  - Challenges in balancing stakeholder needs. |
 
 
 
