@@ -26,7 +26,7 @@ confirm/check this thing of example in thi document
 9. The system shall provide curated articles, videos, and interactive tools for mental wellness.
     - **Acceptance Criteria**: Content must be categorized by mental health topics (e.g., stress, anxiety, depression).
 10. The system shall provide study guides and exam preparation strategies with mental wellness components.
-    - Acceptance Criteria: Study guides must include tips for managing stress during exams.
+     - Acceptance Criteria: Study guides must include tips for managing stress during exams.
 ## 1.5 Progress Tracking
 11. The system shall track and visualize mental wellness trends over time.
      - **Acceptance Criteria**: Trends must be displayed in a user-friendly dashboard with graphs and charts.
