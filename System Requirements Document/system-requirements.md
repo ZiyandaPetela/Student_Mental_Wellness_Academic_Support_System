@@ -62,17 +62,18 @@
    - **Acceptance Criteria**: The system must handle 1,000 concurrent users without performance degradation.
 - **NRF11:**- The system shall be scalable to accommodate future enhancements (e.g., trend tracking, real-time chat support).
      - **Acceptance Criteria**: The system must support a 20% increase in users without requiring major architectural changes.
-
-## 2.6 Reliability
-- **NRF12:**-The system shall maintain **99.5% availability** during academic terms.
+## 2.6 Maintainability
+- **NRF12:**- Documentation shall include an **API guide** for future integrations.
+    - **Acceptance Criteria**: API documentation must cover all endpoints with examples.
+- **NRF13:**- The system shall support **modular updates** without requiring a full system restart.
+    - **Acceptance Criteria**: Updates to individual modules must not disrupt system functionality.
+      
+## 2.7 Reliability
+- **NRF14:**-The system shall maintain **99.5% availability** during academic terms.
     - **Acceptance Criteria**: Downtime must not exceed 0.5% during academic terms.
-- **NRF13:**- The system shall perform **automatic backups** of all user data.
+- **NRF15:**- The system shall perform **automatic backups** of all user data.
     - **Acceptance Criteria**: Backups must occur daily and be stored securely offsite.
 
-## 2.7 Maintainability
-- **NRF14:**- Documentation shall include an **API guide** for future integrations.
-    - **Acceptance Criteria**: API documentation must cover all endpoints with examples.
-- **NRF15:**- The system shall support **modular updates** without requiring a full system restart.
-    - **Acceptance Criteria**: Updates to individual modules must not disrupt system functionality.
+
 
 
