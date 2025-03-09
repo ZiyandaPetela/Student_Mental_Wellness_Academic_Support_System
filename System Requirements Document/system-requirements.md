@@ -5,14 +5,14 @@
      - **Acceptance Criteria**: Registration must include validation of institutional email domains and fails for non-institutional emails..
 - **FR2:**- The system shall support multi-factor authentication (password + OTP).
      - **Acceptance Criteria**: 100% of logins require two-factor verification.
-- **FR3**: The system shall store user profiles with academic year, major, and mental health preferences.
+- **FR3:** -The system shall store user profiles with academic year, major, and mental health preferences.
      - **Acceptance Criteria**:Profiles include mandatory fields for academic and wellness data.
 ## 2 Self-Assessment Module
 - **FR4:** -The system shall implement PHQ-9 for depression ans GAD-7 for anxiety assessments with real-time feedback. 
    - **Acceptance Criteria**: Assessments must include validated tools and provide real-time feedback.
 - **FR5:** -The system shall allow students to customize the frequency of assessments based on their needs.
    - **Acceptance Criteria**: Users can set reminders (daily/weekly/monthly).
-- **FR6** -The system shall assess how mental health issues are affecting specific academic activities (e.g., attendance, grades).
+- **FR6:** -The system shall assess how mental health issues are affecting specific academic activities (e.g., attendance, grades).
     - **Acceptance Criteria**: The system must correlate mental health metrics with academic performance indicators.
 
 ## 3 Personalized Recommendation Engine
@@ -36,7 +36,7 @@
 ## 2.1 Usability
 - **NRF1:**- The system shall comply with **WCAG 2.1 AA standards** for accessibility.
    - **Acceptance Criteria**: All features must be accessible via keyboard navigation and screen readers.
-- **NRF2:** The system shall provide a user-friendly interface with intuitive navigation.
+- **NRF2:** - The system shall provide a user-friendly interface with intuitive navigation.
    - **Acceptance Criteria**: 90% of users must rate the interface as "easy to use" in a post-launch survey.
 ## 2.2 Deployability
 - **NRF3:**-The system shall be deployable on **Windows and Linux servers**.
