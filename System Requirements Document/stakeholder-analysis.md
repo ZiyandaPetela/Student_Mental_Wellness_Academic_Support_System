@@ -1,5 +1,7 @@
-
 # Stakeholder Analysis Table
+* This document identifies the key stakeholders for the **Student Mental Wellness & Academic Support System**, their roles, concerns, pain points, and success metrics. Understanding these stakeholders is critical to ensuring the system meets their needs and delivers value.
+
+
 
 | **Stakeholder**            | **Role**                                                                 | **Key Concerns**                                                                 | **Pain Points**                                                                 | **Success Metrics**                                                                 |
 |----------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
