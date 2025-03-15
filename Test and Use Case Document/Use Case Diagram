@@ -1,4 +1,8 @@
 ```mermaid
+---
+title: Student Mental Wellness & Academic Support System
+---
+
 usecaseDiagram
     actor Student
     actor "Counselor/Support Staff" as Counselor
