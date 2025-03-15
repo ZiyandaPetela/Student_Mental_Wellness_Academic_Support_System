@@ -1,1 +1,46 @@
+---
+title: Student Mental Wellness & Academic Support System
+---
+    
+usecaseDiagram
+    actor Student
+    actor "Counselor/Support Staff" as Counselor
+    actor "University Administrator" as Admin
+    actor "IT Staff" as IT
+    actor "Faculty/Lecturer" as Faculty
+    actor "Parent/Guardian" as Parent
 
+    Student --> (Register/Login)
+    Student --> (Complete Wellness Assessment)
+    Student --> (View Personalized Recommendations)
+    Student --> (Schedule Counseling Appointment)
+    Student --> (Track Mental Wellness Goals)
+    Student --> (Access Resource Library)
+    Student --> (View Academic Support Tools)
+    Student --> (Receive Notifications)
+
+    Counselor --> (Monitor Student Wellness Trends)
+    Counselor --> (Manage Appointment Calendar)
+    Counselor --> (Generate Risk Assessment Reports)
+    Counselor --> (Initiate Proactive Outreach)
+    Counselor --> (Update Resource Library Content)
+
+    Admin --> (View Institutional Analytics)
+    Admin --> (Configure Access Permissions)
+    Admin --> (Audit System Compliance)
+
+    IT --> (Maintain System Infrastructure)
+    IT --> (Ensure Data Encryption)
+    IT --> (Deploy System Updates)
+
+    Faculty --> (Submit Academic Performance Alert)
+    Faculty --> (View Student Wellness Status)
+    Faculty --> (Request Counselor Collaboration)
+
+    Parent --> (View Wellness Summary)
+    Parent --> (Communicate with University)
+
+    (Schedule Counseling Appointment) ..> (Check Counselor Availability) : <<include>>
+    (Personalized Recommendations) ..> (Analyze Assessment Data) : <<include>>
+    (Initiate Proactive Outreach) ..> (Monitor Student Wellness Trends) : <<extend>>
+    (Track Mental Wellness Goals) ..> (Update Progress Dashboard) : <<include>>
