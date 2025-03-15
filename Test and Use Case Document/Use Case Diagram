@@ -1,7 +1,4 @@
----
-title: Student Mental Wellness & Academic Support System
----
-    
+```mermaid
 usecaseDiagram
     actor Student
     actor "Counselor/Support Staff" as Counselor
@@ -44,3 +41,8 @@ usecaseDiagram
     (Personalized Recommendations) ..> (Analyze Assessment Data) : <<include>>
     (Initiate Proactive Outreach) ..> (Monitor Student Wellness Trends) : <<extend>>
     (Track Mental Wellness Goals) ..> (Update Progress Dashboard) : <<include>>
+
+  
+```
+
+
