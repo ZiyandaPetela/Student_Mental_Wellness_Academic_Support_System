@@ -39,10 +39,10 @@ This relationship ensures that the system **facilitates direct interaction betwe
 ### How the Diagram Addresses Stakeholder Concerns  
 The system is designed to **support mental wellness** while ensuring **data security and accessibility**:  
 
-✅ **Students** receive structured mental health support through assessments, recommendations, and goal tracking.  
-✅ **Counsellors & Administrators** monitor student wellness trends and intervene when necessary.  
-✅ **IT Staff & Admins** ensure system security and customization for smooth functionality.  
-✅ **Faculty & Parents** (if authorized) access anonymized insights to provide additional support.  
+- **Students** receive structured mental health support through assessments, recommendations, and goal tracking.  
+- **Counsellors & Administrators** monitor student wellness trends and intervene when necessary.  
+- **IT Staff & Admins** ensure system security and customization for smooth functionality.  
+- **Faculty & Parents** (if authorized) access anonymized insights to provide additional support.  
 
 By incorporating these use cases and relationships, the system ensures **efficient mental health monitoring, timely intervention, and data security**, meeting all stakeholder needs.  
 
