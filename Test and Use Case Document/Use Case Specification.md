@@ -281,3 +281,21 @@ Technical staff configure and maintain system settings, including assessment par
 5. System applies changes with emergency override flag
 6. System notifies all technical administrators of emergency change
 7. System schedules mandatory review of emergency changes
+## Use Case 9: Analyze Academic Impact (FR6)
+### Actor: Counsellor
+Description: Correlates mental health metrics with academic performance
+### Preconditions:
+- Student has completed ≥2 assessments
+- Academic records available
+### Postconditions:
+- Correlation report generated
+- Intervention list created
+### Basic Flow:
+1. Select student(s) for analysis
+2. Choose academic metrics (GPA/attendance)
+3. Set analysis timeframe
+4. Generate correlation matrix
+5. Flag students with >0.7 negative correlation
+6. Export report for academic advisors
+### Alternative Flows:
+- A1: No significant correlation → Suggest reassessment in 4 weeks
