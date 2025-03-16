@@ -6,7 +6,7 @@ One of the biggest challenges in translating system requirements into use cases 
 To address this, stakeholder feedback and refinement were necessary. Breaking down vague requirements into actionable steps was key to ensuring the system met real-world needs.
 
 ## 2. Identifying and Defining Actors
-Another challenge was identifying all relevant actors and defining their roles. Some actors, like students and counselors, had clear roles, while others, like administrators and IT staff, needed further clarification.
+Another challenge was identifying all relevant actors and defining their roles. Some actors, like students and counsellors, had clear roles, while others, like administrators and IT staff, needed further clarification.
 
 For instance, in the "Configure System Settings" use case, IT staff and administrators both have roles, but their level of access differs. This required careful distinction to avoid redundant responsibilities.
 
