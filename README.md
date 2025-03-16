@@ -26,7 +26,7 @@ Once completed, the system will feature:
 - [Reflection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/reflection.md)  - Challenges in balancing stakeholder needs. |
 ### Test and Use Case Document
 - [Use Case Diagram.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Use%20Case%20Diagram.md)
-- [Use Case Specifications.md]()
+- [Use Case Specifications.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Use%20Case%20Specification.md)
 - [Test Cases.md]()
 - [Reflection.md]()
 
