@@ -184,6 +184,7 @@ Authorized staff generate reports identifying students who may be at risk for me
 - Risk reports are generated with appropriate privacy protections
 - Intervention recommendations are provided
 - Report access is logged for compliance purposes
+- Intervention checklists generated  
 ### Basic Flow:
 1. User selects "Risk Assessment" from administrative dashboard
 2. System presents risk parameter configuration options
@@ -280,16 +281,24 @@ Technical staff configure and maintain system settings, including assessment par
 4. System bypasses standard validation checks
 5. System applies changes with emergency override flag
 6. System notifies all technical administrators of emergency change
-7. System schedules mandatory review of emergency changes
+7. System schedules mandatory review of emergency change
+**A3: Invalid Permissions** 
+1. User attempts configuration without admin rights  
+2. System logs unauthorized attempt  
+3. Triggers security alert to IT team  
+
 ## Analyze Academic Impact
 ### Actor: Counsellor
 Description: Correlates mental health metrics with academic performance
 ### Preconditions:
 - Student has completed ≥2 assessments
 - Academic records available
+- System integration with academic records API
 ### Postconditions:
 - Correlation report generated
 - Intervention list created
+- Intervention plans shared with faculty advisors
+
 ### Basic Flow:
 1. Select student(s) for analysis
 2. Choose academic metrics (GPA/attendance)
