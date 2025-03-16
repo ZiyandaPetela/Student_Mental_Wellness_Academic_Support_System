@@ -34,7 +34,7 @@ The system has six primary actors, each playing a key role:
   - **Student ↔ Parent**: If permitted, students can share wellness data with parents.  
 - **Standalone Use Case: "Check Counsellor Availability"**
 - "Check Counsellor Availability" is now a standalone use case, allowing students to check availability before deciding to schedule an appointment.
-_ "Schedule Counselling Appointment" includes "Check Counsellor Availability" to ensure slots are open before booking.
+- "Schedule Counselling Appointment" includes "Check Counsellor Availability" to ensure slots are open before booking.
 
 
 This relationship ensures that the system **facilitates direct interaction between stakeholders** where necessary, improving **support accessibility and collaboration**.  
