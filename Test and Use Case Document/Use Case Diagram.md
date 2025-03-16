@@ -2,7 +2,7 @@
 
 ## 1. Use Case Diagram  
 
-![Use Case Diagram](your-diagram-image-link.png)  
+![Use Case Diagram](file:///C:/Users/Ncumisa/Downloads/system%20use%20case%20diagram.drawio.pdf)  
 
 ## 2. Use Case Diagram Explanation  
 
