@@ -281,7 +281,7 @@ Technical staff configure and maintain system settings, including assessment par
 5. System applies changes with emergency override flag
 6. System notifies all technical administrators of emergency change
 7. System schedules mandatory review of emergency changes
-## Use Case 9: Analyze Academic Impact (FR6)
+## Analyze Academic Impact
 ### Actor: Counsellor
 Description: Correlates mental health metrics with academic performance
 ### Preconditions:
