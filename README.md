@@ -25,9 +25,9 @@ Once completed, the system will feature:
 - [System Requirements.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/system-requirements.md) - Functional/non-functional requirements with acceptance criteria. 
 - [Reflection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/System%20Requirements%20Document/reflection.md)  - Challenges in balancing stakeholder needs. |
 ### Test and Use Case Document
-- [Use Case Diagram].md()
+- [Use Case Diagram.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Use%20Case%20Diagram.md)
 - [Use Case Specifications.md]()
-- [Test Cases].md()
-- [Reflection].md()
+- [Test Cases.md]()
+- [Reflection.md]()
 
 
