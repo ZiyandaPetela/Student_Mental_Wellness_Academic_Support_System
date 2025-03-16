@@ -18,7 +18,6 @@ The system has six primary actors, each playing a key role:
 
 ### Relationships Between Actors and Use Cases  
 
-The use case diagram follows UML relationships to define system behavior:  
 
 - **Inclusion ("<<include>>") Relationships**  
   - *"Complete Wellness Assessment"* **includes** *"Generate Risk Assessment Reports"* → Risk reports are generated based on assessment responses.  
