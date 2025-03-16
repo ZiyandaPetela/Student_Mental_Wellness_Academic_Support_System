@@ -2,7 +2,7 @@
 
 ## 1. Use Case Diagram  
 
-![Use Case Diagram](file:///C:/Users/Ncumisa/Downloads/system%20use%20case%20diagram.drawio.pdf)  
+![Use Case Diagram](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/system%20use%20case%20diagram.drawio.pdf)  
 
 ## 2. Use Case Diagram Explanation  
 
