@@ -30,4 +30,9 @@ Once completed, the system will feature:
 - [Test Cases.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Test%20Case.md)
 - [Reflection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Reflection.md)
 
+### Agile Planning document
+- [Age Planning document](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Use%20Case%20Diagram.md)
+- [issues](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Use%20Case%20Specification.md)
+- [Project](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Test%20Case.md)
+
 
