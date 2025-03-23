@@ -1,4 +1,14 @@
-# User Stories Table
+# User Stories
+
+This document contains the user stories for the Student Mental Wellness Academic Support System, derived from the functional requirements (Assignment 4) and use cases (Assignment 5). Each user story follows the format: 
+*"As a [role], I want [action] so that [benefit]."* 
+
+The stories are designed to meet the **INVEST criteria** (Independent, Negotiable, Valuable, Estimable, Small, Testable) and include **acceptance criteria** to ensure clarity and testability. These stories will guide the development of the system and form the basis for the product backlog and sprint planning.
+
+---
+
+## Table of User Stories
+
 
 | Story ID | User Story | Acceptance Criteria | Priority      | Type          | Source       |
 |----------|------------|---------------------|---------------|---------------|--------------|
