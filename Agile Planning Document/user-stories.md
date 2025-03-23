@@ -25,7 +25,7 @@ The stories are designed to meet the **INVEST criteria** (Independent, Negotiabl
 | **US-011** | As a student, I want to submit anonymous feedback so I can share concerns privately. | - No user metadata stored with feedback | Low | 
 | **US-012** | As a student, I want to generate and download a personal wellness report so I can share progress with counselors. | - Report includes accurate data and is downloadable as PDF | Medium | 
 | **US-013** | As a system admin, I want user data encrypted with AES-256 so security compliance is met. | - Encryption verified via security audit | Medium | Non-
-| **US-014** | As a DevOps engineer, I want Docker containerization so deployment is consistent across environments. | - Runs in Docker for dev/prod | Could-have | 
+| **US-014** | As a DevOps engineer, I want Docker containerization so deployment is consistent across environments. | - Runs in Docker for dev/prod | Medium | 
 | **US-015** | As a student, I want my profile to store academic year, major, and mental health preferences so I receive tailored support. | - Mandatory fields enforced<br>- Data persists across sessions | Medium | 
 | **US-016** | As a counselor, I want to view correlations between mental health metrics and academic performance so I can identify at-risk students. | - Reports show anonymized links between PHQ-9 scores and attendance/grades | Medium |
 
