@@ -61,3 +61,30 @@ Balancing Agile principles with stakeholder demands was akin to "building the pl
 3. Revisit "Could-have" items like encryption (US-013) post-MVP.  
 
 This process highlighted the importance of humility in Agile planning – even as a solo stakeholder, assumptions must be constantly challenged.  
+# Reflection: Agile Planning Challenges  
+
+### **Prioritization Difficulties**  
+1. **Security vs. Usability**:  
+   - *Example*: US-013 (AES-256 encryption) was deprioritized to "Could-have" despite its compliance importance. As the sole stakeholder, I prioritized user-facing features (US-005/US-006) for MVP viability but risked technical debt.  
+2. **Counselor vs. Student Needs**:  
+   - *Example*: US-016 (academic-mental health correlations) was critical for counselors but delayed to "Should-have" to focus on student workflows.  
+
+### **Estimation Challenges**  
+1. **Underestimating Complexity**:  
+   - *Example*: US-003 (assessments) was initially estimated at 5 story points but required 14 hours of work due to real-time feedback complexity.  
+2. **Dependency Blindspots**:  
+   - *Example*: US-005 (resources) couldn’t start until US-003 (assessments) was complete, causing delays.  
+
+### **Agile-Stakeholder Alignment**  
+1. **Resisting Scope Creep**:  
+   - *Example*: US-011 (anonymous feedback) was tempting but deferred to "Won’t-have" to protect MVP focus.  
+2. **Tooling Adaptation**:  
+   - *GitHub Projects*: Learning to link dependencies (e.g., US-002 → US-001) was error-prone initially.  
+
+### **Lessons Learned**  
+1. **Smaller Subtasks**: Breaking US-003 into backend scoring and frontend UI would improve estimation accuracy.  
+2. **Stakeholder Bias**: Prioritizing visible features over security (US-013) was risky.  
+3. **Dependency Mapping**: Visualizing dependencies earlier would prevent bottlenecks.  
+
+### **Conclusion**  
+Balancing Agile principles with MVP delivery was challenging as a solo stakeholder. Future sprints must revisit "Could-have" items (e.g., encryption) and involve mock team feedback for better estimation.  
