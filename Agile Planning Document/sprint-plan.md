@@ -1,33 +1,5 @@
 # Sprint Plan Document  
 
-
-## Sprint Goal  
-*Implement secure student registration, mental health assessments, personalized resource delivery, and appointment scheduling to establish the MVP foundation.*  
-
-### Selected Stories (6 Must-Have)  
-| Story ID | User Story |  
-|----------|-------------|  
-| US-001 | Student registration |  
-| US-002 | MFA authentication |  
-| US-003 | PHQ-9/GAD-7 assessments |  
-| US-005 | Personalized resources |  
-| US-006 | Resource filtering |  
-| US-010 | Appointment scheduling |  
-
-### Sprint Backlog  
-| Task ID | Task Description | Assigned To | Hours | Status |  
-|---------|-------------------|-------------|-------|--------|  
-| T-001 | Develop registration API | Backend Team | 10 | In Progress |  
-| T-002 | Design registration UI | Frontend Team | 8 | To Do |  
-| T-003 | Integrate OTP service for MFA | Security Team | 12 | In Progress |  
-| T-004 | Build PHQ-9/GAD-7 scoring logic | Data Team | 14 | To Do |  
-| T-005 | Design assessment feedback UI | UX Team | 8 | To Do |  
-| T-006 | Develop recommendation engine | AI Team | 16 | To Do |  
-| T-007 | Implement resource filtering UI | Frontend Team | 6 | To Do |  
-| T-008 | Create appointment scheduling interface | Full-Stack Team | 10 | To Do |  
-| T-009 | Sync appointments with calendar API | Backend Team | 8 | To Do |  
-# Sprint Plan Document
-
 ## Sprint Goal
 Implement secure student registration, mental health assessments, personalized resource delivery, and appointment scheduling to establish the MVP foundation.
 
