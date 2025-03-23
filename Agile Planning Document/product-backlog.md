@@ -12,11 +12,11 @@
 | **US-009** | As a counselor, I want to view anonymized wellness trends to support student groups effectively. | Should-have | 3 | US-003 |
 | **US-015** | As a student, I want my profile to store academic year, major, and mental health preferences to receive tailored support. | Should-have | 2 | US-001 |
 | **US-016** | As a counselor, I want to view correlations between mental health metrics and academic performance to identify at-risk students. | Should-have | 4 | US-003, Academic API |
-| **US-004** | As a student, I want to customize assessment frequency (daily/weekly/monthly) to manage my wellness journey. | Could-have | 2 | US-003 |
+| **US-004** | As a student, I want to customize assessment frequency (daily/weekly/monthly) to manage my wellness journey. | Should-have | 2 | US-003 |
 | **US-008** | As a student, I want to set mental wellness goals and receive milestone notifications to stay motivated. | Could-have | 2 | US-007 |
-| **US-012** | As a student, I want to generate and download a personal wellness report to share progress with counselors. | Could-have | 2 | US-007 |
-| **US-013** | As a system admin, I want user data encrypted with AES-256 so security compliance is met. | Could-have | 3 | None |
-| **US-014** | As a DevOps engineer, I want Docker containerization so deployment is consistent across environments. | Could-have | 3 | None |
+| **US-012** | As a student, I want to generate and download a personal wellness report to share progress with counselors. | Should-have | 2 | US-007 |
+| **US-013** | As a system admin, I want user data encrypted with AES-256 so security compliance is met. | Should-have | 3 | None |
+| **US-014** | As a DevOps engineer, I want Docker containerization so deployment is consistent across environments. | Should-have | 3 | None |
 | **US-011** | As a student, I want to submit anonymous feedback to share concerns privately. | Won’t-have | 1 | None |
 
 ---
@@ -28,31 +28,14 @@
    - *Rationale*: Aligns with stakeholder success metrics for usability, security, and immediate student support.  
 
 2. **Should-have**:  
-   - **US-007/US-009/US-015/US-016**: Enhance user experience and counselor insights (dashboard, anonymized trends, profiles, academic correlations).  
+   - **US-007/US-004/US-012/US-009/US-013//US-014/US-015/US-016**: Enhance user experience and counselor insights (dashboard,custom frequency,, reports,
+     encryption, Docker anonymized trends, profiles, academic correlations).  
    - *Rationale*: Secondary to MVP but critical for long-term adoption and institutional value.  
 
 3. **Could-have**:  
-   - **US-004/US-008/US-012/US-013/US-014**: Optional enhancements (custom frequency, goals, reports, encryption, Docker).  
+   - **US-008**: Optional enhancements (goals).  
    - *Rationale*: Valuable for future iterations but not essential for MVP launch.  
 
 4. **Won’t-have**:  
    - **US-011**: Deferred due to low priority and minimal impact on MVP goals.
-### Product Backlog  
-| Story ID | User Story | Priority | Effort | Dependencies |  
-|----------|-------------|----------|--------|--------------|  
-| **US-001** | As a student, I want to register with my institutional email to access the system securely. | Must-have | 3 | None |  
-| **US-002** | As a user, I want multi-factor authentication (password + OTP) to secure my account. | Must-have | 4 | US-001 |  
-| **US-003** | As a student, I want to complete PHQ-9/GAD-7 assessments with real-time feedback to understand my mental health status. | Must-have | 5 | US-002 |  
-| **US-005** | As a student, I want personalized mental health resources within 2 seconds of assessment completion. | Must-have | 4 | US-003 |  
-| **US-006** | As a student, I want to filter resources by topic (stress/anxiety/depression). | Must-have | 2 | US-005 |  
-| **US-010** | As a student, I want to schedule counseling appointments with real-time calendar syncing. | Must-have | 5 | US-001 |  
-| **US-007** | As a student, I want a dashboard to visualize my wellness trends. | Should-have | 3 | US-003 |  
-| **US-009** | As a counselor, I want to view anonymized wellness trends to support students. | Should-have | 3 | US-003 |  
-| **US-015** | As a student, I want my profile to store academic year, major, and preferences. | Should-have | 2 | US-001 |  
-| **US-016** | As a counselor, I want to analyze correlations between mental health and academic performance. | Should-have | 4 | US-003, Academic API |  
-| **US-004** | As a student, I want to customize assessment frequency. | Could-have | 2 | US-003 |  
-| **US-008** | As a student, I want to set mental wellness goals with milestone notifications. | Could-have | 2 | US-007 |  
-| **US-012** | As a student, I want to download a personal wellness report. | Could-have | 2 | US-007 |  
-| **US-013** | As a system admin, I want user data encrypted with AES-256. | Could-have | 3 | None |  
-| **US-014** | As a DevOps engineer, I want Docker containerization for deployment. | Could-have | 3 | None |  
-| **US-011** | As a student, I want to submit anonymous feedback. | Won’t-have | 1 | None |  
+
