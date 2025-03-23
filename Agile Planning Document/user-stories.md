@@ -29,8 +29,18 @@ The stories are designed to meet the **INVEST criteria** (Independent, Negotiabl
 | **US-015** | As a student, I want my profile to store academic year, major, and mental health preferences so I receive tailored support. | - Mandatory fields enforced<br>- Data persists across sessions | Medium | 
 | **US-016** | As a counselor, I want to view correlations between mental health metrics and academic performance so I can identify at-risk students. | - Reports show anonymized links between PHQ-9 scores and attendance/grades | Medium |
 
-## Notes
-- **Priority**: High, Medium, or Low, based on stakeholder needs and project goals.
-- **Acceptance Criteria**: Specific conditions that must be met for the story to be considered complete.
-- **GitHub Issues**: Each user story is tracked as a GitHub Issue for better project management.
+## Traceability
+- **US-001** maps to **FR1** (User Registration) from Assignment 4.  
+- **US-010** maps to **Use Case 4** (Schedule Counselling Appointment) from Assignment 5.  
 
+---
+
+## GitHub Setup
+- **Labels**: `user-story`, `high-priority`, `security`, `counselling`.  
+- **Issues**: All stories are tracked as GitHub Issues in the project repository.  
+
+---
+
+## Notes
+- **Priority**: High, Medium, or Low, based on stakeholder needs and project goals.  
+- **Acceptance Criteria**: Specific conditions that must be met for the story to be considered complete
