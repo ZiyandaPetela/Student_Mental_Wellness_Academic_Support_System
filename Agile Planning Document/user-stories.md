@@ -35,12 +35,7 @@ The stories are designed to meet the **INVEST criteria** (Independent, Negotiabl
 
 ---
 
-## GitHub Setup
-- **Labels**: `user-story`, `high-priority`, `security`, `counselling`.  
-- **Issues**: All stories are tracked as GitHub Issues in the project repository.  
-
----
-
 ## Notes
 - **Priority**: High, Medium, or Low, based on stakeholder needs and project goals.  
 - **Acceptance Criteria**: Specific conditions that must be met for the story to be considered complete
+- **Issues**: All stories are tracked as GitHub Issues in the project repository.  
