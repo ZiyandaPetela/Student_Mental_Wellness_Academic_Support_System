@@ -12,9 +12,6 @@ As the sole stakeholder and product owner for the **Student Mental Wellness Syst
 - **Internal Resistance**: I initially labeled encryption as a "Could-have" to prioritize usability but later moved it to "Should-have" due to potential legal risks and again moved it to "Could-have".
 - **Lesson**: Security should never be compromised, even if it delays user-facing features.
 
-### **Deferring Low-Impact Features**
-- **Example**: **US-011 (Anonymous Feedback)** was tempting to include as a "quick win" but was deferred to "Won’t-have" to protect MVP focus.
-- **Lesson**: Staying disciplined about scope is critical for delivering the MVP on time.
 
 ---
 
