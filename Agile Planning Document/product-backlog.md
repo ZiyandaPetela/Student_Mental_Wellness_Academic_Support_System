@@ -28,7 +28,7 @@
    - *Rationale*: Aligns with stakeholder success metrics for usability, security, and immediate student support.  
 
 2. **Should-have**:  
-   - **US-007/US-004/US-012/US-009/US-013//US-014/US-015/US-016**: Enhance user experience and counselor insights (dashboard,custom frequency,, reports,
+   - **US-007/US-004/US-012/US-009/US-013/US-014/US-015/US-016**: Enhance user experience and counselor insights (dashboard,custom frequency,, reports,
      encryption, Docker anonymized trends, profiles, academic correlations).  
    - *Rationale*: Secondary to MVP but critical for long-term adoption and institutional value.  
 
