@@ -27,7 +27,7 @@ By using the **Automated Kanban** template, we can efficiently track project pro
 ### Justification with User Story References  
 
 #### 1. Agile Sprint Support  
-- **Backlog Column**: Matches our [Sprint 1 backlog](#) (US-001 to US-010)  
+- **Backlog Column**: Matches our Sprint 1 backlog (US-001 to US-010)  
 - **WIP Limits**: Enforces focus (critical for US-003 assessment development)  
 - **Automation**: Closes issues when PRs merge (supports US-002 MFA implementation)  
 **Justification:**
