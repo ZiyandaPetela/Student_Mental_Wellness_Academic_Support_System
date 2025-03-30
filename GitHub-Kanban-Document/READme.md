@@ -139,3 +139,6 @@ This Kanban implementation successfully addresses both the technical and domain-
 - US-001 in "In Progress" with assignee @DevTeamMember
 - Labels: `must-have` (red), `technical` (blue)
 - WIP limits visible on columns
+!
+!
+!
