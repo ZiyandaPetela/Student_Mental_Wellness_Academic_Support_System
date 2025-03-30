@@ -49,4 +49,35 @@ This template best supports our project from Assignments 5-6 because:
    - Clear progression from Todo → In Progress → Done
    - Links directly to our code repository
 
+###  Clinical-Academic Workflow  
+```mermaid  
+graph TD  
+    A[Backlog] --> B[In Dev]  
+    B --> C[Clinical Review<br><i>For US-003, US-005</i>]  
+    B --> D[Academic Review<br><i>For US-010, US-016</i>]  
+    C & D --> E[Compliance Check<br><i>US-013</i>]  
+    E --> F[Student Beta<br><i>TC003, TC004</i>]
+# Clinical Path  
+- if: title.contains("PHQ-9") OR title.contains("GAD-7")  
+  then:  
+    add_label: clinical  
+    assign: @therapist-team  
+    move_to: "Clinical Review"  
+
+# Academic Path  
+- if: title.contains("schedule") OR title.contains("GPA")  
+  then:  
+    add_label: academic  
+    assign: @educator-team
+### Test Case Integration
+- Clinical Features: Auto-links to TC001 (Assessment), TC002 (Critical Risk)
+- Academic Features: Triggers TC004 (Scheduling), TC008 (Academic Impact)
+
+## Customization Plan: Added Columns
+
+| Column | Purpose | Linked Items |
+|--------|---------|--------------|
+| **Clinical Review** | PHQ-9/GAD-7 validation | US-003, US-005, TC001 |
+| **Academic Review** | Scheduling/performance analysis | US-010, US-016, TC004 |
+| **FERPA Check** | Privacy compliance | US-002, US-013, NFTC003 |
 
