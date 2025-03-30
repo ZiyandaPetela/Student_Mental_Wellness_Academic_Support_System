@@ -57,6 +57,7 @@ graph TD
     B --> D[Academic Review<br><i>For US-010, US-016</i>]  
     C & D --> E[Compliance Check<br><i>US-013</i>]  
     E --> F[Student Beta<br><i>TC003, TC004</i>]
+```
 # Clinical Path  
 - if: title.contains("PHQ-9") OR title.contains("GAD-7")  
   then:  
