@@ -2,9 +2,8 @@
 
 ## Board Structure with Populated Issues
 
-I've implemented our customized Kanban board using the Automated Kanban template as a starting point, adding specialized columns to support our dual clinical-academic workflow. Below is the current state of our populated board:
-## Board Configuration
-**Template Used**: Automated Kanban  
+I've implemented our customized Kanban board using the **Automated Kanban template** as a starting point, adding specialized columns to support our dual clinical-academic workflow. Below is the current state of our populated board:
+
 **Custom Columns Added**:
 1. `Clinical Review` - For mental health feature validation
 2. `Compliance Check` - For security/privacy verification
@@ -13,7 +12,7 @@ I've implemented our customized Kanban board using the Automated Kanban template
 ## Current Board Status
 | Column | Issues | In Progress | Notes |
 |--------|--------|-------------|-------|
-| **Backlog** | 15 | - | All unstarted user stories |
+| **Backlog** | 10 | - | All unstarted user stories |
 | **Ready** | 5 | - | Prioritized for upcoming work |
 | **In Progress** | 1 | US-001 (Registration) | Actively being developed |
 | **Clinical Review** | 0 | - | Awaiting PHQ-9 validation |
