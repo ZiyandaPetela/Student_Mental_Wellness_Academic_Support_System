@@ -26,6 +26,25 @@ Our board uses color-coded labels to visualize different types of work:
 - Blue labels for core technical implementation
 
 This allows team members to quickly identify what type of work each card represents, facilitating better task selection based on expertise.
+# Kanban Board Explanation
+
+## Definition
+A Kanban board is a visual workflow management system that represents work items as cards moving through defined process stages (columns). It provides real-time visibility into work status, helps identify bottlenecks, and enables continuous process improvement by limiting work-in-progress (WIP).
+
+## Our Implementation
+
+### 1. Workflow Visualization
+Our board uses seven columns to map the complete development lifecycle:
+1. **Backlog**: All identified requirements (16 user stories)
+2. **Ready**: Prioritized items for current sprint (5 stories)
+3. **In Progress**: Actively developed items (currently US-001)
+4. **Clinical Review**: Mental health feature validation
+5. **Academic Review**: Education functionality verification
+6. **Compliance Check**: Final security/privacy gate
+7. **Done**: Completed work
+
+*Visual Example*:  
+`US-001 (Registration)` moving from `Backlog` → `Ready` → `In Progress` shows concrete progress to all stakeholders.
 
 ### 3. Parallel Workflows
 
@@ -104,25 +123,6 @@ Our Kanban implementation supports core Agile principles in the following ways:
 
 Our Kanban board has transformed how our team works on the Student Mental Wellness Academic Support System. Rather than relying on status meetings or reports, we now have a shared visual understanding of our work progress, allowing us to identify and resolve issues more quickly and collaborate more effectively across our specialized domains.
 
-# Kanban Board Explanation
-
-## Definition
-A Kanban board is a visual workflow management system that represents work items as cards moving through defined process stages (columns). It provides real-time visibility into work status, helps identify bottlenecks, and enables continuous process improvement by limiting work-in-progress (WIP).
-
-## Our Implementation
-
-### 1. Workflow Visualization
-Our board uses seven columns to map the complete development lifecycle:
-1. **Backlog**: All identified requirements (16 user stories)
-2. **Ready**: Prioritized items for current sprint (5 stories)
-3. **In Progress**: Actively developed items (currently US-001)
-4. **Clinical Review**: Mental health feature validation
-5. **Academic Review**: Education functionality verification
-6. **Compliance Check**: Final security/privacy gate
-7. **Done**: Completed work
-
-*Visual Example*:  
-`US-001 (Registration)` moving from `Backlog` → `Ready` → `In Progress` shows concrete progress to all stakeholders.
 
 ### 2. WIP Limitation
 We enforce strict WIP limits to maintain flow:
