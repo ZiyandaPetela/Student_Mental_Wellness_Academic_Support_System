@@ -65,5 +65,43 @@ After analyzing the available templates, I have chosen the **Automated Kanban** 
 - **Improved Task Management**: With columns like *New, In Progress, Review, and Done*, it provides clear visibility into project status.
 
 By using the **Automated Kanban** template, we can efficiently track project progress, minimize manual task updates, and ensure a smooth Agile workflow.
+# Assignment 7: GitHub Project Template Analysis and Selection  
+**For Student Mental Wellness Academic Support System**  
+
+## GitHub Project Templates Comparative Analysis  
+
+### Overview of Available Templates  
+GitHub offers four project management templates evaluated against our system requirements from [Assignment 5](#) and [Assignment 6](#).  
+
+---
+
+## Template Comparison Table  
+
+| Template | Columns & Workflow | Automation Features | Agile Suitability | Best For | Limitations for Our Project |  
+|----------|--------------------|---------------------|-------------------|----------|-----------------------------|  
+| **Basic Kanban** | To Do, In Progress, Done | None | Basic | Simple projects | Cannot handle clinical/academic dual workflows |  
+| **Automated Kanban** | Backlog, Todo, In Progress, Done | Auto-moves closed PRs, status sync | High (Scrum/Kanban) | CI/CD teams | Requires 2 custom columns added |  
+| **Bug Triage** | New, High Priority, In Progress, Fixed | Auto-labels bugs | Medium | QA teams | No support for feature development (US-001 to US-016) |  
+| **Team Planning** | Icebox, Ready, In Progress, Done | Milestone tracking | High | Large teams | Overkill for our 4-person team |  
+
+---
+
+## Selected Template: **Enhanced Automated Kanban**  
+
+### Justification with User Story References  
+
+#### 1. Agile Sprint Support  
+- **Backlog Column**: Matches our [Sprint 1 backlog](#) (US-001 to US-010)  
+- **WIP Limits**: Enforces focus (critical for US-003 assessment development)  
+- **Automation**: Closes issues when PRs merge (supports US-002 MFA implementation)  
+
+#### 2. Clinical-Academic Workflow  
+```mermaid  
+graph TD  
+    A[Backlog] --> B[In Dev]  
+    B --> C[Clinical Review<br><i>For US-003, US-005</i>]  
+    B --> D[Academic Review<br><i>For US-010, US-016</i>]  
+    C & D --> E[Compliance Check<br><i>US-013</i>]  
+    E --> F[Student Beta<br><i>TC003, TC004</i>]  
 
 
