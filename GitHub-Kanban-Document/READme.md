@@ -135,9 +135,19 @@ This Kanban implementation successfully addresses both the technical and domain-
 ## Screenshot Documentation
 ![Kanban Board Screenshot]()
 *Caption*: Shows:
-- Custom columns (highlighted in yellow)
+- Custom columns 
 - US-001 in "In Progress" with assignee @DevTeamMember
 - Labels: `must-have` (red), `technical` (blue)
 - WIP limits visible on columns
-![Alt Text](![Kanban Board 1](https://github.com/user-attachments/assets/17351812-e1ca-4487-a47a-874d11f3ec79)
-image-path.png)
+- Priority
+- Assignees
+##Kanban Board with Columns
+![Kanban Board 1](https://github.com/user-attachments/assets/17351812-e1ca-4487-a47a-874d11f3ec79)
+
+![Kanban Board 1](![Kanban Board](https://github.com/user-attachments/assets/9acf081a-3096-4d8b-920d-65459bb66c62)
+)
+![Kanban Board 1](![Kanban Board in-detail](https://github.com/user-attachments/assets/3c5a336c-886a-4eea-af77-1c9eeddefcd1)
+)
+![Kanban Board 1](![Kanban Board continuation](https://github.com/user-attachments/assets/84e8729c-1253-47c2-b1d1-4986bc3817c2)
+)
+
