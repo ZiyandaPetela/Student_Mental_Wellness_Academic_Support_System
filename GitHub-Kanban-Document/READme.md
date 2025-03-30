@@ -4,11 +4,6 @@
 
 I've implemented our customized Kanban board using the **Automated Kanban template** as a starting point, adding specialized columns to support our dual clinical-academic workflow. Below is the current state of our populated board:
 
-**Custom Columns Added**:
-1. `Clinical Review` - For mental health feature validation
-2. `Compliance Check` - For security/privacy verification
-3. `Academic Review` - For education functionality validation
-
 ## Current Board Status
 | Column | Issues | In Progress | Notes |
 |--------|--------|-------------|-------|
@@ -46,21 +41,6 @@ These items are fully defined and ready to be picked up for development in Sprin
 ### In Progress (1 issue)
 Currently being actively worked on:
 1. **US-001: Registration** (Dev Team, Must-have, Sprint 1)
-
-### Clinical Review (0 issues)
-*No issues currently in this stage*
-
-### Academic Review (0 issues)
-*No issues currently in this stage*
-
-### In Review (0 issues)
-*No issues currently in this stage*
-
-### Compliance Check (0 issues)
-*No issues currently in this stage*
-
-### Done (0 issues)
-*No issues completed yet*
 
 ## Customization Rationale
 
