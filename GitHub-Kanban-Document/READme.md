@@ -21,18 +21,15 @@ These items are not yet ready for development but are prioritized for future spr
 ### Ready (5 issues)
 These items are fully defined and ready to be picked up for development in Sprint 1:
 
-1. **US-001: Registration** (Dev Team, Must-have, Sprint 1)
-2. **US-002: Multiple-Factor Authentication** (Security Team, Must-have, Sprint 1)
-3. **US-003: PHQ-9 Assessment** (Clinical Team, Must-have, Sprint 1)
-4. **US-006: Filtering Resources** (Dev Team, Must-have, Sprint 1)
-5. **US-010: Schedule counseling appointments** (Academic Team, Must-have, Sprint 1)
+1. **US-002: Multiple-Factor Authentication** (Security Team, Must-have, Sprint 1)
+2. **US-003: PHQ-9 Assessment** (Clinical Team, Must-have, Sprint 1)
+3. **US-005: Resources** (Dev Team, Must-have, Sprint 1)
+5. **US-006: Filtering Resources** (Dev Team, Must-have, Sprint 1)
+6. **US-010: Schedule counseling appointments** (Academic Team, Must-have, Sprint 1)
 
 ### In Progress (1 issue)
 Currently being actively worked on:
-
-1. **US-005: Resources** (Dev Team, Must-have, Sprint 1)
-   - Implementing resource suggestion features
-   - Assigned to development team
+1. **US-001: Registration** (Dev Team, Must-have, Sprint 1)
 
 ### Clinical Review (0 issues)
 *No issues currently in this stage*
