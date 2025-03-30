@@ -71,3 +71,10 @@ graph TD
 | **Academic Review** | Scheduling/performance analysis | US-010, US-016, TC004 |
 | **FERPA Check** | Privacy compliance | US-002, US-013, NFTC003 |
 
+## Why Alternative Templates Were Rejected
+
+| Template          | Critical Limitations | Impact on Our Project |
+|-------------------|-----------------------|-----------------------|
+| **Basic Kanban**  | Lacks support for parallel workflows<br>No automation capabilities | Cannot accommodate simultaneous clinical (US-003) and academic (US-010) review processes<br>Requires manual status updates for all issues |
+| **Bug Triage**    | Designed exclusively for defect tracking<br>Limited workflow customization | Unable to properly track feature development (US-001-US-016)<br>No columns for resource management (US-005) |
+| **Team Planning** | Overly complex milestone system<br>Built for large cross-functional teams | 70% of features irrelevant to our 4-person team<br>Steep learning curve without proportional benefit |
