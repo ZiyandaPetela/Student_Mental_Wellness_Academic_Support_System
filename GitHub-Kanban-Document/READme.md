@@ -143,7 +143,8 @@ This Kanban implementation successfully addresses both the technical and domain-
 - Assignees
   
 ## Kanban Board with Columns
-(https://github.com/user-attachments/assets/17351812-e1ca-4487-a47a-874d11f3ec79)
+
+![Kanban Board 1](https://github.com/user-attachments/assets/e3773a21-1584-4ee2-bfc7-4db714e7cdba)
 
 (![Kanban Board](https://github.com/user-attachments/assets/9acf081a-3096-4d8b-920d-65459bb66c62)
 ## More details of the Kanban Board
