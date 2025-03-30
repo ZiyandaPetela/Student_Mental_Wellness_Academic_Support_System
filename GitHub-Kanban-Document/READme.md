@@ -3,6 +3,23 @@
 ## Board Structure with Populated Issues
 
 I've implemented our customized Kanban board using the Automated Kanban template as a starting point, adding specialized columns to support our dual clinical-academic workflow. Below is the current state of our populated board:
+## Board Configuration
+**Template Used**: Automated Kanban  
+**Custom Columns Added**:
+1. `Clinical Review` - For mental health feature validation
+2. `Compliance Check` - For security/privacy verification
+3. `Academic Review` - For education functionality validation
+
+## Current Board Status
+| Column | Issues | In Progress | Notes |
+|--------|--------|-------------|-------|
+| **Backlog** | 15 | - | All unstarted user stories |
+| **Ready** | 5 | - | Prioritized for upcoming work |
+| **In Progress** | 1 | US-001 (Registration) | Actively being developed |
+| **Clinical Review** | 0 | - | Awaiting PHQ-9 validation |
+| **Academic Review** | 0 | - | Awaiting scheduling verification |
+| **Compliance Check** | 0 | - | Final security gate |
+| **Done** | 0 | - | Completed items |
 
 ### Backlog (10 issues)
 These items are not yet ready for development but are prioritized for future sprints:
@@ -135,23 +152,6 @@ As our project progresses, I plan to refine the board by:
 This Kanban implementation successfully addresses both the technical and domain-specific requirements of our Student Mental Wellness Academic Support System while maintaining Agile principles and efficient workflow management.
 # Custom Kanban Board Implementation
 
-## Board Configuration
-**Template Used**: Automated Kanban  
-**Custom Columns Added**:
-1. `Clinical Review` - For mental health feature validation
-2. `Compliance Check` - For security/privacy verification
-3. `Academic Review` - For education functionality validation
-
-## Current Board Status
-| Column | Issues | In Progress | Notes |
-|--------|--------|-------------|-------|
-| **Backlog** | 15 | - | All unstarted user stories |
-| **Ready** | 5 | - | Prioritized for upcoming work |
-| **In Progress** | 1 | US-001 (Registration) | Actively being developed |
-| **Clinical Review** | 0 | - | Awaiting PHQ-9 validation |
-| **Academic Review** | 0 | - | Awaiting scheduling verification |
-| **Compliance Check** | 0 | - | Final security gate |
-| **Done** | 0 | - | Completed items |
 
 ## Screenshot Documentation
 ![Kanban Board Screenshot]()
