@@ -104,3 +104,52 @@ Our Kanban implementation supports core Agile principles in the following ways:
 
 Our Kanban board has transformed how our team works on the Student Mental Wellness Academic Support System. Rather than relying on status meetings or reports, we now have a shared visual understanding of our work progress, allowing us to identify and resolve issues more quickly and collaborate more effectively across our specialized domains.
 
+# Kanban Board Explanation
+
+## Definition
+A Kanban board is a visual workflow management system that represents work items as cards moving through defined process stages (columns). It provides real-time visibility into work status, helps identify bottlenecks, and enables continuous process improvement by limiting work-in-progress (WIP).
+
+## Our Implementation
+
+### 1. Workflow Visualization
+Our board uses seven columns to map the complete development lifecycle:
+1. **Backlog**: All identified requirements (16 user stories)
+2. **Ready**: Prioritized items for current sprint (5 stories)
+3. **In Progress**: Actively developed items (currently US-001)
+4. **Clinical Review**: Mental health feature validation
+5. **Academic Review**: Education functionality verification
+6. **Compliance Check**: Final security/privacy gate
+7. **Done**: Completed work
+
+*Visual Example*:  
+`US-001 (Registration)` moving from `Backlog` → `Ready` → `In Progress` shows concrete progress to all stakeholders.
+
+### 2. WIP Limitation
+We enforce strict WIP limits to maintain flow:
+- **In Progress**: Max 3 items (currently 1: US-001)
+- **Review Columns**: Max 2 items each
+- **Ready**: Max 5 prioritized items
+
+*Bottleneck Prevention*: When "Clinical Review" reaches 2 items, the board visually alerts us to allocate more clinical resources before developers complete additional mental health features.
+
+### 3. Agile Principles Support
+
+| Agile Principle | Kanban Implementation | Example from Our Board |
+|-----------------|-----------------------|------------------------|
+| Continuous Delivery | Small, testable increments | US-001 can deploy after passing Compliance Check |
+| Adaptability | Easy reprioritization | Can drag US-010 ahead if scheduling becomes urgent |
+| Customer Collaboration | Domain review columns | Clinical team approves US-003 before release |
+| Sustainable Pace | WIP limits prevent overload | Developers focus on 3 items max |
+
+## Key Customizations
+1. **Dual Review Columns**  
+   Added "Clinical Review" and "Academic Review" to:  
+   - Ensure mental health features meet therapeutic standards  
+   - Verify academic functions align with educational requirements  
+
+2. **Compliance Gate**  
+   Added "Compliance Check" column to:  
+   - Enforce FERPA/HIPAA requirements  
+   - Serve as final quality gate before "Done"
+
+*"By limiting 'In Progress' to 3 items, our team maintains focus while the specialized review columns ensure both clinical validity and academic usefulness in our Student Wellness System."*
