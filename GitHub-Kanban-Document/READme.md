@@ -108,9 +108,9 @@ I've organized our board with color-coded labels that align with our team struct
 ### Priority-Based Organization
 
 Within columns, issues are organized by priority using MoSCoW labels:
-- **Must-have**: Top priority (Sprint 1 focus)
-- **Should-have**: Medium priority (Sprint 2 focus)
-- **Could-have**: Lower priority (Sprint 3 focus)
+- **Must-have**: Top priority(P0) (Sprint 1 focus)
+- **Should-have**: Medium priority(P1) (Sprint 2 focus)
+- **Could-have**: Lower priority(P2) (Sprint 3 focus)
 - **Won't have**: Out of current scope
 
 ### Sprint Planning Integration
