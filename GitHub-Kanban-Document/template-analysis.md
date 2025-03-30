@@ -58,18 +58,7 @@ graph TD
     C & D --> E[Compliance Check<br><i>US-013</i>]  
     E --> F[Student Beta<br><i>TC003, TC004</i>]
 ```
-# Clinical Path  
-- if: title.contains("PHQ-9") OR title.contains("GAD-7")  
-  then:  
-    add_label: clinical  
-    assign: @therapist-team  
-    move_to: "Clinical Review"  
 
-# Academic Path  
-- if: title.contains("schedule") OR title.contains("GPA")  
-  then:  
-    add_label: academic  
-    assign: @educator-team
 ### Test Case Integration
 - Clinical Features: Auto-links to TC001 (Assessment), TC002 (Critical Risk)
 - Academic Features: Triggers TC004 (Scheduling), TC008 (Academic Impact)
