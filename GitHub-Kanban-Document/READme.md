@@ -15,7 +15,7 @@ Our Student Mental Wellness Academic Support System Kanban board visualizes work
 Our board makes the entire workflow visible by representing each stage as a column:
 - **Backlog** → **Ready** → **In Progress** → **Clinical/Academic Review** → **In Review** → **Compliance Check** → **Done**
 
-This visualization shows exactly where each user story is in the development process. For example, seeing US-005 (Resources) in the "In Progress" column immediately communicates to all stakeholders that development has started but the feature isn't ready for review yet.
+This visualization shows exactly where each user story is in the development process. For example, seeing US-001 (Registration) in the "In Progress" column immediately communicates to all stakeholders that development has started but the feature isn't ready for review yet.
 
 ### 2. Work Type Differentiation
 
@@ -79,7 +79,7 @@ Our Kanban implementation supports core Agile principles in the following ways:
 - Small, incremental changes (individual user stories) move through the board
 - Completed items can be deployed as soon as they pass all reviews
 - The visualization encourages breaking down work into smaller, deliverable units
-- Example: US-005 (Resources) can be completed and deployed before US-003 (PHQ-9 Assessment)
+
 
 ### 2. Customer Value Focus
 
