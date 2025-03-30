@@ -139,4 +139,5 @@ This Kanban implementation successfully addresses both the technical and domain-
 - US-001 in "In Progress" with assignee @DevTeamMember
 - Labels: `must-have` (red), `technical` (blue)
 - WIP limits visible on columns
-  <img src="GitHub-KanBad-Documentation/Kanban board 1.png" alt="Custom Kanban Board" width="600">
+![Alt Text](![Kanban Board 1](https://github.com/user-attachments/assets/17351812-e1ca-4487-a47a-874d11f3ec79)
+image-path.png)
