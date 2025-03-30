@@ -1,21 +1,8 @@
+# GitHub Project Template Comparative Analysis and Selection  
+**For Student Mental Wellness Academic Support System** 
 
-# GitHub Project Templates Comparative Analysis
-
-## Overview of Available Templates
-GitHub offers several project management templates designed to support different workflow needs and project types.
-
-
-
-
-# Assignment 7: GitHub Project Template Analysis and Selection  
-**For Student Mental Wellness Academic Support System**  
-
-## GitHub Project Templates Comparative Analysis  
-
-### Overview of Available Templates  
-GitHub offers four project management templates evaluated against our system requirements from [Assignment 5](#) and [Assignment 6](#).  
-
----
+## Overview of Available Templates  
+GitHub offers several project management templates designed to support different workflow needs and project types. Four project management templates are evaluated against our system requirements from Assignment 5  and Assignment 6.   
 
 ## Template Comparison Table  
 
@@ -26,9 +13,16 @@ GitHub offers four project management templates evaluated against our system req
 | **Bug Triage** | New, High Priority, In Progress, Fixed | Auto-labels bugs | Medium | QA teams | No support for feature development (US-001 to US-016) |  
 | **Team Planning** | Icebox, Ready, In Progress, Done | Milestone tracking | High | Large teams | Overkill for our 4-person team |  
 
----
 
-## Selected Template: **Enhanced Automated Kanban**  
+## Selected Template: **Automated Kanban** 
+### Justification for Selected Template
+After analyzing the available templates, I have chosen the **Automated Kanban** template for this project due to the following reasons:
+
+- **Automation Features**: This template supports auto-moving issues, reducing manual effort and improving workflow efficiency.
+- **Agile Suitability**: It aligns well with Agile methodologies by supporting sprint tracking and continuous delivery.
+- **Improved Task Management**: With columns like *New, In Progress, Review, and Done*, it provides clear visibility into project status.
+
+By using the **Automated Kanban** template, we can efficiently track project progress, minimize manual task updates, and ensure a smooth Agile workflow.
 
 ### Justification with User Story References  
 
@@ -54,30 +48,5 @@ This template best supports our project from Assignments 5-6 because:
 4. **Traceability**:
    - Clear progression from Todo → In Progress → Done
    - Links directly to our code repository
-  
-#### 2. Clinical-Academic Workflow  
-```mermaid  
-graph TD  
-    A[Backlog] --> B[In Dev]  
-    B --> C[Clinical Review<br><i>For US-003, US-005</i>]  
-    B --> D[Academic Review<br><i>For US-010, US-016</i>]  
-    C & D --> E[Compliance Check<br><i>US-013</i>]  
-    E --> F[Student Beta<br><i>TC003, TC004</i>]  
-## Selected Template: Automated Kanban
 
-
-# Template Analysis and Selection
-
-## Comparison of GitHub Project Templates
-
-
-## Justification for Selected Template
-
-After analyzing the available templates, I have chosen the **Automated Kanban** template for this project due to the following reasons:
-
-- **Automation Features**: This template supports auto-moving issues, reducing manual effort and improving workflow efficiency.
-- **Agile Suitability**: It aligns well with Agile methodologies by supporting sprint tracking and continuous delivery.
-- **Improved Task Management**: With columns like *New, In Progress, Review, and Done*, it provides clear visibility into project status.
-
-By using the **Automated Kanban** template, we can efficiently track project progress, minimize manual task updates, and ensure a smooth Agile workflow.
 
