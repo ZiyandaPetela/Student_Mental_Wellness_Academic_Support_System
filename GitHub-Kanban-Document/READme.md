@@ -2,7 +2,7 @@
 
 ## Board Structure with Populated Issues
 
-I've implemented our customized Kanban board using the **Automated Kanban template** as a starting point, adding specialized columns to support our dual clinical-academic workflow. Below is the current state of our populated board:
+I've implemented my customized Kanban board using the **Automated Kanban template** as a starting point, adding specialized columns to support our dual clinical-academic workflow. Below is the current state of our populated board:
 
 ## Current Board Status
 | Column | Issues | In Progress | Notes |
