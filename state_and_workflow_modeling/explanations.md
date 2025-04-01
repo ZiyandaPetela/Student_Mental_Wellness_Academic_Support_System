@@ -1,5 +1,5 @@
 # State Diagram Explanations
-# replace UC/FR with the correct ones
+# replace UC/FR with the correct ones from assignment 4/5
 ## 1. Wellness Assessment
 ### Key States and Transitions
 - **Unstarted → InProgress**: Student begins assessment (triggered by UC-01: "Complete Wellness Assessment").
