@@ -7,3 +7,17 @@ stateDiagram-v2
     HighRisk --> Resolved: counselor_intervention
     LowRisk --> Archived: after_30_days
     Resolved --> Archived: case_closed
+stateDiagram-v2
+    [*] --> Pending
+    Pending --> Confirmed: counselor_approves
+    Pending --> Canceled: student_cancels
+    
+    state "Confirmed" as conf <<blue>>
+    state "NoShow" as ns <<orange>>
+    
+    conf --> Completed: session_ends
+    conf --> ns: student_misses
+    ns --> Archived: after_review
+    Completed --> Archived
+    Canceled --> Archived
+
