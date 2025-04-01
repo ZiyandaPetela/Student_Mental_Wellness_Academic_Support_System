@@ -108,4 +108,4 @@ stateDiagram-v2
 
 
 ## State Diagrams Explanation  
-[See explanation](/state_and_workflow_modeling/explanations.md#1-wellness-assessment)  
+[See explanation](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/explanations.md)  
