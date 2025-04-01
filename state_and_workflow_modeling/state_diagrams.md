@@ -105,3 +105,7 @@ stateDiagram-v2
 ```
 **Lifecycle**:  
 - `Updated` allows iterative improvements (FR-33)  
+
+
+## State Diagrams Explanation  
+[See explanation](/state_and_workflow_modeling/explanations.md#1-wellness-assessment)  
