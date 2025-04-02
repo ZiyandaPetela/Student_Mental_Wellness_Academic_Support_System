@@ -74,6 +74,20 @@ stateDiagram-v2
     HighPriority --> Archived: case_closed
     Monitoring --> Archived: inactive_90_days
 ```
+```mermaid
+
+stateDiagram-v2
+    [*] --> New
+    New --> PendingVerification: registration_submitted
+    PendingVerification --> Active: email_verified && mfa_setup_complete
+    Active --> Monitoring: low_risk
+    Active --> HighPriority: high_risk
+    HighPriority --> Active: risk_reduced
+    Monitoring --> Active: risk_increased
+    Active --> Suspended: inactivity_60_days
+    Suspended --> Active: user_returns
+    Suspended --> Archived: inactive_90_days
+```
 **Note**:  
 - `HighPriority` requires counselor attention (FR-09)  
 
@@ -89,6 +103,18 @@ stateDiagram-v2
     InProgress --> Reopened: new_symptoms
     Resolved --> Archived
 ```
+```mermaid
+    stateDiagram-v2
+    [*] --> Unassigned
+    Unassigned --> Open: counselor_accepts
+    Open --> InProgress: contact_initiated
+    InProgress --> OnHold: awaiting_student_response
+    OnHold --> InProgress: student_responds
+    InProgress --> Resolved: intervention_complete && student_confirmed
+    InProgress --> Reopened: new_symptoms || academic_decline
+    Reopened --> InProgress: intervention_updated
+    Resolved --> Archived: 30_days_no_issues
+```
 **Workflow**:  
 - `Reopened` state handles recurring issues (UC-07)  
 
@@ -103,6 +129,19 @@ stateDiagram-v2
     Escalated --> Resolved: intervention_complete
     Resolved --> Logged: report_filed
 ```
+```mermaid
+  stateDiagram-v2
+    [*] --> Inactive
+    Inactive --> Triggered: risk_detected && (suicide_ideation || severe_depression)
+    Triggered --> Acknowledged: system_notifies_counselor
+    Acknowledged --> Escalated: escalation_required
+    Acknowledged --> Managed: counselor_handling
+    Escalated --> External: campus_security_notified || emergency_services_called
+    Managed --> Resolved: intervention_complete
+    External --> Resolved: external_intervention_complete
+    Resolved --> Logged: report_filed && case_documented
+    Logged --> [*]
+```
 **Protocol**:  
 - `Triggered` within 5 minutes of detection (FR-20)  
 
@@ -115,6 +154,18 @@ stateDiagram-v2
     Unreviewed --> Approved: counselor_verifies
     Approved --> Published: admin_releases
     Published --> Archived: outdated
+```
+```mermaid
+stateDiagram-v2
+    [*] --> Unreviewed
+    Unreviewed --> InReview: counselor_assigned
+    InReview --> Approved: content_verified
+    InReview --> Rejected: content_unsuitable
+    Approved --> Published: admin_releases
+    Published --> Featured: high_effectiveness_rating
+    Featured --> Published: newer_resources_available
+    Published --> Archived: outdated || low_usage_90_days
+    Archived --> InReview: content_refresh_requested
 ```
 **Control**:  
 - Dual approval process (FR-25)  
@@ -131,9 +182,33 @@ stateDiagram-v2
     Reviewed --> Updated: new_data_added
     Updated --> Archived: semester_end
 ```
+```mermaid
+  stateDiagram-v2
+    [*] --> Unprepared
+    Unprepared --> Draft: counselor_starts
+    Draft --> PendingAcademicData: wellness_data_added
+    PendingAcademicData --> Finalized: academic_data_integrated && counselor_submits
+    Finalized --> Reviewed: student_views
+    Reviewed --> Updated: new_data_added || student_feedback_received
+    Updated --> Finalized: counselor_approves_changes
+    Finalized --> Archived: semester_end
+```
 **Lifecycle**:  
 - `Updated` allows iterative improvements (FR-33)  
-
-
+```mermaid
+stateDiagram-v2
+    [*] --> Created
+    Created --> PendingEmailVerification: registration_submitted
+    PendingEmailVerification --> PendingMFASetup: email_verified
+    PendingMFASetup --> Active: mfa_setup_complete
+    Active --> Locked: failed_login_attempts >= 3
+    Locked --> Active: password_reset || 24_hours_elapsed
+    Active --> Suspended: institutional_policy_violation
+    Suspended --> Active: admin_approval
+    Active --> Inactive: 60_days_no_login
+    Inactive --> Active: user_returns
+    Inactive --> Archived: 180_days_no_login
+    Archived --> [*]
+```
 ## State Diagrams Explanation  
 [See explanation](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/workflow_explanations.md)  
