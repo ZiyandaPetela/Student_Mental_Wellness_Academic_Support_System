@@ -1,6 +1,6 @@
 # Workflow Explanations
 # State Diagram Explanations
-# replace UC/FR with the correct ones from assignment 4/5
+# need to replace UC/FR with the correct ones from assignment 4/5
 ## 1. Wellness Assessment
 ### Key States and Transitions
 - **Unstarted → InProgress**: Student begins assessment (triggered by UC-01: "Complete Wellness Assessment").
@@ -55,7 +55,8 @@
 - **Unprepared → Draft**: Counselor starts report (UC-11: "Generate Progress Reports").
 - **Finalized → Reviewed**: Student views report (FR-39: "Share reports with students").
 - **Updated**: New assessment data added (FR-42: "Allow report updates").
-
+- 
+# Activity Diagram Explanations
 ## 1. Student Registration & Authentication
 ### Key Steps
 1. **Email Validation**: Verifies institutional email domains (FR1)
