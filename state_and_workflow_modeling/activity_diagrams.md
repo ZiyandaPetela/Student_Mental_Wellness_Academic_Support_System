@@ -1,35 +1,4 @@
-# Activity Workflow Diagrams
-# 1. Student Registration & Authentication  
-**Swimlanes**: Student, System, Database  
-```mermaid
-flowchart TD
-    start([Start]) --> A[Enter Email]
-    A --> B{"Valid institutional email?"}
-    B -->|Yes| C[Send OTP]
-    B -->|No| E[Show Error] --> end1([End])
-    C --> D[Input Profile Data]
-    D --> F{"All mandatory fields complete?"}
-    F -->|Yes| G[Encrypt & Save Profile] --> H[Confirm Registration] --> end2([End])
-    F -->|No| I[Prompt Completion] --> D
-```
-## 1. Student Registration & Authentication  
-**Swimlanes**: Student, System, Database  
 
-```mermaid
-flowchart TD
-    start([Start]) --> A[Enter Email] --> B{{"Valid institutional email?"}}
-    B -->|Yes| C[Send OTP] --> D[Input Profile Data]
-    B -->|No| E[Show Error] --> end([End])
-    D --> F{{"All mandatory fields complete?"}}
-    F -->|Yes| G[Encrypt & Save Profile] --> H[Confirm Registration]
-    F -->|No| I[Prompt Completion] --> D
-    H --> end
-```
-**Stakeholder Value**:  
-- Ensures only verified students access the system (**FR1, NRF7**).  
-- MFA and encryption meet security standards (**FR2, NRF6**).  
-
----
 # Activity Workflow Diagrams
 
 ## 1. Student Registration & Authentication  
