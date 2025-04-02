@@ -1,18 +1,7 @@
 # Student Wellness System - State Transition Diagrams
 
 ## 1. Wellness Assessment
-```mermaid
-stateDiagram-v2
-    [*] --> Unstarted
-    Unstarted --> InProgress: student_begins
-    InProgress --> Submitted: student_completes
-    Submitted --> Analyzed: system_scores
-    Analyzed --> HighRisk: score >= threshold
-    Analyzed --> LowRisk: score < threshold
-    HighRisk --> Resolved: counselor_intervention
-    LowRisk --> Archived: after_30_days
-    Resolved --> Archived: case_closed
-```
+
 ```mermaid
 stateDiagram-v2
     [*] --> Unstarted
@@ -34,17 +23,7 @@ stateDiagram-v2
 ---
 
 ## 2. Counseling Appointment
-```mermaid
-stateDiagram-v2
-    [*] --> Unrequested
-    Unrequested --> Pending: student_requests
-    Pending --> Confirmed: counselor_approves
-    Pending --> Canceled: student_cancels
-    Confirmed --> Completed: session_ends
-    Confirmed --> NoShow: student_misses
-    NoShow --> FollowUp: counselor_reviews
-    Completed --> Archived
-```
+
 ```mermaid
 stateDiagram-v2
     [*] --> Unrequested
