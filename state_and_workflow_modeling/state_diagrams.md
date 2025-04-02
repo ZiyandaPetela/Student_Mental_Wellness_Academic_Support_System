@@ -13,10 +13,23 @@ stateDiagram-v2
     LowRisk --> Archived: after_30_days
     Resolved --> Archived: case_closed
 ```
+```mermaid
+stateDiagram-v2
+    [*] --> Unstarted
+    Unstarted --> InProgress: student_begins
+    InProgress --> Submitted: student_completes
+    Submitted --> Analyzed: system_scores
+    Analyzed --> HighRisk: score >= 15 [PHQ-9] || score >= 10 [GAD-7]
+    Analyzed --> ModerateRisk: score >= 10 [PHQ-9] || score >= 5 [GAD-7]
+    Analyzed --> LowRisk: score < 10 [PHQ-9] && score < 5 [GAD-7]
+    HighRisk --> Resolved: counselor_intervention
+    ModerateRisk --> Resolved: self_help_completed
+    LowRisk --> Archived: after_30_days
+    Resolved --> Archived: case_closed
 **Key States**:  
 - `Unstarted` → `InProgress`: Tracks active assessment (FR-04)  
 - `HighRisk`: Triggers counselor alerts (UC-03)  
-
+```
 ---
 
 ## 2. Counseling Appointment
