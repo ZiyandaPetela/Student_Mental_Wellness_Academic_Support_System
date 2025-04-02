@@ -2,6 +2,7 @@
 
 ## 1. Student Registration & Authentication  
 **Swimlanes**: Student, System, Database  
+
 ```mermaid
 flowchart TD
     start([Start]) --> A[Enter Email] --> B{{"Valid institutional email?"}}
