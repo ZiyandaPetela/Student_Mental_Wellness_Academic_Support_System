@@ -74,35 +74,14 @@ stateDiagram-v2
     HighPriority --> Archived: case_closed
     Monitoring --> Archived: inactive_90_days
 ```
-```mermaid
 
-stateDiagram-v2
-    [*] --> New
-    New --> PendingVerification: registration_submitted
-    PendingVerification --> Active: email_verified && mfa_setup_complete
-    Active --> Monitoring: low_risk
-    Active --> HighPriority: high_risk
-    HighPriority --> Active: risk_reduced
-    Monitoring --> Active: risk_increased
-    Active --> Suspended: inactivity_60_days
-    Suspended --> Active: user_returns
-    Suspended --> Archived: inactive_90_days
-```
 **Note**:  
 - `HighPriority` requires counselor attention (FR-09)  
 
 ---
 
 ## 4. Counselor Case File
-```mermaid
-stateDiagram-v2
-    [*] --> Unassigned
-    Unassigned --> Open: counselor_accepts
-    Open --> InProgress: contact_initiated
-    InProgress --> Resolved: student_confirmed
-    InProgress --> Reopened: new_symptoms
-    Resolved --> Archived
-```
+
 ```mermaid
     stateDiagram-v2
     [*] --> Unassigned
@@ -121,14 +100,7 @@ stateDiagram-v2
 ---
 
 ## 5. Emergency Alert
-```mermaid
-stateDiagram-v2
-    [*] --> Inactive
-    Inactive --> Triggered: risk_detected
-    Triggered --> Escalated: notify_counselor
-    Escalated --> Resolved: intervention_complete
-    Resolved --> Logged: report_filed
-```
+
 ```mermaid
   stateDiagram-v2
     [*] --> Inactive
@@ -151,13 +123,6 @@ stateDiagram-v2
 ```mermaid
 stateDiagram-v2
     [*] --> Unreviewed
-    Unreviewed --> Approved: counselor_verifies
-    Approved --> Published: admin_releases
-    Published --> Archived: outdated
-```
-```mermaid
-stateDiagram-v2
-    [*] --> Unreviewed
     Unreviewed --> InReview: counselor_assigned
     InReview --> Approved: content_verified
     InReview --> Rejected: content_unsuitable
@@ -173,15 +138,7 @@ stateDiagram-v2
 ---
 
 ## 7. Progress Report
-```mermaid
-stateDiagram-v2
-    [*] --> Unprepared
-    Unprepared --> Draft: counselor_starts
-    Draft --> Finalized: counselor_submits
-    Finalized --> Reviewed: student_views
-    Reviewed --> Updated: new_data_added
-    Updated --> Archived: semester_end
-```
+
 ```mermaid
   stateDiagram-v2
     [*] --> Unprepared
@@ -194,7 +151,8 @@ stateDiagram-v2
     Finalized --> Archived: semester_end
 ```
 **Lifecycle**:  
-- `Updated` allows iterative improvements (FR-33)  
+- `Updated` allows iterative improvements (FR-33)
+# 8. User Account 
 ```mermaid
 stateDiagram-v2
     [*] --> Created
