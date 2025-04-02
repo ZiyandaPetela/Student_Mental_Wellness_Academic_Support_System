@@ -101,3 +101,5 @@ flowchart TD
     E -->|Yes| F[Alert Admin] --> end1([End])
     E -->|No| end2([End])
 ```
+## Activity Diagrams Explanation  
+[See explanation](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/explanations.md)  
