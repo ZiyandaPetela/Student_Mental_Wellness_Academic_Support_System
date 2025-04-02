@@ -102,4 +102,4 @@ flowchart TD
     E -->|No| end2([End])
 ```
 ## Activity Diagrams Explanation  
-[See explanation](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/explanations.md)  
+[See explanation](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/workflow_explanations.md)  
