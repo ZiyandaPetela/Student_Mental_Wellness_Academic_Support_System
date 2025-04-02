@@ -1,5 +1,17 @@
 # Activity Workflow Diagrams
-
+# 1. Student Registration & Authentication  
+**Swimlanes**: Student, System, Database  
+```mermaid
+flowchart TD
+    start([Start]) --> A[Enter Email]
+    A --> B{"Valid institutional email?"}
+    B -->|Yes| C[Send OTP]
+    B -->|No| E[Show Error] --> end1([End])
+    C --> D[Input Profile Data]
+    D --> F{"All mandatory fields complete?"}
+    F -->|Yes| G[Encrypt & Save Profile] --> H[Confirm Registration] --> end2([End])
+    F -->|No| I[Prompt Completion] --> D
+```
 ## 1. Student Registration & Authentication  
 **Swimlanes**: Student, System, Database  
 
