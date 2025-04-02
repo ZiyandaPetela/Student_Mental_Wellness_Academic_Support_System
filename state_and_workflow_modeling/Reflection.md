@@ -30,4 +30,15 @@
 | **Aspect**          | **State Diagrams**                     | **Activity Diagrams**               |  
 |----------------------|----------------------------------------|-------------------------------------|  
 | **Purpose**          | Object lifecycle (e.g., `Assessment`)  | Process flow (e.g., "Submit Form")  |  
-| **Agile Alignment**  | Maps to *acceptance criteria* (FRs
+| **Agile Alignment**  | Maps to *acceptance criteria* (FRs)    | Maps to *user story steps*          |  
+| **Complexity**       | Fewer states = better readability      | Can handle parallel flows           |  
+| **Example**          | `Unstarted → Submitted → Analyzed`     | `Student → System → Counselor` lanes|  
+
+**Key Insight**:  
+- State diagrams excel at showing *constraints* (e.g., "Can’t cancel archived appointments").  
+- Activity diagrams reveal *collaboration pain points* (e.g., handoffs between swimlanes).  
+
+## Lessons Learned  
+1. **Validation**: Early Mermaid prototypes exposed 3 mismatches between FRs and user stories.  
+2. **Tooling**: GitHub’s native Mermaid support improved team collaboration.  
+3. **Agile Synergy**: Diagrams became living docs—updated during sprint retrospectives.  
