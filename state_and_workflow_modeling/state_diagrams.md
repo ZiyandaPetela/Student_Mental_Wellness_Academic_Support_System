@@ -26,10 +26,11 @@ stateDiagram-v2
     ModerateRisk --> Resolved: self_help_completed
     LowRisk --> Archived: after_30_days
     Resolved --> Archived: case_closed
+```
 **Key States**:  
 - `Unstarted` → `InProgress`: Tracks active assessment (FR-04)  
 - `HighRisk`: Triggers counselor alerts (UC-03)  
-```
+
 ---
 
 ## 2. Counseling Appointment
