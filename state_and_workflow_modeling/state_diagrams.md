@@ -45,6 +45,20 @@ stateDiagram-v2
     NoShow --> FollowUp: counselor_reviews
     Completed --> Archived
 ```
+```mermaid
+stateDiagram-v2
+    [*] --> Unrequested
+    Unrequested --> Pending: student_requests
+    Pending --> Confirmed: counselor_approves
+    Pending --> Rescheduled: time_conflict
+    Pending --> Canceled: student_cancels || counselor_unavailable
+    Confirmed --> Completed: session_ends
+    Confirmed --> NoShow: student_misses
+    NoShow --> FollowUp: counselor_reviews
+    Completed --> FeedbackPending: system_requests_feedback
+    FeedbackPending --> Archived: feedback_provided || 7_days_elapsed
+    FollowUp --> Pending: reschedule
+```
 **Critical Flow**:  
 - `NoShow` → `FollowUp`: Addresses missed sessions (FR-15)  
 
