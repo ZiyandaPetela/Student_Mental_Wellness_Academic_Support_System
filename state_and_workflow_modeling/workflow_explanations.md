@@ -29,33 +29,43 @@
 
 ## 4. Counselor Case File
 ### Key States and Transitions
-- **Unassigned → Open**: Counselor accepts case (UC-05: "Assign cases to counselors").
-- **InProgress → Reopened**: New symptoms reported (FR-27: "Allow case reopening").
-- **Resolved → Archived**: Counselor confirms resolution (FR-30: "Close cases after 14 days").
-
+- **Unassigned → Open**: Counselor accepts case (supports counselor role in use case diagram).
+- **InProgress → OnHold/Resolved/Reopened**: Multiple progression paths based on student response.
+- **Reopened → InProgress**: Tracks recurring issues or academic decline (FR6: "Assess how mental health issues affect academic activities").
+- **Resolved → Archived**: Documentation complete after follow-up period (supports US-016 Correlation).
 ---
 
 ## 5. Emergency Alert
 ### Key States and Transitions
-- **Inactive → Triggered**: System detects crisis (FR-20: "Immediate alerts for suicidal ideation").
-- **Escalated → Resolved**: Counselor intervenes (UC-09: "Emergency protocol").
-- **Logged**: Audit trail created (FR-33: "Log all emergency actions").
-
+- **Inactive → Triggered**: System detects crisis indicators like suicide ideation or severe depression.
+- **Acknowledged → Escalated/Managed**: Decision point for severity level (supports "Generate Risk Assessment Reports" use case).
+- **External → Resolved**: Campus security or emergency services involved for severe cases.
+- **Logged**: Creates comprehensive audit trail (supports US-012 Reporting).
 ---
 
 ## 6. Wellness Resource
 ### Key States and Transitions
-- **Unreviewed → Approved**: Counselor verifies content (FR-25: "Counselor approval for resources").
-- **Published → Archived**: Resource outdated (FR-36: "Archive unused resources after 1 year").
-
----
+- **Unreviewed → InReview → Approved**: Quality control workflow (FR9: "Categorize content by topic").
+- **Published → Featured**: Highlights highly effective resources based on user feedback.
+- **Archived → InReview**: Allows content refresh cycle (supports US-006 Filtering Resources).
+- **Featured → Published**: Rotation of featured resources keeps content fresh.
 
 ## 7. Progress Report
 ### Key States and Transitions
-- **Unprepared → Draft**: Counselor starts report (UC-11: "Generate Progress Reports").
-- **Finalized → Reviewed**: Student views report (FR-39: "Share reports with students").
-- **Updated**: New assessment data added (FR-42: "Allow report updates").
-- 
+- **Unprepared → Draft**: Counselor initiates report creation.
+-  **PendingAcademicData → Finalized**: Integration of wellness and academic metrics (FR11: "Track and visualize mental wellness trends").
+- **Reviewed → Updated**: Iterative improvement process with student feedback.
+- **Finalized → Archived**: Semester-end documentation (supports US-009 Trends and US-007 Dashboard).
+
+## 8. User Account
+### Key States and Transitions
+- **Created → PendingEmailVerification**: Institutional email validation (FR1: "Registration with institutional email").
+- **PendingMFASetup → Active**: Security setup complete (FR2: "Multi-factor authentication").
+- **Active → Locked**: Security protection for failed attempts (supports NRF6: "Data encryption").
+- **Inactive → Archived**: Lifecycle management for unused accounts (supports US-001 Registration and US-002 MFA).
+---
+
+
 # Activity Diagram Explanations
 ## 1. Student Registration & Authentication
 ### Key Steps
@@ -157,58 +167,6 @@
 - **Admins**: Automated legal compliance
 - **System**: Docker-ready (NRF4)
 - **Data**: 50% faster deployments (NRF5)
-# Workflow Explanations
-
-# State Diagram Explanations
-
-## 1. Wellness Assessment
-
-
-## 2. Counseling Appointment
-### Key States and Transitions
-
-
-## 3. Student Wellness Profile
-### Key States and Transitions
-- **New → PendingVerification**: Registration submitted (FR1: "Allow students to register using institutional email").
-- **PendingVerification → Active**: Email verified and MFA setup complete (FR2: "Support multi-factor authentication").
-- **Active → HighPriority/Monitoring**: Risk-based state assignment (FR3: "Store user profiles with preferences").
-- **Suspended → Active/Archived**: Handles profile reactivation or retirement (supports US-015 Profile management).
-
-## 4. Counselor Case File
-### Key States and Transitions
-- **Unassigned → Open**: Counselor accepts case (supports counselor role in use case diagram).
-- **InProgress → OnHold/Resolved/Reopened**: Multiple progression paths based on student response.
-- **Reopened → InProgress**: Tracks recurring issues or academic decline (FR6: "Assess how mental health issues affect academic activities").
-- **Resolved → Archived**: Documentation complete after follow-up period (supports US-016 Correlation).
-
-## 5. Emergency Alert
-### Key States and Transitions
-- **Inactive → Triggered**: System detects crisis indicators like suicide ideation or severe depression.
-- **Acknowledged → Escalated/Managed**: Decision point for severity level (supports "Generate Risk Assessment Reports" use case).
-- **External → Resolved**: Campus security or emergency services involved for severe cases.
-- **Logged**: Creates comprehensive audit trail (supports US-012 Reporting).
-
-## 6. Wellness Resource
-### Key States and Transitions
-- **Unreviewed → InReview → Approved**: Quality control workflow (FR9: "Categorize content by topic").
-- **Published → Featured**: Highlights highly effective resources based on user feedback.
-- **Archived → InReview**: Allows content refresh cycle (supports US-006 Filtering Resources).
-- **Featured → Published**: Rotation of featured resources keeps content fresh.
-
-## 7. Progress Report
-### Key States and Transitions
-- **Unprepared → Draft**: Counselor initiates report creation.
-- **PendingAcademicData → Finalized**: Integration of wellness and academic metrics (FR11: "Track and visualize mental wellness trends").
-- **Reviewed → Updated**: Iterative improvement process with student feedback.
-- **Finalized → Archived**: Semester-end documentation (supports US-009 Trends and US-007 Dashboard).
-
-## 8. User Account
-### Key States and Transitions
-- **Created → PendingEmailVerification**: Institutional email validation (FR1: "Registration with institutional email").
-- **PendingMFASetup → Active**: Security setup complete (FR2: "Multi-factor authentication").
-- **Active → Locked**: Security protection for failed attempts (supports NRF6: "Data encryption").
-- **Inactive → Archived**: Lifecycle management for unused accounts (supports US-001 Registration and US-002 MFA).
 
 # Activity Diagram Explanations
 
