@@ -29,7 +29,7 @@ flowchart TD
     D --> F
     F -->|Yes| G --> H --> end2([End])
     F -->|No| I --> D
-
+```
 
 ## 1. Student Registration & Authentication  
 **Swimlanes**: Student, System, Database  
