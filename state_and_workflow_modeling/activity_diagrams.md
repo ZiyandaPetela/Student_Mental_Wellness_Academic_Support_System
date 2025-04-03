@@ -1,32 +1,25 @@
 ```mermaid
-flowchart TD
-    subgraph Student
-        start([Start]) 
-        A[Enter Email]
-        D[Input Profile Data]
-    end
+
+  flowchart TD
+    %% Activity Diagram Style
+    start([Start]) --> A[Enter Email]
+    A --> B{Valid institutional email?}
+    B -->|Yes| C[Send OTP]
+    B -->|No| E[Show Error] --> stop1([End])
     
-    subgraph System
-        B{"Valid institutional email?"}
-        C[Send OTP]
-        E[Show Error]
-        F{"All mandatory fields complete?"}
-        H[Confirm Registration] 
-        I[Prompt Completion]
-    end
+    C --> D[Input Profile Data]
+    D --> F{All mandatory fields complete?}
+    F -->|Yes| G[Encrypt & Save Profile] --> H[Confirm Registration] --> stop2([End])
+    F -->|No| I[Prompt Completion] --> D
     
-    subgraph Database
-        G[Encrypt & Save Profile]
-    end
+    %% Styling for activity diagram
+    classDef activity fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef decision fill:#f96,stroke:#333,stroke-width:2px;
+    classDef startend fill:#000,stroke:#000,stroke-width:2px,color:#fff;
     
-    start --> A
-    A --> B
-    B -->|Yes| C
-    B -->|No| E --> end1([End])
-    C --> D
-    D --> F
-    F -->|Yes| G --> H --> end2([End])
-    F -->|No| I --> D
+    class A,C,D,E,G,H,I activity;
+    class B,F decision;
+    class start,stop1,stop2 startend;
 ```
 
 # Activity Workflow Diagrams
