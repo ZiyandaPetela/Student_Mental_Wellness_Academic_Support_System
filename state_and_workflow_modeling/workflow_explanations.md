@@ -1,6 +1,6 @@
 # Workflow Explanations
 # State Diagram Explanations
-# need to replace UC/FR with the correct ones from assignment 4/5
+
 ## 1. Wellness Assessment
 ### Key States and Transitions
 - **Unstarted → InProgress**: Student begins assessment (triggered by "Complete Wellness Assessment" use case).
@@ -106,53 +106,50 @@
 
 ## 4. Crisis Resource Delivery
 ### Key Steps
-1. **Risk Triage**: Score-based routing (FR7)
-2. **Emergency Protocol**: Instant hotline display
-3. **Logging**: Encrypted audit trail (NRF6)
+1. **Risk Triage**: Score-based routing to appropriate resources (FR7)
+2. **Emergency Protocol**: Immediate display of crisis resources for high-risk cases
+3. **Secure Tracking**: Encrypted audit trail of resource delivery (NRF6)
 
 ### Stakeholder Benefits
-- **Students**: Life-saving resources
-- **Counselors**: Clear escalation path
-- **Compliance**: HIPAA-ready (NRF7)
-
+- **Students**: Life-saving resources delivered when most needed
+- **Counselors**: Clear escalation path with defined protocols
+- **Compliance**: Maintains privacy while enabling necessary interventions (NRF7)
 ---
 
 ## 5. Progress Tracking & Goal Updates
 ### Key Steps
-1. **Dashboard Updates**: Real-time graphs (FR11)
+1. **Dashboard Updates**: Real-time graphs and trends (FR11)
 2. **Milestone Checks**: Automated notifications (FR12)
 3. **Plan Adjustment**: Dynamic recommendations
 
 ### Stakeholder Benefits
-- **Students**: Motivational tracking
-- **Admins**: WCAG 2.1 AA compliant (NRF1)
-- **System**: 99.5% uptime (NRF14)
-
+- **Students**: Motivational tracking with visual progress indicators (supports US-008 Goals)
+- **Admins**: - **System**: Accessible interface compliant with WCAG 2.1 AA standards (NRF1)
+- **System**: 99.5% uptime ensures consistent access to progress data (NRF14)
 ---
 
 ## 6. Counselor High-Risk Case Handling
 ### Key Steps
-1. **Alert Reception**: <5 min response (FR12)
+1. **Alert Reception**: Rapid notification of high-risk assessments, <5 min response (FR12)
 2. **Threat Assessment**: Counselor judgment
 3. **Escalation**: Campus safety integration
 
 ### Stakeholder Benefits
-- **Counselors**: Streamlined workflow
-- **Students**: Rapid intervention
-- **Security**: AES-256 encrypted comms (NRF6)
+- **Counselors**: Streamlined workflow prioritizing most urgent cases
+- **Students**: Timely intervention for critical mental health needs
+- **Security**: Encrypted communications protect sensitive discussions (NRF6)
 
 ---
 
 ## 7. Study Guide Generation
 ### Key Steps
-1. **Content Fetching**: Topic-filtered (FR9)
-2. **Wellness Integration**: Stress-management tips (FR10)
+1. **Content Fetching**: Topic-specific educational resources (FR9)
+2. **Wellness Integration**: Study guides with stress management components (FR10)
 3. **PDF Output**: Accessible format (NRF1)
 
 ### Stakeholder Benefits
-- **Students**: Unified academic/wellness support
-- **System**: Linux/Windows compatible (NRF3)
-
+- **Students**: Unified approach connecting academic needs with mental wellness strategies
+- **System**: Cross-platform compatibility with Windows and Linux (NRF3
 ---
 
 ## 8. Automated Backup & Compliance
@@ -164,76 +161,4 @@
 ### Stakeholder Benefits
 - **Admins**: Automated legal compliance
 - **System**: Docker-ready (NRF4)
-- **Data**: 50% faster deployments (NRF5)
-
-# Activity Diagram Explanations
-
-## 1. Student Registration & Authentication
-### Key Steps
-1. **Email Validation**: Verifies institutional email domains (FR1)
-2. **OTP Verification**: Enforces multi-factor authentication (FR2)
-3. **Profile Completion**: Mandates academic/wellness data (FR3)
-
-### Stakeholder Benefits
-- **Students**: Secure onboarding with protection of sensitive mental health data (NRF6: "AES-256 encryption")
-- **Admins**: Compliant with educational data privacy regulations (NRF7)
-- **System**: Robust validation prevents unauthorized access (supports US-001 Registration)
-
-
-
-
-## 4. Crisis Resource Delivery
-### Key Steps
-1. **Risk Triage**: Score-based routing to appropriate resources (FR7)
-2. **Emergency Protocol**: Immediate display of crisis resources for high-risk cases
-3. **Secure Tracking**: Encrypted audit trail of resource delivery (NRF6)
-
-### Stakeholder Benefits
-- **Students**: Life-saving resources delivered when most needed
-- **Counselors**: Clear escalation path with defined protocols
-- **Compliance**: Maintains privacy while enabling necessary interventions (NRF7)
-
-## 5. Progress Tracking & Goal Setting
-### Key Steps
-1. **Dashboard Visualization**: Real-time graphs and trends (FR11)
-2. **Goal Definition**: Student-defined wellness objectives (FR12)
-3. **Milestone Notifications**: Automated recognition of achievements
-
-### Stakeholder Benefits
-- **Students**: Motivational tracking with visual progress indicators (supports US-008 Goals)
-- **System**: Accessible interface compliant with WCAG 2.1 AA standards (NRF1)
-- **Data Integrity**: 99.5% uptime ensures consistent access to progress data (NRF14)
-
-## 6. Counselor High-Risk Case Management
-### Key Steps
-1. **Alert Reception**: Rapid notification of high-risk assessments
-2. **Case Evaluation**: Counselor assessment of severity and urgency
-3. **Intervention Planning**: Structured approach based on risk level
-4. **Referral Options**: Integration with external services when needed
-
-### Stakeholder Benefits
-- **Counselors**: Streamlined workflow prioritizing most urgent cases
-- **Students**: Timely intervention for critical mental health needs
-- **Security**: Encrypted communications protect sensitive discussions (NRF6)
-
-## 7. Personalized Study Resource Generation
-### Key Steps
-1. **Content Filtering**: Topic-specific educational resources (FR9)
-2. **Mental Wellness Integration**: Study guides with stress management components (FR10)
-3. **Personalization**: Adapting recommendations to individual assessment results (FR7)
-
-### Stakeholder Benefits
-- **Students**: Unified approach connecting academic needs with mental wellness strategies
-- **Faculty**: Supplementary resources that support classroom learning
-- **System**: Cross-platform compatibility with Windows and Linux (NRF3)
-
-## 8. System Security & Compliance Management
-### Key Steps
-1. **Automated Backups**: Daily secure data protection (NRF15)
-2. **Compliance Monitoring**: Regular checks against privacy regulations (NRF7)
-3. **Containerized Deployment**: Docker-based implementation for consistency (NRF4)
-
-### Stakeholder Benefits
-- **Administrators**: Streamlined compliance documentation
-- **IT Staff**: Simplified deployment and maintenance (NRF5: "50% faster deployments")
-- **Data Protection**: Multi-layered security approach protecting sensitive mental health data
+- **Data**: Simplified deployment and maintenance (NRF5: "50% faster deployments") 
