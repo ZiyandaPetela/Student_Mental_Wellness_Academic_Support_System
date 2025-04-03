@@ -56,7 +56,7 @@ Once completed, the system will feature:
   - [User Stories (Assignment 6)](/docs/user_stories.md)  
 
 **4. Reflection**  
-- [Challenges & Learnings](/state_and_workflow_modeling/reflection.md)  
+- [Challenges & Learnings](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Reflection.md)  
 
 
  
