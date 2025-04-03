@@ -1,5 +1,36 @@
+```mermaid
+flowchart TD
+    subgraph Student
+        start([Start]) 
+        A[Enter Email]
+        D[Input Profile Data]
+    end
+    
+    subgraph System
+        B{"Valid institutional email?"}
+        C[Send OTP]
+        E[Show Error]
+        F{"All mandatory fields complete?"}
+        H[Confirm Registration] 
+        I[Prompt Completion]
+    end
+    
+    subgraph Database
+        G[Encrypt & Save Profile]
+    end
+    
+    start --> A
+    A --> B
+    B -->|Yes| C
+    B -->|No| E --> end1([End])
+    C --> D
+    D --> F
+    F -->|Yes| G --> H --> end2([End])
+    F -->|No| I --> D
+```
 
 # Activity Workflow Diagrams
+
 ```mermaid
 flowchart TD
     subgraph Student
