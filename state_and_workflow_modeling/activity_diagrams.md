@@ -1,3 +1,5 @@
+## 1. Student Registration & Authentication  
+**Swimlanes**: Student, System, Database
 ```mermaid
 flowchart TD
     %% Clean activity diagram for GitHub
@@ -12,52 +14,6 @@ flowchart TD
     F -->|No| I[Prompt Completion] --> D
 ```
 
-# Activity Workflow Diagrams
-
-```mermaid
-flowchart TD
-    subgraph Student
-        start([Start]) 
-        A[Enter Email]
-        D[Input Profile Data]
-    end
-    
-    subgraph System
-        B{"Valid institutional email?"}
-        C[Send OTP]
-        E[Show Error]
-        F{"All mandatory fields complete?"}
-        H[Confirm Registration] 
-        I[Prompt Completion]
-    end
-    
-    subgraph Database
-        G[Encrypt & Save Profile]
-    end
-    
-    start --> A
-    A --> B
-    B -->|Yes| C
-    B -->|No| E --> end1([End])
-    C --> D
-    D --> F
-    F -->|Yes| G --> H --> end2([End])
-    F -->|No| I --> D
-```
-
-## 1. Student Registration & Authentication  
-**Swimlanes**: Student, System, Database  
-```mermaid
-flowchart TD
-    start([Start]) --> A[Enter Email]
-    A --> B{"Valid institutional email?"}
-    B -->|Yes| C[Send OTP]
-    B -->|No| E[Show Error] --> end1([End])
-    C --> D[Input Profile Data]
-    D --> F{"All mandatory fields complete?"}
-    F -->|Yes| G[Encrypt & Save Profile] --> H[Confirm Registration] --> end2([End])
-    F -->|No| I[Prompt Completion] --> D
-```
 
 ## 2. PHQ-9/GAD-7 Assessment Flow  
 **Swimlanes**: Student, System, Counselor  
@@ -72,7 +28,33 @@ flowchart TD
     F --> G[Display Dashboard] --> end1([End])
     E -->|Score ≥8| H[Alert Counselor] --> I[High-Risk Protocol] --> end2([End])
 ```
-
+```mermaid
+flowchart TD
+    subgraph Student
+        start([Start])
+        B[Answer Questions]
+    end
+    
+    subgraph System
+        A[Display Questions]
+        C{"All questions answered?"}
+        D[Save Progress]
+        E[Calculate Scores]
+        F[Generate Recommendations]
+        G[Display Dashboard]
+    end
+    
+    subgraph Counselor
+        H[Review Alert]
+        I[High-Risk Protocol]
+    end
+    
+    start --> A
+    A --> B
+    B --> C
+    C -->|No| D --> B
+    C -->|Yes| E
+  ```
 ## 3. Academic-Mental Health Correlation  
 **Swimlanes**: System, Database  
 ```mermaid
