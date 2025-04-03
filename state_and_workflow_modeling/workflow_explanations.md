@@ -74,36 +74,34 @@
 3. **Profile Completion**: Mandates academic/wellness data (FR3)
 
 ### Stakeholder Benefits
-- **Students**: Secure onboarding (NRF6 encryption)
-- **Admins**: Compliant with FERPA (NRF7)
-- **System**: Blocks non-institutional emails (FR1 acceptance criteria)
-
+- **Students**: Secure onboarding with protection of sensitive mental health data (NRF6: "AES-256 encryption")
+- **Admins**:Compliant with educational data privacy regulations (NRF7)
+- **System**: Robust validation prevents unauthorized access (supports US-001 Registration)
 ---
 
 ## 2. PHQ-9/GAD-7 Assessment Flow
 ### Key Steps
 1. **Question Processing**: Validated depression/anxiety tools (FR4)
 2. **Real-Time Scoring**: <2s processing (NRF9)
-3. **High-Risk Escalation**: Auto-alerts counselors (FR12)
+3. **High-Risk Escalation**: Auto-alerts counselors to counselors for critical cases
+ (FR12)
 
 ### Stakeholder Benefits
-- **Students**: Immediate feedback (FR4)
-- **Counselors**: Prioritized cases (FR12)
-- **System**: Handles 1,000 concurrent users (NRF10)
-
+- **Students**: Immediate feedback with personalized recommendations (FR7) 
+- **Counselors**: Prioritized case management for efficient intervention
+- **System**: Handles 1,000 concurrent assessments during peak periods (NRF10)
 ---
 
 ## 3. Academic-Mental Health Correlation
 ### Key Steps
-1. **Data Aggregation**: Links grades to assessment scores (FR6)
-2. **Pattern Analysis**: Identifies academic impacts
-3. **Intervention Suggestions**: Custom study plans (FR8)
-
+1. **Data Aggregation**:  Links academic performance with mental health metrics (FR6)
+2. **Pattern Analysis**: Identifies impact on specific activities like attendance and grades
+3. **Intervention Suggestions**: Customized study techniques aligned with mental health needs (FR8)
+   
 ### Stakeholder Benefits
-- **Faculty**: Early warning system
-- **Students**: Targeted academic support (FR8)
-- **System**: Modular updates (NRF13)
-
+- **Faculty**: Early warning system for academic performance issues
+- **Students**: Targeted support addressing both academic and wellness concerns
+- **System**: Supports modular updates without requiring full system restart (NRF13)
 ---
 
 ## 4. Crisis Resource Delivery
@@ -181,27 +179,8 @@
 - **Admins**: Compliant with educational data privacy regulations (NRF7)
 - **System**: Robust validation prevents unauthorized access (supports US-001 Registration)
 
-## 2. PHQ-9/GAD-7 Assessment Flow
-### Key Steps
-1. **Question Presentation**: Validated depression/anxiety screening tools (FR4)
-2. **Real-Time Scoring**: Fast processing within 2 seconds (NRF9)
-3. **High-Risk Escalation**: Automated alerts to counselors for critical cases
 
-### Stakeholder Benefits
-- **Students**: Immediate feedback with personalized recommendations (FR7) 
-- **Counselors**: Prioritized case management for efficient intervention
-- **System**: Handles 1,000 concurrent assessments during peak periods (NRF10)
 
-## 3. Academic-Mental Health Correlation
-### Key Steps
-1. **Data Aggregation**: Links academic performance with mental health metrics (FR6)
-2. **Pattern Analysis**: Identifies impact on specific activities like attendance and grades
-3. **Intervention Suggestions**: Customized study techniques aligned with mental health needs (FR8)
-
-### Stakeholder Benefits
-- **Faculty**: Early warning system for academic performance issues
-- **Students**: Targeted support addressing both academic and wellness concerns
-- **System**: Supports modular updates without requiring full system restart (NRF13)
 
 ## 4. Crisis Resource Delivery
 ### Key Steps
