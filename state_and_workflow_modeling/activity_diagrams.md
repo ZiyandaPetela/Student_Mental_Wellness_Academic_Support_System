@@ -28,33 +28,7 @@ flowchart TD
     F --> G[Display Dashboard] --> end1([End])
     E -->|Score ≥8| H[Alert Counselor] --> I[High-Risk Protocol] --> end2([End])
 ```
-```mermaid
-flowchart TD
-    subgraph Student
-        start([Start])
-        B[Answer Questions]
-    end
-    
-    subgraph System
-        A[Display Questions]
-        C{"All questions answered?"}
-        D[Save Progress]
-        E[Calculate Scores]
-        F[Generate Recommendations]
-        G[Display Dashboard]
-    end
-    
-    subgraph Counselor
-        H[Review Alert]
-        I[High-Risk Protocol]
-    end
-    
-    start --> A
-    A --> B
-    B --> C
-    C -->|No| D --> B
-    C -->|Yes| E
-  ```
+
 ## 3. Academic-Mental Health Correlation  
 **Swimlanes**: System, Database  
 ```mermaid
@@ -66,7 +40,34 @@ flowchart TD
     D -->|Yes| E[Suggest Adjustments] --> F[Update Dashboard] --> end1([End])
     D -->|No| G[Log Baseline Data] --> end2([End])
 ```
+```mermaid
+flowchart TD
+    %% Activity Diagram with Parallel Processing
+    subgraph System["System"]
+        start((" ")) --> Pull[Pull Grades]
+        start --> Fetch[Fetch Assessment Data]
+        Pull & Fetch --> Identify[Identify Patterns]
+        Identify --> Check{Significant correlation?}
+        Check -->|Yes| Adjust[Suggest Adjustments]
+        Adjust --> Update[Update Dashboard] --> stop1((" "))
+        Check -->|No| Log[Log Baseline Data] --> stop2((" "))
+    end
 
+    subgraph Database["Database"]
+        Pull
+        Fetch
+        Log
+    end
+
+    %% Styling
+    classDef system fill:#f0f0f0,stroke:#333;
+    classDef database fill:#e6f3ff,stroke:#333;
+    classDef startEnd fill:#000000,stroke:#000,color:#fff,shape:circle;
+
+    class System system;
+    class Database database;
+    class start,stop1,stop2 startEnd;
+ ```
 ## 4. Crisis Resource Delivery  
 **Swimlanes**: System, Student  
 ```mermaid
