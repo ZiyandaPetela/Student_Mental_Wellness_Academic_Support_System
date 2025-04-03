@@ -46,7 +46,7 @@ Once completed, the system will feature:
 - [Explanations](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/workflow_explanations.md)  
 
 **2. Activity Workflow Diagrams**  
-- [All Activity Diagrams](/state_and_workflow_modeling/activity_diagrams.md)  
+- [All Activity Diagrams](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/activity_diagrams.md)  
 - [Explanations](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/workflow_explanations.md)  
 
 **3. Integration & Traceability**  
