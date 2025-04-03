@@ -37,3 +37,26 @@ Once completed, the system will feature:
 
 ### GitHub-Kanban-Document
 - [GitHub-Kanban-Document](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/GitHub-Kanban-Document)
+
+## Dynamic Modeling (State & Activity Diagrams)
+
+### Deliverables  
+**1. State Transition Diagrams**  
+- [All State Diagrams](/state_and_workflow_modeling/state_diagrams.md)  
+- [Explanations](/state_and_workflow_modeling/workflow_explanations.md#state-diagram-explanations)  
+
+**2. Activity Workflow Diagrams**  
+- [All Activity Diagrams](/state_and_workflow_modeling/activity_diagrams.md)  
+- [Explanations](/state_and_workflow_modeling/workflow_explanations.md#activity-diagram-explanations)  
+
+**3. Integration & Traceability**  
+- [FR/US Mapping](/state_and_workflow_modeling/integration.md)  
+- Links to Prior Work:  
+  - [Functional Requirements (Assignment 4)](/docs/requirements.md)  
+  - [User Stories (Assignment 6)](/docs/user_stories.md)  
+
+**4. Reflection**  
+- [Challenges & Learnings](/state_and_workflow_modeling/reflection.md)  
+
+
+ 
