@@ -50,10 +50,8 @@ Once completed, the system will feature:
 - [Explanations](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/workflow_explanations.md)  
 
 **3. Integration & Traceability**  
-- [FR/US Mapping](/state_and_workflow_modeling/integration.md)  
-- Links to Prior Work:  
-  - [Functional Requirements (Assignment 4)](/docs/requirements.md)  
-  - [User Stories (Assignment 6)](/docs/user_stories.md)  
+- [FR/US Mapping](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/integration.md)  
+
 
 **4. Reflection**  
 - [Challenges & Learnings](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Reflection.md)  
