@@ -43,11 +43,11 @@ Once completed, the system will feature:
 ### Deliverables  
 **1. State Transition Diagrams**  
 - [All State Diagrams](/state_and_workflow_modeling/state_diagrams.md)  
-- [Explanations](/state_and_workflow_modeling/workflow_explanations.md#state-diagram-explanations)  
+- [Explanations](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/workflow_explanations.md)  
 
 **2. Activity Workflow Diagrams**  
 - [All Activity Diagrams](/state_and_workflow_modeling/activity_diagrams.md)  
-- [Explanations](/state_and_workflow_modeling/workflow_explanations.md#activity-diagram-explanations)  
+- [Explanations](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/state_and_workflow_modeling/workflow_explanations.md)  
 
 **3. Integration & Traceability**  
 - [FR/US Mapping](/state_and_workflow_modeling/integration.md)  
