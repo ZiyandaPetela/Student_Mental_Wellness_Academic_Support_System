@@ -1,7 +1,6 @@
 ```mermaid
-
-  flowchart TD
-    %% Activity Diagram Style
+flowchart TD
+    %% Clean activity diagram for GitHub
     start([Start]) --> A[Enter Email]
     A --> B{Valid institutional email?}
     B -->|Yes| C[Send OTP]
@@ -11,15 +10,6 @@
     D --> F{All mandatory fields complete?}
     F -->|Yes| G[Encrypt & Save Profile] --> H[Confirm Registration] --> stop2([End])
     F -->|No| I[Prompt Completion] --> D
-    
-    %% Styling for activity diagram
-    classDef activity fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef decision fill:#f96,stroke:#333,stroke-width:2px;
-    classDef startend fill:#000,stroke:#000,stroke-width:2px,color:#fff;
-    
-    class A,C,D,E,G,H,I activity;
-    class B,F decision;
-    class start,stop1,stop2 startend;
 ```
 
 # Activity Workflow Diagrams
