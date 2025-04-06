@@ -42,3 +42,5 @@
 1. **Validation**: Early Mermaid prototypes exposed 3 mismatches between FRs and user stories.  
 2. **Tooling**: GitHub’s native Mermaid support improved team collaboration.  
 3. **Agile Synergy**: Diagrams became living docs—updated during sprint retrospectives.  
+
+### Going forward, I’ll use activity diagrams in sprint planning for all multi-role workflows and revisit state transitions at every demo session.
