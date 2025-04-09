@@ -185,10 +185,10 @@ Assessment "1" --> "1" Report : generates
 Assessment "1" --> "0..*" Resource : recommends
 Counsellor "1" --> "0..*" CounsellingAppointment : conducts
 Counsellor "1" --> "0..*" Report : views
-
+```
 
 # Student Mental Wellness Academic Support System - Class Diagram
-```
+
 ```mermaid
 classDiagram
     class User {
