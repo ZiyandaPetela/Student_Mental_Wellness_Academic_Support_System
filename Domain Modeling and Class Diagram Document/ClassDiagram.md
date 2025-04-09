@@ -111,6 +111,87 @@ classDiagram
     note for MentalHealthAssessment "Thresholds:\n- PHQ-9 ≥15 = High risk\n- GAD-7 ≥10 = High risk"
     note for EmergencyAlert "Response Time:\n- Must acknowledge within 5min"
 ```
+classDiagram
+    %% Main Entities
+    class Student {
+        -studentId: String
+        -email: String
+        -academicYear: String
+        -major: String
+        -status: Enum[Active, Inactive]
+        +register(institutionalEmail: String): Boolean
+        +login(password, otp): Boolean
+        +completeAssessment(): MentalHealthAssessment
+        +scheduleAppointment(): Appointment
+    }
+
+class MentalHealthAssessment {
+        -assessmentId: String
+        -type: Enum[PHQ-9, GAD-7]
+        -score: Integer
+        -timestamp: DateTime
+        -status: Enum[Unstarted, InProgress, Completed]
+        +calculateScore(): Integer
+        +generateRiskReport(): RiskLevel
+        +triggerAlerts(): Boolean
+    }
+
+ class Counselor {
+        -counselorId: String
+        -specialization: String
+        -availabilitySlots: TimeSlot[]
+        +viewStudentTrends(): Report
+        +confirmAppointment(): Boolean
+        +reviewResource(): Boolean
+    }
+
+ %% Supporting Entities
+    class Appointment {
+        -appointmentId: String
+        -datetime: DateTime
+        -duration: Integer
+        -status: Enum[Pending, Confirmed, Completed]
+        +schedule(): Boolean
+        +cancel(): Boolean
+        +sendReminder(): Boolean
+    }
+
+ class WellnessResource {
+        -resourceId: String
+        -title: String
+        -type: Enum[Article, Video]
+        -topic: Enum[Stress, Anxiety, Depression]
+        -approvalStatus: Enum[Pending, Approved]
+        +filterByTopic(): WellnessResource[]
+        +rateHelpfulness(): Boolean
+    }
+
+ class EmergencyAlert {
+        -alertId: String
+        -severity: Enum[Low, Medium, High]
+        -triggerTime: DateTime
+        -responseTime: DateTime
+        +escalate(): Boolean
+        +markResolved(): Boolean
+    }
+
+class ProgressTracker {
+        -trackerId: String
+        -wellnessScoreTrend: Float[]
+        -goalCompletionRate: Float
+        +generateTrendReport(): PDF
+        +sendMilestoneNotifications(): Boolean
+    }
+
+ %% Relationships
+    Student "1" -- "0..*" MentalHealthAssessment : completes
+    Student "1" -- "0..3" Appointment : books
+    Counselor "1" -- "0..*" Appointment : manages
+    MentalHealthAssessment "1" -- "1..*" Recommendation : generates
+    MentalHealthAssessment "1" -- "0..1" EmergencyAlert : triggers
+    Counselor "1" -- "0..*" EmergencyAlert : handles
+    Counselor "1" -- "1..*" WellnessResource : reviews
+    ProgressTracker "1" -- "1" Student : monitors
 ```mermaid
     classDiagram
 class Student {
