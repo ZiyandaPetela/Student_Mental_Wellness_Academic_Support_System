@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
     %% ====================== CORE CLASSES ======================
     class Student {
@@ -109,7 +110,8 @@ classDiagram
     note for Student "Business Rules:\n- Max 3 active appointments\n- Institutional email required"
     note for MentalHealthAssessment "Thresholds:\n- PHQ-9 ≥15 = High risk\n- GAD-7 ≥10 = High risk"
     note for EmergencyAlert "Response Time:\n- Must acknowledge within 5min"
-
+```
+```mermaid
     classDiagram
 class Student {
   -studentId: String
@@ -186,7 +188,7 @@ Counsellor "1" --> "0..*" Report : views
 
 
 # Student Mental Wellness Academic Support System - Class Diagram
-
+```
 ```mermaid
 classDiagram
     class User {
