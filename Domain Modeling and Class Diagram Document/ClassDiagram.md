@@ -267,6 +267,34 @@ Assessment "1" --> "0..*" Resource : recommends
 Counsellor "1" --> "0..*" CounsellingAppointment : conducts
 Counsellor "1" --> "0..*" Report : views
 ```
+ Explanation of Class Diagram
+
+This class diagram represents the core structure of the Student Mental Wellness Academic Support System, visualizing the key entities, their attributes, methods, and how they interact.
+
+Encapsulation: Each class includes attributes (data) and methods (behavior) relevant to its role. For example, Assessment stores scores and calculates feedback, while Student handles registration and assessment completion.
+
+Relationships & Multiplicity:
+
+A Student can complete many Assessments, but each Assessment belongs to one student (1 --> 0..*).
+
+A Student has one Profile (composition), meaning the Profile depends on the Student.
+
+Each Assessment can recommend multiple Resources, depending on the results.
+
+A Counsellor can manage multiple CounsellingAppointments and view multiple Reports.
+
+Design Patterns:
+
+Composition is used where appropriate, such as the Profile belonging to a Student.
+
+Association is used to represent flexible connections, like appointments between students and counsellors.
+
+Privacy & Security: The diagram ensures role separation. For instance, counsellors can view anonymized Reports but do not directly access the Student class, supporting system privacy goals.
+
+Scalability: The system is designed to be modular. New entities like Admin, SupportBot, or CrisisTeam can be added without disrupting the core structure.
+
+This diagram directly reflects your system’s use cases and functional requirements and will guide the implementation phase by defining how the system's parts interact and evolve.
+
 
 # Student Mental Wellness Academic Support System - Class Diagram
 
@@ -451,4 +479,156 @@ The class diagram uses standard UML multiplicity notation to show relationships 
 - "0..1" indicates zero or one instance
 
 This design aligns with the system requirements by supporting user registration, assessment completion, personalized recommendations, resource access, appointment scheduling, and wellness tracking while maintaining security and privacy.
+classDiagram
+    class User {
+        -userId: String
+        -email: String
+        -password: String
+        -role: UserRole
+        -authenticationStatus: Boolean
+        +register()
+        +login()
+        +setPreferences()
+        +updateProfile()
+    }
     
+    class Student {
+        -studentId: String
+        -academicYear: String
+        -major: String
+        +completeAssessment()
+        +viewRecommendations()
+        +scheduleAppointment()
+        +trackProgress()
+        +setWellnessGoals()
+    }
+    
+    class Counselor {
+        -counselorId: String
+        -specialization: String
+        -availability: DateTime[]
+        +updateAvailability()
+        +viewAnonymizedTrends()
+        +generateRiskReports()
+    }
+    
+    class Faculty {
+        -facultyId: String
+        -department: String
+        +monitorStudentWellness()
+    }
+    
+    class Admin {
+        -adminId: String
+        +configureSystem()
+        +manageUsers()
+    }
+    
+    class Assessment {
+        -assessmentId: String
+        -type: String
+        -date: DateTime
+        -score: Integer
+        -feedback: String
+        -frequency: String
+        +calculateScore()
+        +provideFeedback()
+        +correlateWithAcademics()
+        +setFrequency()
+    }
+    
+    class Resource {
+        -resourceId: String
+        -title: String
+        -type: String
+        -category: String
+        -content: String
+        +categorize()
+        +filter()
+    }
+    
+    class Recommendation {
+        -recommendationId: String
+        -type: String
+        -priority: Integer
+        -dateGenerated: DateTime
+        +generateForStudent()
+        +matchToAssessment()
+        +linkToResources()
+    }
+    
+    class WellnessGoal {
+        -goalId: String
+        -description: String
+        -targetDate: DateTime
+        -progress: Float
+        -isAchieved: Boolean
+        +updateProgress()
+        +notifyMilestone()
+    }
+    
+    class Appointment {
+        -appointmentId: String
+        -date: DateTime
+        -status: String
+        -notes: String
+        +schedule()
+        +cancel()
+        +reschedule()
+        +syncCalendar()
+    }
+    
+    class WellnessTrend {
+        -trendId: String
+        -startDate: DateTime
+        -endDate: DateTime
+        -metrics: Map
+        +visualizeTrend()
+        +analyzeProgress()
+    }
+    
+    class RiskAssessment {
+        -reportId: String
+        -generatedDate: DateTime
+        -riskLevel: String
+        -recommendations: String[]
+        +analyzeData()
+        +generateReport()
+    }
+    
+    class SecurityModule {
+        -encryptionType: String
+        +encryptData()
+        +validateMFA()
+        +ensureCompliance()
+    }
+    
+    class ResourceLibrary {
+        -categories: Map
+        +addResource()
+        +findResourcesByCategory()
+        +updateResource()
+    }
+
+    User <|-- Student
+    User <|-- Counselor
+    User <|-- Faculty
+    User <|-- Admin
+    
+    Student "1" --> "0..*" Assessment : completes
+    Student "1" --> "0..*" WellnessGoal : sets
+    Student "1" --> "0..*" Appointment : schedules
+    Student "1" --> "0..1" WellnessTrend : tracks
+    
+    Assessment "1" --> "1..*" Recommendation : generates
+    Recommendation "1" --> "1..*" Resource : includes
+    
+    ResourceLibrary "1" -- "0..*" Resource : manages
+    
+    Counselor "1" --> "0..*" RiskAssessment : creates
+    Counselor "1" --> "0..*" Appointment : provides
+    
+    Appointment "0..*" -- "1" Student : schedules
+    Appointment "0..*" -- "1" Counselor : attends
+    
+    SecurityModule -- User : secures
