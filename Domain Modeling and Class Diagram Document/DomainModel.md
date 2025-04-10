@@ -181,5 +181,5 @@ classDiagram
     MentalHealthAssessment "1" -- "1..*" WellnessResource : recommends
     MentalHealthAssessment "1" -- "0..1" EmergencyAlert : triggers
 
-    ed"
+    
 ```
