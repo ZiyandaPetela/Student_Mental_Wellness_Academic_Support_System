@@ -122,3 +122,144 @@ User "1" -- "0..*" Loan : borrows
 Book "1" -- "0..1" Loan : associatedWith
 
 ```
+```mermaid
+classDiagram
+    %% ====================== CORE ENTITIES ======================
+    class Student {
+        -studentId: String
+        -email: String
+        -academicYear: String
+        -major: String
+        -status: StudentStatus
+        +register(institutionalEmail: String) Boolean
+        +login(password: String, otp: String) Session
+        +completeAssessment(assessmentType: AssessmentType) MentalHealthAssessment
+        +scheduleAppointment(counselorId: String, datetime: DateTime) Appointment
+        +setWellnessGoal(description: String, targetDate: Date) WellnessGoal
+        +trackProgress() ProgressReport
+    }
+
+    class MentalHealthAssessment {
+        -assessmentId: String
+        -type: AssessmentType
+        -score: Integer
+        -timestamp: DateTime
+        -status: AssessmentStatus
+        +calculateScore() Integer
+        +generateRecommendations() Recommendation[]
+        +triggerAlerts() AlertStatus
+        +correlateWithAcademic() AcademicImpact
+    }
+
+    class Counselor {
+        -counselorId: String
+        -name: String
+        -specialization: String[]
+        -availability: TimeSlot[]
+        +viewAnonymizedTrends(filters: TrendFilters) TrendReport
+        +confirmAppointment(appointmentId: String) Boolean
+        +generateRiskReport(assessmentIds: String[]) RiskReport
+        +reviewResource(resourceId: String) ApprovalStatus
+    }
+
+    %% ====================== SUPPORT ENTITIES ======================
+    class Appointment {
+        -appointmentId: String
+        -datetime: DateTime
+        -duration: Integer
+        -status: AppointmentStatus
+        -notes: String
+        +schedule() Boolean
+        +cancel(reason: String) Boolean
+        +reschedule(newTime: DateTime) Boolean
+        +sendReminder() Notification
+    }
+
+    class WellnessResource {
+        -resourceId: String
+        -title: String
+        -type: ResourceType
+        -topics: Topic[]
+        -content: String
+        -approvalStatus: ApprovalStatus
+        +filter(criteria: FilterOptions) WellnessResource[]
+        +rate(userId: String, rating: Integer) Boolean
+        +recommend(assessmentId: String) Boolean
+    }
+
+    class EmergencyAlert {
+        -alertId: String
+        -severity: AlertLevel
+        -triggerTime: DateTime
+        -responseDeadline: DateTime
+        +escalate(recipient: EscalationPath) Boolean
+        +resolve(notes: String) Boolean
+        +acknowledge(counselorId: String) Boolean
+    }
+
+    %% ====================== TRACKING ENTITIES ======================
+    class ProgressTracker {
+        -trackerId: String
+        -historicalScores: DataPoint[]
+        -currentGoals: Goal[]
+        +generateReport(timeRange: DateRange) Report
+        +notifyMilestones() Notification[]
+        +analyzeTrends() WellnessTrend
+    }
+
+    class WellnessGoal {
+        -goalId: String
+        -description: String
+        -targetDate: Date
+        -progress: Float
+        +updateProgress(value: Float) Boolean
+        +checkCompletion() Boolean
+        +sendReminder() Notification
+    }
+
+    %% ====================== RELATIONSHIPS ======================
+    Student "1" -- "0..*" MentalHealthAssessment : completes
+    Student "1" -- "0..3" Appointment : books
+    Student "1" -- "1" ProgressTracker : has
+    Student "1" -- "0..*" WellnessGoal : sets
+
+    Counselor "1" -- "0..*" Appointment : manages
+    Counselor "1" -- "0..*" EmergencyAlert : handles
+    Counselor "1" -- "1..*" WellnessResource : reviews
+
+    MentalHealthAssessment "1" -- "1..*" Recommendation : generates
+    MentalHealthAssessment "1" -- "0..1" EmergencyAlert : triggers
+    MentalHealthAssessment "1" -- "1" AcademicImpact : produces
+
+    ProgressTracker "1" -- "0..*" WellnessTrend : maintains
+
+    %% ====================== ENUMERATIONS ======================
+    class StudentStatus {
+        <<enumeration>>
+        NEW
+        ACTIVE
+        INACTIVE
+        ARCHIVED
+    }
+
+    class AssessmentType {
+        <<enumeration>>
+        PHQ9
+        GAD7
+    }
+
+    class AppointmentStatus {
+        <<enumeration>>
+        REQUESTED
+        CONFIRMED
+        COMPLETED
+        CANCELLED
+        NOSHOW
+    }
+
+    %% ====================== NOTES ======================
+    note for Student "Business Rules:\n- Max 3 active appointments\n- Institutional email required\n- MFA authentication"
+    note for MentalHealthAssessment "Thresholds:\n- PHQ9 ≥15 = High risk\n- GAD7 ≥10 = Medium risk\n- Feedback within 2s"
+    note for EmergencyAlert "Response Protocol:\n- 5min acknowledgment\n- 15min escalation"
+    note for Appointment "Policies:\n- 24h cancellation\n- 60min duration limit"
+```
