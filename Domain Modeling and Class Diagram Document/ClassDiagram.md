@@ -1,3 +1,67 @@
+# Class Diagram
+```mermaid
+classDiagram
+
+    class Student {
+        -studentId: String
+        -email: String
+        -academicYear: String
+        -major: String
+        +register() Boolean
+        +login() Boolean
+        +completeAssessment() Boolean
+        +scheduleAppointment() Boolean
+    }
+
+    class MentalHealthAssessment {
+        -assessmentId: String
+        -type: String
+        -score: Integer
+        -timestamp: DateTime
+        +calculateScore() Integer
+        +generateRecommendations() Boolean
+        +triggerAlerts() Boolean
+    }
+
+    class Counselor {
+        -counselorId: String
+        -specialization: String
+        +viewTrends() Report
+        +confirmAppointment() Boolean
+    }
+
+    class Appointment {
+        -appointmentId: String
+        -datetime: DateTime
+        -status: String
+        +schedule() Boolean
+        +cancel() Boolean
+    }
+
+    class WellnessResource {
+        -resourceId: String
+        -title: String
+        -type: String
+        +filterByTopic() Resource[]
+    }
+
+    class EmergencyAlert {
+        -alertId: String
+        -severity: String
+        +escalate() Boolean
+    }
+
+
+    Student "1" -- "0..*" MentalHealthAssessment : completes
+    Student "1" -- "0..3" Appointment : books
+    Counselor "1" -- "0..*" Appointment : manages
+    MentalHealthAssessment "1" -- "1..*" WellnessResource : recommends
+    MentalHealthAssessment "1" -- "0..1" EmergencyAlert : triggers
+
+    
+```
+
+
 # Explanation
 
 ## Overview
