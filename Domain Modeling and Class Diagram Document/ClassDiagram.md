@@ -1,4 +1,4 @@
-# Class Diagram
+# Student Mental Wellness System- Class Diagram
 ```mermaid
 classDiagram
 
