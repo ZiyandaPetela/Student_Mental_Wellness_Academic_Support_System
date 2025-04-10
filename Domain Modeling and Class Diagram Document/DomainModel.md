@@ -95,4 +95,3 @@ classDiagram
 | BR-EM-001 | Response timer | Alert Monitor |
 | BR-DM-002 | Encryption audit | Security Team |
 
-> **Note**: All business rules map directly to functional requirements (FR) and non-functional requirements (NRF) from the system specification.
