@@ -92,7 +92,6 @@
 - Mermaid.js limitations influenced some notation choices
 - Trade-off documentation helps justify design decisions
 
-> **Key Insight**: The iterative design process - with multiple diagram revisions - was crucial for achieving a model that satisfies both technical requirements and real-world wellness system needs while maintaining student privacy and system usability.
 
 ## Conclusion
 This task significantly enhanced my ability to:
