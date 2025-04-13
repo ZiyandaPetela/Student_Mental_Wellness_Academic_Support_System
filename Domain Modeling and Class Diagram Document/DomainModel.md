@@ -94,3 +94,12 @@ classDiagram
 | BR-AP-001 | Appointment count check | Scheduling Service |
 | BR-EM-001 | Response timer | Alert Monitor |
 | BR-DM-002 | Encryption audit | Security Team |
+
+## Suggestions for Improvement
+
+- **Add `GuardianContact` attribute** to the Student entity to enable emergency support.
+- **Introduce a `PeerSupportGroup` entity** for students to join anonymous support communities.
+- **Allow multilingual content** in `WellnessResource` to support diverse users.
+- **Add chat-based check-ins** or `ChatSupport` entity for light-touch mental health tracking.
+- **Enable `Risk History` tracking** in the `ProgressTracker` to identify patterns.
+
