@@ -57,12 +57,9 @@ Once completed, the system will feature:
 - [Challenges & Learnings](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Test%20and%20Use%20Case%20Document/Reflection.md)  
 
 # Domain Modeling and Class Diagram Document
-**1. Class Diagram** 
-- [Class Diagram](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/ClassDiagram.md)
-**2. Domain Model** 
-- [Domain Model](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/DomainModel.md)
-**3. Reflection**
-- [Reflection](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/Reflection.md)
+**1. Class Diagram** - [Class Diagram](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/ClassDiagram.md)
+**2. Domain Model** - [Domain Model](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/DomainModel.md)
+**3. Reflection**- [Reflection](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/Reflection.md)
 
 
  
