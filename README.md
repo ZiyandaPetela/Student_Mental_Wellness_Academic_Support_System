@@ -67,4 +67,24 @@ Once completed, the system will feature:
 - [Reflection](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/Reflection.md)
 
 
- 
+ # Student Mental Wellness System
+
+## Language Choice: Java
+- **Strong Typing**: Ensures data integrity (e.g., valid email format).
+- **OOP Principles**: Encapsulation, composition, and polymorphism align with the class diagram.
+- **Maven Support**: Simplifies dependency management and testing.
+
+## Key Design Decisions
+1. **Relationships**:
+   - **Composition**: `MentalHealthAssessment` creates/owns `EmergencyAlert`.
+   - **Associations**: `Student` ↔ `Appointment` (enforced via collection limits).
+2. **Validation**:
+   - Appointment limits (`Student` can’t book >3 appointments).
+   - Score thresholds for triggering alerts.
+3. **Encapsulation**:
+   - Private fields with getters/setters.
+   - Defensive copying of collections.
+
+## How to Build
+```bash
+mvn clean install
