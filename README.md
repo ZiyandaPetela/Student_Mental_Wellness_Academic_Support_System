@@ -88,3 +88,12 @@ Once completed, the system will feature:
 ## How to Build
 ```bash
 mvn clean install
+```
+## Creational Patterns Justification
+
+1. **Singleton**: Used for `EmergencyAlertService` to ensure a single point of control for alert escalation  
+2. **Builder**: Applied to `Student` due to optional fields (academicYear, major)  
+3. **Factory Method**: Created `AssessmentFactory` to delegate PHQ-9/GAD-7 assessment creation  
+4. **Abstract Factory**: Implemented `ResourceFactory` for topic-specific wellness resources  
+5. **Prototype**: Clones preconfigured `WellnessResource` templates to avoid reinitialization  
+6. **Simple Factory**: Centralizes creation of different appointment types
