@@ -97,3 +97,12 @@ mvn clean install
 4. **Abstract Factory**: Implemented `ResourceFactory` for topic-specific wellness resources  
 5. **Prototype**: Clones preconfigured `WellnessResource` templates to avoid reinitialization  
 6. **Simple Factory**: Centralizes creation of different appointment types
+## Creational Patterns
+
+### Factory Method
+- **Use Case**: Delegate creation of PHQ-9 and GAD-7 assessments to specialized factories.
+- **Why**: Allows adding new assessment types (e.g., a future "Stress Scale") without modifying existing code.
+
+### Abstract Factory
+- **Use Case**: Generate anxiety/depression-themed articles and videos as cohesive groups.
+- **Why**: Ensures resources for a specific mental health topic are consistently configured.
