@@ -106,3 +106,8 @@ mvn clean install
 ### Abstract Factory
 - **Use Case**: Generate anxiety/depression-themed articles and videos as cohesive groups.
 - **Why**: Ensures resources for a specific mental health topic are consistently configured.
+### Factory Method Pattern
+- **Use Case**: Create PHQ-9 and GAD-7 assessments using dedicated factories.
+- **Why**:  
+  - Decouples assessment creation logic from client code.  
+  - Simplifies adding new assessment types (e.g., a future "Stress Scale").
