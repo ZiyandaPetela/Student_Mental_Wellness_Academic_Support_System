@@ -6,8 +6,21 @@ This project implements a Student Mental Health Management System using all six 
 ## Language Choice & Design Decisions
 
 This project is implemented in **Java** due to its robust object-oriented features that make it ideal for demonstrating design patterns. Java's strong typing and explicit class structure provide clarity when implementing complex patterns like Abstract Factory and Builder.
+- **Strong Typing**: Ensures data integrity (e.g., valid email format).
+- **OOP Principles**: Encapsulation, composition, and polymorphism align with the class diagram.
+- **Maven Support**: Simplifies dependency management and testing.
+
 
 Key design decisions:
+1. **Relationships**:
+   - **Composition**: `MentalHealthAssessment` creates/owns `EmergencyAlert`.
+   - **Associations**: `Student` ↔ `Appointment` (enforced via collection limits).
+2. **Validation**:
+   - Appointment limits (`Student` can’t book >3 appointments).
+   - Score thresholds for triggering alerts.
+3. **Encapsulation**:
+   - Private fields with getters/setters.
+   - Defensive copying of collections.
 - **Core domain model** focused on Student, Counselor, Appointment, and MentalHealthAssessment classes
 - **Clear separation** between core classes and pattern implementations
 - **Thread-safe Singleton** implementation for the EmergencyResponseSystem
@@ -103,3 +116,4 @@ Test coverage breakdown:
 - Singleton: 100%
 
 Overall code coverage: 97%
+
