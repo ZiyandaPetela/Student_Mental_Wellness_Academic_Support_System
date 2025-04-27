@@ -57,6 +57,7 @@ EmergencyAlert
 - severity: String
 ---------
 + escalate()
+```
 (Relationships:
 
 Student "1 to many" MentalHealthAssessment
