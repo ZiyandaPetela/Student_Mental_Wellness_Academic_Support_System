@@ -1,40 +1,31 @@
+# Repository Layer Class Diagram (Mermaid)
 
-# Repository Layer Class Diagram
+```mermaid
+classDiagram
+    class Repository~T, ID~ {
+        +save(T entity)
+        +findById(ID id) Optional~T~
+        +findAll() List~T~
+        +delete(ID id)
+    }
 
-```plaintext
-                         +------------------------+
-                         |  Repository<T, ID>      |  (interface)
-                         +------------------------+
-                         | + save(T entity)        |
-                         | + findById(ID id)        |
-                         | + findAll()              |
-                         | + delete(ID id)          |
-                         +------------------------+
-                                  ▲
-                                  |
-        ---------------------------------------------------
-        |                        |                        |
-+--------------------+ +----------------------+ +------------------------+
-| StudentRepository   | | CounselorRepository   | | AppointmentRepository   | ...
-| (interface)         | | (interface)            | | (interface)              |
-| + findByMajor()     | | + findBySpecialization()| | + findByDateRange()      |
-| + findByAcademicYear() |                        | + findByStatus()          |
-+--------------------+ +----------------------+ +------------------------+
-                                  ▲
-                                  |
-        ---------------------------------------------------
-        |                        |                        |
-+------------------------------+ +------------------------------+ +-------------------------------+
-| InMemoryStudentRepository    | | InMemoryCounselorRepository  | | InMemoryAppointmentRepository |
-| (class)                      | | (class)                      | | (class)                       |
-| implements StudentRepository | | implements CounselorRepository | implements AppointmentRepository |
-+------------------------------+ +------------------------------+ +-------------------------------+
+    Repository~T, ID~ <|-- StudentRepository
+    Repository~T, ID~ <|-- CounselorRepository
+    Repository~T, ID~ <|-- AppointmentRepository
+    Repository~T, ID~ <|-- MentalHealthAssessmentRepository
+    Repository~T, ID~ <|-- EmergencyAlertRepository
+    Repository~T, ID~ <|-- WellnessResourceRepository
 
-                         +--------------------------+
-                         | RepositoryFactory         |  (class)
-                         +--------------------------+
-                         | + getStudentRepository()  |
-                         | + getCounselorRepository()|
-                         | + getAppointmentRepository() |
-                         | + getRepository(String storageType, Class<T>) |
-                         +--------------------------+
+    StudentRepository <|-- InMemoryStudentRepository
+    CounselorRepository <|-- InMemoryCounselorRepository
+    AppointmentRepository <|-- InMemoryAppointmentRepository
+    MentalHealthAssessmentRepository <|-- InMemoryMentalHealthAssessmentRepository
+    EmergencyAlertRepository <|-- InMemoryEmergencyAlertRepository
+    WellnessResourceRepository <|-- InMemoryWellnessResourceRepository
+
+    class RepositoryFactory {
+        +getStudentRepository(storageType: String) StudentRepository
+        +getCounselorRepository(storageType: String) CounselorRepository
+        +getAppointmentRepository(storageType: String) AppointmentRepository
+        +getRepository(storageType: String, entityClass: Class~T~) Repository~T, ID~
+    }
