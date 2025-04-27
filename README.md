@@ -66,48 +66,7 @@ Once completed, the system will feature:
 **3. Reflection**
 - [Reflection](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/Reflection.md)
 
+# Class Diagrams to Code with All Creational Patterns Document
+[src Folder with everything](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
 
- # Student Mental Wellness System
-
-## Language Choice: Java
-- **Strong Typing**: Ensures data integrity (e.g., valid email format).
-- **OOP Principles**: Encapsulation, composition, and polymorphism align with the class diagram.
-- **Maven Support**: Simplifies dependency management and testing.
-
-## Key Design Decisions
-1. **Relationships**:
-   - **Composition**: `MentalHealthAssessment` creates/owns `EmergencyAlert`.
-   - **Associations**: `Student` ↔ `Appointment` (enforced via collection limits).
-2. **Validation**:
-   - Appointment limits (`Student` can’t book >3 appointments).
-   - Score thresholds for triggering alerts.
-3. **Encapsulation**:
-   - Private fields with getters/setters.
-   - Defensive copying of collections.
-
-## How to Build
-```bash
-mvn clean install
-```
-## Creational Patterns Justification
-
-1. **Singleton**: Used for `EmergencyAlertService` to ensure a single point of control for alert escalation  
-2. **Builder**: Applied to `Student` due to optional fields (academicYear, major)  
-3. **Factory Method**: Created `AssessmentFactory` to delegate PHQ-9/GAD-7 assessment creation  
-4. **Abstract Factory**: Implemented `ResourceFactory` for topic-specific wellness resources  
-5. **Prototype**: Clones preconfigured `WellnessResource` templates to avoid reinitialization  
-6. **Simple Factory**: Centralizes creation of different appointment types
-## Creational Patterns
-
-### Factory Method
-- **Use Case**: Delegate creation of PHQ-9 and GAD-7 assessments to specialized factories.
-- **Why**: Allows adding new assessment types (e.g., a future "Stress Scale") without modifying existing code.
-
-### Abstract Factory
-- **Use Case**: Generate anxiety/depression-themed articles and videos as cohesive groups.
-- **Why**: Ensures resources for a specific mental health topic are consistently configured.
-### Factory Method Pattern
-- **Use Case**: Create PHQ-9 and GAD-7 assessments using dedicated factories.
-- **Why**:  
-  - Decouples assessment creation logic from client code.  
-  - Simplifies adding new assessment types (e.g., a future "Stress Scale").
+ 
