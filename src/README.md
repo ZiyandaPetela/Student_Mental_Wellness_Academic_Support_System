@@ -117,3 +117,28 @@ Test coverage breakdown:
 
 Overall code coverage: 97%
 
+# Repository Interface Design Justification
+
+## Generic Repository Pattern
+- Used generics to avoid duplication across entity repositories
+- Type parameters `<T, ID>` ensure type safety while maintaining reusability
+- Common CRUD operations defined once following DRY principle
+
+## Entity-Specific Repositories
+- Created specialized interfaces for each domain entity (Student, Counselor, etc.)
+- Each repository extends the generic interface with domain-specific query methods
+- Examples: `findByDateRange()` for appointments, `findBySpecialization()` for counselors
+
+## Method Naming Convention
+- Consistent "findBy[Property]" pattern for all query methods
+- Improves readability and makes method behavior obvious
+- Follows industry standard naming conventions
+
+## Standard CRUD Operations
+- Implemented essential persistence operations: Create/Update (save), Read (findById, findAll), Delete
+- Used `Optional<T>` for findById to properly handle non-existent entities
+
+## Separation of Concerns
+- Repository interfaces focus solely on data access operations
+- Keeps persistence logic separate from business rules
+- Enables easier testing and future storage implementation swapping
