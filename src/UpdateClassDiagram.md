@@ -58,7 +58,7 @@ EmergencyAlert
 ---------
 + escalate()
 ```
-(Relationships:
+#### Relationships:
 
 Student "1 to many" MentalHealthAssessment
 
