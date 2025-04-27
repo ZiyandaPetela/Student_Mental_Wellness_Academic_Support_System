@@ -117,6 +117,12 @@ Test coverage breakdown:
 
 Overall code coverage: 97%
 
+# Student Wellness Management System - Repository Layer
+
+## Overview
+This project implements a repository layer for a Student Wellness Management System following clean architecture principles. The system manages student wellness resources, counseling appointments, mental health assessments, and emergency alerts.
+
+
 # Repository Interface Design Justification
 
 ## Generic Repository Pattern
@@ -142,3 +148,161 @@ Overall code coverage: 97%
 - Repository interfaces focus solely on data access operations
 - Keeps persistence logic separate from business rules
 - Enables easier testing and future storage implementation swapping
+
+## Architecture
+
+The repository layer abstracts data storage from domain logic using the Repository pattern and Factory pattern:
+
+- **Repository Interface**: Defines CRUD operations for domain entities
+- **In-Memory Implementation**: HashMap-based storage for development and testing
+- **Factory Pattern**: Allows easy switching between storage implementations
+- **Future Storage Options**: Stubs for file-based and database repositories
+
+## Project Structure
+
+```
+src/
+├── core/                               # Domain model classes
+│   ├── Student.java
+│   ├── Counselor.java
+│   ├── Appointment.java
+│   ├── MentalHealthAssessment.java
+│   ├── EmergencyAlert.java
+│   └── WellnessResource.java
+│
+├── repositories/                       # Repository interfaces
+│   ├── Repository.java                 # Generic repository interface
+│   ├── StudentRepository.java
+│   ├── CounselorRepository.java
+│   ├── AppointmentRepository.java
+│   ├── MentalHealthAssessmentRepository.java
+│   ├── EmergencyAlertRepository.java
+│   └── WellnessResourceRepository.java
+│   │
+│   ├── inmemory/                       # In-memory implementations
+│   │   ├── InMemoryRepository.java     # Abstract base implementation
+│   │   ├── InMemoryStudentRepository.java
+│   │   ├── InMemoryCounselorRepository.java
+│   │   ├── InMemoryAppointmentRepository.java
+│   │   ├── InMemoryMentalHealthAssessmentRepository.java
+│   │   ├── InMemoryEmergencyAlertRepository.java
+│   │   └── InMemoryWellnessResourceRepository.java
+│   │
+│   └── filesystem/                     # File-based implementations (stub)
+│       └── FileSystemStudentRepository.java
+│
+├── factories/                          # Factory pattern implementation
+│   └── RepositoryFactory.java
+    
+test/
+└── tests/                              # Test classes
+    ├── InMemoryStudentRepositoryTest.java
+    ├── InMemoryCounselorRepositoryTest.java
+    ├── All other tests
+    └── RepositoryFactoryTest.java 
+```
+
+## Design Choices
+
+### Repository Interface Design
+- **Generic Repository Interface**: Used generics (`Repository<T, ID>`) to avoid duplication across entity repositories
+- **Entity-Specific Extensions**: Created specialized interfaces for each domain entity with domain-specific query methods
+- **CRUD Operations**: Each repository supports create, read, update, and delete operations
+
+### In-Memory Implementation
+- **Abstract Base Class**: Created `InMemoryRepository<T, ID>` to handle common storage operations
+- **HashMap-Based Storage**: Used Java's HashMap for efficient in-memory data access
+- **Stream-Based Queries**: Leveraged Java streams for specialized query methods
+
+### Storage Abstraction Mechanism
+- **Factory Pattern**: Implemented `RepositoryFactory` to abstract storage details
+- **Easy Switching**: The factory makes it simple to switch between storage implementations
+- **Generic and Specific Methods**: Provides both generic and entity-specific factory methods
+
+### Future-Proofing
+- **Stub Implementations**: Created stub for file-based repository implementation
+- **Extension Points**: Clear structure for adding database repositories in the future
+- **Client Independence**: Client code relies only on repository interfaces, not implementations
+
+## Domain Entities
+
+- **Student**: Manages student information (ID, name, email, major, academic year)
+- **Counselor**: Stores counselor information (ID, name, specialization)
+- **Appointment**: Tracks student-counselor appointments
+- **MentalHealthAssessment**: Records assessment results
+- **EmergencyAlert**: Handles critical student wellness situations
+- **WellnessResource**: Manages available wellness resources
+
+## Usage Examples
+
+### Using the Repository Factory
+
+```java
+// Get a repository using the factory
+StudentRepository studentRepo = RepositoryFactory.getStudentRepository("MEMORY");
+CounselorRepository counselorRepo = RepositoryFactory.getCounselorRepository("MEMORY");
+
+// Generic approach
+Repository<Student, String> genericRepo = RepositoryFactory.getRepository("MEMORY", Student.class);
+```
+
+### Creating and Accessing Data
+
+```java
+// Create a new student
+Student student = new Student("S123", "John Doe", "john@example.com", "Computer Science", "Junior");
+studentRepo.save(student);
+
+// Read a student
+Optional<Student> found = studentRepo.findById("S123");
+
+// Find students by criteria
+List<Student> csStudents = studentRepo.findByMajor("Computer Science");
+List<Student> juniors = studentRepo.findByAcademicYear("Junior");
+
+// Update a student
+student.setEmail("john.doe@university.edu");
+studentRepo.save(student);
+
+// Delete a student
+studentRepo.delete("S123");
+```
+
+### Using Services with Repositories
+
+```java
+// Create a service with in-memory storage
+StudentService service = new StudentService("MEMORY");
+
+// Service uses repository internally
+service.registerStudent(student);
+Student foundStudent = service.findStudent("S123");
+```
+
+## Testing
+
+Run tests using JUnit:
+```
+mvn test
+```
+
+The test suite verifies:
+- CRUD operations for in-memory repositories
+- Custom query methods
+- Factory pattern functionality
+- Error handling for invalid inputs
+
+## Future Enhancements
+
+1. **Database Integration**: Implement repositories for MySQL, MongoDB
+2. **File-Based Storage**: Complete the filesystem repository implementations
+3. **Caching Layer**: Add caching support for frequently accessed entities
+4. **Transaction Support**: Implement transaction management for repository operations
+
+## Justification of Design Decisions
+
+- **Repository Pattern**: Used to abstract storage details from domain logic
+- **Factory Pattern**: Chosen over DI for simplicity and direct control over repository creation
+- **Generics**: Used to promote code reuse and type safety
+- **Interface-Based Design**: Promotes loose coupling and makes testing easier
+- **Domain-Specific Methods**: Added specialized methods to repositories to support domain-specific queries
