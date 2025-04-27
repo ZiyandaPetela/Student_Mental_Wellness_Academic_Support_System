@@ -1,0 +1,68 @@
+package test.tests;
+
+import core.MentalHealthAssessment;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import repositories.MentalHealthAssessmentRepository;
+import repositories.inmemory.InMemoryMentalHealthAssessmentRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class InMemoryMentalHealthAssessmentRepositoryTest {
+    
+    private MentalHealthAssessmentRepository repository;
+    
+    @BeforeEach
+    void setUp() {
+        repository = new InMemoryMentalHealthAssessmentRepository();
+    }
+    
+    @Test
+    void testSaveAndFindById() {
+        MentalHealthAssessment assessment = new MentalHealthAssessment("A123", "Depression", 85);
+        repository.save(assessment);
+        
+        Optional<MentalHealthAssessment> found = repository.findById("A123");
+        assertTrue(found.isPresent());
+        assertEquals("Depression", found.get().getType());
+    }
+    
+    @Test
+    void testFindAll() {
+        repository.save(new MentalHealthAssessment("A123", "Depression", 85));
+        repository.save(new MentalHealthAssessment("A456", "Anxiety", 70));
+        
+        List<MentalHealthAssessment> assessments = repository.findAll();
+        assertEquals(2, assessments.size());
+    }
+    
+    @Test
+    void testDelete() {
+        MentalHealthAssessment assessment = new MentalHealthAssessment("A123", "Depression", 85);
+        repository.save(assessment);
+        repository.delete("A123");
+        
+        assertFalse(repository.findById("A123").isPresent());
+    }
+    
+    @Test
+    void testFindByType() {
+        repository.save(new MentalHealthAssessment("A123", "Depression", 85));
+        repository.save(new MentalHealthAssessment("A456", "Anxiety", 70));
+        
+        List<MentalHealthAssessment> depressionAssessments = repository.findByType("Depression");
+        assertEquals(1, depressionAssessments.size());
+    }
+    
+    @Test
+    void testFindByScoreGreaterThan() {
+        repository.save(new MentalHealthAssessment("A123", "Depression", 85));
+        repository.save(new MentalHealthAssessment("A456", "Anxiety", 70));
+        
+        List<MentalHealthAssessment> highScoreAssessments = repository.findByScoreGreaterThan(75);
+        assertEquals(1, highScoreAssessments.size());
+    }
+}

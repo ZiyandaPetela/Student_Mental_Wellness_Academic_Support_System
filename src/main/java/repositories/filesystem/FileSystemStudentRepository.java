@@ -2,110 +2,116 @@ package repositories.filesystem;
 
 import core.Student;
 import repositories.StudentRepository;
-
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.CollectionType;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.type.CollectionType;
 
+/**
+ * JSON file-based implementation of StudentRepository with in-memory caching.
+ * Uses synchronized methods for thread safety and periodic file synchronization.
+ */
 public class FileSystemStudentRepository implements StudentRepository {
     private final String filePath;
     private final ObjectMapper objectMapper;
+    private final Map<String, Student> inMemoryCache = new HashMap<>();
 
+    /**
+     * Initializes repository with file storage and loads existing data into cache.
+     * @param filePath Path to JSON storage file
+     * @throws RuntimeException If file initialization fails
+     */
     public FileSystemStudentRepository(String filePath) {
         this.filePath = filePath;
         this.objectMapper = new ObjectMapper();
         
-        // Create the file if it doesn't exist
         try {
-            File file = new File(filePath);
-            if (!file.exists()) {
-                file.getParentFile().mkdirs();
-                file.createNewFile();
-                // Initialize with empty array
-                Files.write(Paths.get(filePath), "[]".getBytes());
-            }
+            initializeStorageFile();
+            loadCacheFromFile();
         } catch (IOException e) {
-            throw new RuntimeException("Could not initialize file storage", e);
+            throw new RuntimeException("Failed to initialize file storage", e);
+        }
+    }
+
+    /**
+     * Creates storage file with empty array if it doesn't exist
+     */
+    private void initializeStorageFile() throws IOException {
+        File file = new File(filePath);
+        if (!file.exists()) {
+            file.getParentFile().mkdirs();
+            file.createNewFile();
+            Files.write(Paths.get(filePath), "[]".getBytes());
+        }
+    }
+
+    /**
+     * Loads data from file into in-memory cache
+     */
+    private synchronized void loadCacheFromFile() {
+        try (FileInputStream fis = new FileInputStream(filePath)) {
+            CollectionType listType = objectMapper.getTypeFactory()
+                    .constructCollectionType(ArrayList.class, Student.class);
+            List<Student> students = objectMapper.readValue(fis, listType);
+            
+            inMemoryCache.clear();
+            students.forEach(student -> 
+                inMemoryCache.put(student.getStudentId(), student)
+            );
+        } catch (JsonParseException e) {
+            throw new RuntimeException("Invalid JSON format in file", e);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load data from file", e);
+        }
+    }
+
+    /**
+     * Synchronizes in-memory cache with persistent file storage
+     */
+    private synchronized void syncCacheWithFile() {
+        try (FileOutputStream fos = new FileOutputStream(filePath)) {
+            objectMapper.writeValue(fos, new ArrayList<>(inMemoryCache.values()));
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to synchronize with file storage", e);
         }
     }
 
     @Override
-    public void save(Student student) {
-        try {
-            List<Student> students = findAll();
-            
-            // Update existing or add new
-            boolean updated = false;
-            for (int i = 0; i < students.size(); i++) {
-                if (students.get(i).getStudentId().equals(student.getStudentId())) {
-                    students.set(i, student);
-                    updated = true;
-                    break;
-                }
-            }
-            
-            if (!updated) {
-                students.add(student);
-            }
-            
-            // Write back to file
-            objectMapper.writeValue(new File(filePath), students);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to save student", e);
-        }
+    public synchronized void save(Student student) {
+        inMemoryCache.put(student.getStudentId(), student);
+        syncCacheWithFile();
+    }
+
+    @Override
+    public synchronized void delete(String id) {
+        inMemoryCache.remove(id);
+        syncCacheWithFile();
     }
 
     @Override
     public Optional<Student> findById(String id) {
-        return findAll().stream()
-                .filter(student -> student.getStudentId().equals(id))
-                .findFirst();
+        return Optional.ofNullable(inMemoryCache.get(id));
     }
 
     @Override
     public List<Student> findAll() {
-        try {
-            File file = new File(filePath);
-            if (file.length() == 0) {
-                return new ArrayList<>();
-            }
-            
-            CollectionType listType = objectMapper.getTypeFactory()
-                    .constructCollectionType(ArrayList.class, Student.class);
-            return objectMapper.readValue(file, listType);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to read students from file", e);
-        }
-    }
-
-    @Override
-    public void delete(String id) {
-        try {
-            List<Student> students = findAll();
-            List<Student> filtered = students.stream()
-                    .filter(student -> !student.getStudentId().equals(id))
-                    .collect(Collectors.toList());
-            
-            objectMapper.writeValue(new File(filePath), filtered);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to delete student", e);
-        }
+        return new ArrayList<>(inMemoryCache.values());
     }
 
     @Override
     public List<Student> findByAcademicYear(String academicYear) {
-        return findAll().stream()
+        return inMemoryCache.values().stream()
                 .filter(student -> academicYear.equals(student.getAcademicYear()))
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<Student> findByMajor(String major) {
-        return findAll().stream()
+        return inMemoryCache.values().stream()
                 .filter(student -> major.equals(student.getMajor()))
                 .collect(Collectors.toList());
     }

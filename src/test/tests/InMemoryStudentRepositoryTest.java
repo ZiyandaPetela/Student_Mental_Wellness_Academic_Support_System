@@ -1,4 +1,4 @@
-package tests;
+package test.tests;
 
 import core.Student;
 import org.junit.jupiter.api.BeforeEach;
