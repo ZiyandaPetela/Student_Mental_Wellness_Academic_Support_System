@@ -1,15 +1,16 @@
 // src/main/java/Main.java
 package core;
 
-import creational.singleton.EmergencyAlertService;
-import creational.abstractfactory.AnxietyResourceFactory;
-import creational.abstractfactory.ResourceFactory;
-import creational.builder.StudentBuilder;
-import creational.factorymethod.AssessmentFactory;
-import creational.factorymethod.PHQ9Factory;
-import creational.prototype.ResourcePrototype;
-import creational.simplefactory.AppointmentFactory;
 import java.time.LocalDateTime;
+
+import creational_pattern.abstractfactory.AnxietyResourceFactory;
+import creational_pattern.abstractfactory.ResourceFactory;
+import creational_pattern.builder.StudentBuilder;
+import creational_pattern.factorymethod.AssessmentFactory;
+import creational_pattern.factorymethod.PHQ9Factory;
+import creational_pattern.prototype.ResourcePrototype;
+import creational_pattern.simplefactory.AppointmentFactory;
+import creational_pattern.singleton.EmergencyAlertService;
 
 public class Main {
     public static void main(String[] args) {
