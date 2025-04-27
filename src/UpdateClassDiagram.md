@@ -1,3 +1,74 @@
+# Class Diagrams
+
+## 1. Domain Model Class Diagram
+
+```plaintext
+Student
+---------
+- studentId: String
+- name: String
+- email: String
+- major: String
+- academicYear: String
+---------
++ register()
++ login()
++ completeAssessment()
++ scheduleAppointment()
+
+MentalHealthAssessment
+---------
+- type: String
+- score: int
+- timestamp: LocalDateTime
+---------
++ calculateScore()
++ generateRecommendations()
++ triggerAlerts()
+
+Counselor
+---------
+- counselorId: String
+- specialization: String
+---------
++ viewTrends()
++ confirmAppointment()
+
+Appointment
+---------
+- appointmentId: String
+- datetime: LocalDateTime
+- status: String
+---------
++ schedule()
++ cancel()
+
+WellnessResource
+---------
+- resourceId: String
+- type: String
+- title: String
+---------
++ filterByTopic()
+
+EmergencyAlert
+---------
+- alertId: String
+- severity: String
+---------
++ escalate()
+(Relationships:
+
+Student "1 to many" MentalHealthAssessment
+
+Student "1 to 3" Appointment
+
+MentalHealthAssessment "1 to many" WellnessResource
+
+MentalHealthAssessment "0 or 1" EmergencyAlert)
+
+
+
 # Repository Layer Class Diagram (Mermaid)
 
 ```mermaid
