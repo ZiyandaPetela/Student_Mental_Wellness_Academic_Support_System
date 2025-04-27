@@ -117,6 +117,12 @@ Test coverage breakdown:
 
 Overall code coverage: 97%
 
+# Student Wellness Management System - Repository Layer
+
+## Overview
+This project implements a repository layer for a Student Wellness Management System following clean architecture principles. The system manages student wellness resources, counseling appointments, mental health assessments, and emergency alerts.
+
+
 # Repository Interface Design Justification
 
 ## Generic Repository Pattern
@@ -142,11 +148,6 @@ Overall code coverage: 97%
 - Repository interfaces focus solely on data access operations
 - Keeps persistence logic separate from business rules
 - Enables easier testing and future storage implementation swapping
-
-# Student Wellness Management System - Repository Layer
-
-## Overview
-This project implements a repository layer for a Student Wellness Management System following clean architecture principles. The system manages student wellness resources, counseling appointments, mental health assessments, and emergency alerts.
 
 ## Architecture
 
@@ -192,17 +193,13 @@ src/
 │
 ├── factories/                          # Factory pattern implementation
 │   └── RepositoryFactory.java
-│
-└── services/                           # Service layer using repositories
-    ├── StudentService.java
-    ├── CounselorService.java
-    └── AppointmentService.java
     
 test/
 └── tests/                              # Test classes
     ├── InMemoryStudentRepositoryTest.java
     ├── InMemoryCounselorRepositoryTest.java
-    └── RepositoryFactoryTest.java
+    ├── All other tests
+    └── RepositoryFactoryTest.java 
 ```
 
 ## Design Choices
