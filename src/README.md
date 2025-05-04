@@ -306,3 +306,93 @@ The test suite verifies:
 - **Generics**: Used to promote code reuse and type safety
 - **Interface-Based Design**: Promotes loose coupling and makes testing easier
 - **Domain-Specific Methods**: Added specialized methods to repositories to support domain-specific queries
+
+#Updated Structure based on Assignment 12
+
+
+src/
+├── core/                               # Domain model classes (from Assignment 9)
+│   ├── Student.java
+│   ├── Counselor.java
+│   ├── Appointment.java
+│   ├── MentalHealthAssessment.java
+│   ├── EmergencyAlert.java
+│   └── WellnessResource.java
+│
+├── repositories/                       # Repository interfaces (from Assignment 11)
+│   ├── Repository.java                 # Generic repository interface
+│   ├── StudentRepository.java
+│   ├── CounselorRepository.java
+│   ├── AppointmentRepository.java
+│   ├── MentalHealthAssessmentRepository.java
+│   ├── EmergencyAlertRepository.java
+│   └── WellnessResourceRepository.java
+│   │
+│   ├── inmemory/                       # In-memory implementations
+│   │   ├── InMemoryRepository.java     # Abstract base implementation
+│   │   ├── InMemoryStudentRepository.java
+│   │   ├── InMemoryCounselorRepository.java
+│   │   ├── InMemoryAppointmentRepository.java
+│   │   ├── InMemoryMentalHealthAssessmentRepository.java
+│   │   ├── InMemoryEmergencyAlertRepository.java
+│   │   └── InMemoryWellnessResourceRepository.java
+│   │
+│   └── filesystem/                     # File-based implementations (stub)
+│       └── FileSystemStudentRepository.java
+│
+├── factories/                          # Factory pattern implementation (from Assignment 10)
+│   └── RepositoryFactory.java
+│
+├── services/                           # NEW: Service layer (Assignment 12)
+│   ├── StudentService.java
+│   ├── CounselorService.java
+│   ├── AppointmentService.java
+│   ├── MentalHealthAssessmentService.java
+│   ├── EmergencyAlertService.java
+│   └── WellnessResourceService.java
+│
+├── api/                                # NEW: REST API controllers (Assignment 12)
+│   ├── StudentController.java
+│   ├── CounselorController.java
+│   ├── AppointmentController.java
+│   ├── MentalHealthAssessmentController.java
+│   ├── EmergencyAlertController.java
+│   └── WellnessResourceController.java
+│
+├── dto/                                # NEW: Data Transfer Objects
+│   ├── StudentDTO.java
+│   ├── CounselorDTO.java
+│   ├── AppointmentDTO.java
+│   ├── MentalHealthAssessmentDTO.java
+│   ├── EmergencyAlertDTO.java
+│   └── WellnessResourceDTO.java
+│
+├── exceptions/                         # NEW: Custom exceptions
+│   ├── StudentNotFoundException.java
+│   ├── CounselorNotFoundException.java
+│   ├── AppointmentNotFoundException.java
+│   ├── CounselorUnavailableException.java
+│   ├── MaxAppointmentsExceededException.java
+│   └── ValidationException.java
+│
+└── Application.java                    # NEW: Main application class with Spring Boot
+
+test/
+├── tests/                              # Existing tests
+│   ├── InMemoryStudentRepositoryTest.java
+│   ├── InMemoryCounselorRepositoryTest.java
+│   ├── All other repository tests
+│   └── RepositoryFactoryTest.java
+│
+├── services/                           # NEW: Service tests
+│   ├── StudentServiceTest.java
+│   ├── CounselorServiceTest.java
+│   └── AppointmentServiceTest.java
+│
+└── api/                                # NEW: API integration tests
+    ├── StudentControllerTest.java
+    ├── CounselorControllerTest.java
+    └── AppointmentControllerTest.java
+
+docs/                                   # NEW: API documentation
+└── api-docs.yaml                       # OpenAPI specification

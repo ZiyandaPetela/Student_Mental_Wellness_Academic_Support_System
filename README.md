@@ -67,7 +67,11 @@ Once completed, the system will feature:
 - [Reflection](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/Reflection.md)
 
 # Class Diagrams to Code with All Creational Patterns Document
-[src Folder with everything](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
+[src (Creational Patterns)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
 
- # Implementing a PersistenceRepository Layer
- [src Folder with everything](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
+ # Implementing a Persistence Repository Layer
+ [src (Repository Layer)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
+
+ # Service Layer and REST API Implementation
+ [src (Service Layer and REST API)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
+ 
