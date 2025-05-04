@@ -396,3 +396,62 @@ test/
 
 docs/                                   # NEW: API documentation
 └── api-docs.yaml                       # OpenAPI specification
+
+// src/api/OpenApiConfig.java
+package api;
+
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OpenApiConfig {
+    
+    @Bean
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI()
+                .components(new Components())
+                .info(new Info()
+                        .title("Mental Health System API")
+                        .description("RESTful API for the Mental Health System")
+                        .version("v1.0")
+                        .contact(new Contact()
+                                .name("Your Name")
+                                .email("your.email@example.com"))
+                        .license(new License()
+                                .name("MIT License")
+                                .url("https://opensource.org/licenses/MIT")));
+    }
+}
+
+// src/api/StudentApiDocs.java
+package api;
+
+import core.Student;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@Tag(name = "Student", description = "Student management API")
+public interface StudentApiDocs {
+    
+    @Operation(summary = "Get all students", description = "Returns a list of all students in the system")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful operation",
+                    content = @Content(array = @ArraySchema(
+
+OpenAPI/Swagger documentation
