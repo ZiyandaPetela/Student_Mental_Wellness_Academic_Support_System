@@ -2,8 +2,7 @@
 
 All notable changes to the Student Mental Health System project will be documented in this file.
 
-## [1.0.0] - 2025-04-20
-
+## [1.0.0] 
 ### Added
 - Initial implementation of core domain classes
   - Student
