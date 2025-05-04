@@ -1,0 +1,76 @@
+package tests.api;
+
+import core.Counselor;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import services.CounselorService;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class CounselorControllerIntegrationTest {
+
+    @Autowired
+    private TestRestTemplate restTemplate;
+    
+    @Autowired
+    private CounselorService counselorService;
+    
+    @Test
+    public void getAllCounselors_ReturnsListOfCounselors() {
+        // Act
+        ResponseEntity<Counselor[]> response = restTemplate.getForEntity("/api/counselors", Counselor[].class);
+        
+        // Assert
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+    }
+    
+    @Test
+    public void getCounselorById_ExistingId_ReturnsCounselor() {
+        // Arrange
+        Counselor counselor = new Counselor("C999", "Test Specialization");
+        counselorService.createCounselor(counselor);
+        
+        // Act
+        ResponseEntity<Counselor> response = restTemplate.getForEntity("/api/counselors/C999", Counselor.class);
+        
+        // Assert
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals("C999", response.getBody().getCounselorId());
+        assertEquals("Test Specialization", response.getBody().getSpecialization());
+    }
+    
+    @Test
+    public void getCounselorById_NonExistingId_Returns404() {
+        // Act
+        ResponseEntity<String> response = restTemplate.getForEntity("/api/counselors/NONEXISTENT", String.class);
+        
+        // Assert
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
+    
+    @Test
+    public void createCounselor_ValidData_ReturnsCounselor() {
+        // Arrange
+        Counselor counselor = new Counselor("C888", "Academic Advising");
+        
+        // Act
+        ResponseEntity<Counselor> response = restTemplate.postForEntity("/api/counselors", counselor, Counselor.class);
+        
+        // Assert
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals("C888", response.getBody().getCounselorId());
+        assertEquals("Academic Advising", response.getBody().getSpecialization());
+    }
+    
+    @Test
+    public void updateCounselor_Existing

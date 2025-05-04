@@ -1,0 +1,129 @@
+package tests.services;
+
+import core.Appointment;
+import core.Counselor;
+import core.Student;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import repositories.AppointmentRepository;
+import repositories.CounselorRepository;
+import repositories.StudentRepository;
+import services.AppointmentService;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
+
+public class AppointmentServiceTest {
+
+    @Mock
+    private AppointmentRepository appointmentRepository;
+
+    @Mock
+    private StudentRepository studentRepository;
+
+    @Mock
+    private CounselorRepository counselorRepository;
+
+    @InjectMocks
+    private AppointmentService appointmentService;
+
+    private Student student;
+    private Counselor counselor;
+    private LocalDateTime futureDateTime;
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
+        
+        // Create test data
+        futureDateTime = LocalDateTime.now().plusDays(1);
+        
+        student = new Student("S123", "student@example.com");
+        student.setAcademicYear("Sophomore");
+        student.setMajor("Computer Science");
+        
+        counselor = new Counselor("C456", "Career Planning");
+    }
+
+    @Test
+    public void createAppointment_ValidData_ReturnsCreatedAppointment() {
+        // Arrange
+        String appointmentId = "A789";
+        
+        when(studentRepository.findById("S123")).thenReturn(Optional.of(student));
+        when(counselorRepository.findById("C456")).thenReturn(Optional.of(counselor));
+        when(appointmentRepository.findById(appointmentId)).thenReturn(Optional.empty());
+        when(appointmentRepository.save(any(Appointment.class))).thenAnswer(i -> i.getArgument(0));
+        
+        // Act
+        Appointment result = appointmentService.createAppointment(appointmentId, futureDateTime, 
+                student.getStudentId(), counselor.getCounselorId());
+        
+        // Assert
+        assertNotNull(result);
+        assertEquals(appointmentId, result.getAppointmentId());
+        assertEquals(futureDateTime, result.getDateTime());
+        assertEquals(student.getStudentId(), result.getStudent().getStudentId());
+        assertEquals(counselor.getCounselorId(), result.getCounselor().getCounselorId());
+        
+        // Verify repository calls
+        verify(studentRepository).findById("S123");
+        verify(counselorRepository).findById("C456");
+        verify(appointmentRepository).findById(appointmentId);
+        verify(appointmentRepository).save(any(Appointment.class));
+        verify(studentRepository).save(student);
+        verify(counselorRepository).save(counselor);
+    }
+    
+    @Test
+    public void createAppointment_PastDateTime_ThrowsException() {
+        // Arrange
+        LocalDateTime pastDateTime = LocalDateTime.now().minusDays(1);
+        
+        // Act & Assert
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            appointmentService.createAppointment("A789", pastDateTime, "S123", "C456");
+        });
+        
+        assertEquals("Appointment cannot be scheduled in the past", exception.getMessage());
+        
+        // Verify no interactions with repositories
+        verify(appointmentRepository, never()).save(any());
+    }
+    
+    @Test
+    public void createAppointment_StudentMaxAppointments_ThrowsException() {
+        // Arrange
+        String appointmentId = "A789";
+        
+        // Create a student with 3 appointments already
+        Student busyStudent = new Student("S123", "busy@example.com");
+        for (int i = 0; i < 3; i++) {
+            Appointment existing = new Appointment("A" + i, futureDateTime.plusHours(i));
+            busyStudent.scheduleAppointment(existing);
+        }
+        
+        when(studentRepository.findById("S123")).thenReturn(Optional.of(busyStudent));
+        when(counselorRepository.findById("C456")).thenReturn(Optional.of(counselor));
+        when(appointmentRepository.findById(appointmentId)).thenReturn(Optional.empty());
+        
+        // Act & Assert
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            appointmentService.createAppointment(appointmentId, futureDateTime, 
+                    busyStudent.getStudentId(), counselor.getCounselorId());
+        });
+        
+        assertEquals("Student has reached the maximum limit of 3 appointments", exception.getMessage());
+        
+        // Verify no save operations were performed
+        verify(appointmentRepository, never()).save(any());
+    }
+}
