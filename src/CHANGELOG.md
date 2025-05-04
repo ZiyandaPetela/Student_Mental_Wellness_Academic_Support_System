@@ -28,8 +28,8 @@ All notable changes to the Student Mental Health System project will be document
 - Added thread-safe implementation to EmergencyResponseSystem using double-checked locking
 - Fixed potential null pointer exception in AppointmentBuilder
 - Resolved issue with invalid status values in Appointment class
-# Changelog
-#: Service Layer and REST APIImplementation
+
+#: Service Layer and REST API Implementation
 ## v1.1.0  - May 4, 2025
 
 ### Added
