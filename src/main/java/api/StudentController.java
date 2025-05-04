@@ -53,6 +53,26 @@ public class StudentController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student not found with id: " + id));
     }
     
+    @Operation(summary = "Get students by academic year", description = "Returns a list of students in a specific academic year")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Students retrieved successfully")
+    })
+    @GetMapping("/academic-year/{year}")
+    public List<Student> getStudentsByAcademicYear(
+            @Parameter(description = "Academic year", required = true) @PathVariable String year) {
+        return studentService.getStudentsByAcademicYear(year);
+    }
+    
+    @Operation(summary = "Get students by major", description = "Returns a list of students with a specific major")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Students retrieved successfully")
+    })
+    @GetMapping("/major/{major}")
+    public List<Student> getStudentsByMajor(
+            @Parameter(description = "Major", required = true) @PathVariable String major) {
+        return studentService.getStudentsByMajor(major);
+    }
+    
     @Operation(summary = "Create new student", description = "Creates a new student in the system")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "201", description = "Student created successfully"),
@@ -68,5 +88,35 @@ public class StudentController {
         }
     }
     
+    @Operation(summary = "Update a student", description = "Updates the data of an existing student by ID")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Student updated successfully"),
+        @ApiResponse(responseCode = "404", description = "Student not found")
+    })
+    @PutMapping("/{id}")
+    public Student updateStudent(
+            @Parameter(description = "Student ID", required = true) @PathVariable String id,
+            @RequestBody Student student) {
+        try {
+            return studentService.updateStudent(id, student);
+        } catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
     
+    @Operation(summary = "Delete a student", description = "Deletes a student by their ID")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "204", description = "Student deleted successfully"),
+        @ApiResponse(responseCode = "404", description = "Student not found")
+    })
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteStudent(
+            @Parameter(description = "Student ID", required = true) @PathVariable String id) {
+        try {
+            studentService.deleteStudent(id);
+        } catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
 }

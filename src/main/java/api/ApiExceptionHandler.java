@@ -1,4 +1,3 @@
-// src/api/ApiExceptionHandler.java
 package api;
 
 import org.springframework.http.HttpStatus;
