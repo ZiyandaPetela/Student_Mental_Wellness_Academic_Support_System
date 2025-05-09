@@ -1,1 +1,48 @@
+name: CI/CD Pipeline
 
+# Triggers: Run on every push + PR to main
+on:
+  push:
+    branches: [ "**" ]  # Any branch
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # Job 1: Run Tests
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4  # Fetch your code
+
+      - name: Set Up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'  # Use your Java version (e.g., 11, 17)
+          distribution: 'temurin'  # JDK distribution (e.g., temurin, corretto)
+
+      - name: Run Unit Tests with Maven
+        run: mvn test  # For Gradle: ./gradlew test
+
+  # Job 2: Build JAR (only on main branch)
+  build:
+    needs: test  # Depends on the "test" job
+    if: github.ref == 'refs/heads/main'  # Only run when merged to main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set Up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build JAR with Maven
+        run: mvn package -DskipTests  # Skip tests (already ran in "test" job)
+
+      - name: Upload JAR Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: app.jar
+          path: target/*.jar  # Path to the generated JAR
