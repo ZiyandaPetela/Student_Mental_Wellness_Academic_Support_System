@@ -1,33 +1,36 @@
 name: CI/CD Pipeline
 
-# Triggers: Run on every push + PR to main
 on:
   push:
-    branches: [ "**" ]  # Any branch
+    branches: [ "**" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  # Job 1: Run Tests
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4  # Fetch your code
+        uses: actions/checkout@v4
+
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
 
       - name: Set Up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'  # Use your Java version (e.g., 11, 17)
-          distribution: 'temurin'  # JDK distribution (e.g., temurin, corretto)
+          java-version: '17'
+          distribution: 'temurin'
 
       - name: Run Unit Tests with Maven
-        run: mvn test  # For Gradle: ./gradlew test
+        run: mvn test
 
-  # Job 2: Build JAR (only on main branch)
   build:
-    needs: test  # Depends on the "test" job
-    if: github.ref == 'refs/heads/main'  # Only run when merged to main
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,10 +42,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Build JAR with Maven
-        run: mvn package -DskipTests  # Skip tests (already ran in "test" job)
+        run: mvn package -DskipTests
 
       - name: Upload JAR Artifact
         uses: actions/upload-artifact@v3
         with:
           name: app.jar
-          path: target/*.jar  # Path to the generated JAR
+          path: target/*.jar
