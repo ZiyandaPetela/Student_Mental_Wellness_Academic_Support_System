@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI Pipeline
 
 on:
   push:
@@ -7,16 +7,19 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test-build:
+    name: Build and Test Java Application
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Build with Maven
-      run: mvn clean install
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build and run tests with Maven
+        run: mvn clean install
