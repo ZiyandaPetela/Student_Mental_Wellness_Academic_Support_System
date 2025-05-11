@@ -80,3 +80,26 @@ Once completed, the system will feature:
 - [Protection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/PROTECTION.md)
 - [Branch protection screenshot-1](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-1.png)
 - [Branch protection screenshot-2](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
+
+
+This project is a Student Wellness management system developed in Java using Maven. It follows domain-driven design principles and implements a layered architecture with domain models, repositories, services, and a REST API.
+
+---
+
+## Running Tests Locally (Java)
+
+To run the project tests locally, follow these steps:
+
+1. Ensure Java (JDK 11 or above) and Maven are installed.
+2. Navigate to the root of the project directory.
+3. Run the following command:
+
+```bash
+mvn clean test
+```
+- This command will:
+- Clean previously compiled files.
+- Compile the source code.
+- Execute all unit and integration tests.
+- Display the test results in your terminal.
+#### All tests must pass before committing or creating a Pull Request
