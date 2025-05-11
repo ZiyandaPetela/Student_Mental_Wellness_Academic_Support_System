@@ -1,51 +1,67 @@
 package core;
 
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;       // For List<>
 
+@Entity
 public class Appointment {
+    
+    @Id
     private String appointmentId;
-    private LocalDateTime datetime;
-    private String status; // REQUESTED, CONFIRMED, CANCELLED
+    
+    private LocalDateTime dateTime;
+    
+    @Enumerated(EnumType.STRING)
+    private Status status = Status.SCHEDULED;
+    
+    @ManyToOne
+    @JoinColumn(name = "student_id")
     private Student student;
+    
+    @ManyToOne
+    @JoinColumn(name = "counselor_id")
     private Counselor counselor;
-
-    public Appointment(String appointmentId, LocalDateTime datetime) {
-        this.appointmentId = appointmentId;
-        this.datetime = datetime;
-        this.status = "REQUESTED";
+    
+    public enum Status {
+        SCHEDULED, CONFIRMED, COMPLETED, CANCELLED
     }
-
-    // Getters/Setters
+    
+    // Required no-arg constructor
+    public Appointment() {}
+    
+    public Appointment(String appointmentId, LocalDateTime dateTime) {
+        this.appointmentId = appointmentId;
+        this.dateTime = dateTime;
+    }
+    
+    // Getters
     public String getAppointmentId() { return appointmentId; }
-    public LocalDateTime getDatetime() { return datetime; }
-    public String getStatus() { return status; }
+    public LocalDateTime getDateTime() { return dateTime; }
+    public Status getStatus() { return status; }
     public Student getStudent() { return student; }
     public Counselor getCounselor() { return counselor; }
-
-    public void setStatus(String status) {
-        if (List.of("REQUESTED", "CONFIRMED", "CANCELLED").contains(status)) {
-            this.status = status;
+    
+    // Setters
+    public void setAppointmentId(String appointmentId) { this.appointmentId = appointmentId; }
+    public void setDateTime(LocalDateTime dateTime) { this.dateTime = dateTime; }
+    public void setStatus(Status status) { this.status = status; }
+    public void setStudent(Student student) { this.student = student; }
+    public void setCounselor(Counselor counselor) { this.counselor = counselor; }
+    
+    // For backward compatibility with string status
+    public void setStatus(String statusStr) {
+        try {
+            this.status = Status.valueOf(statusStr.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid status: " + statusStr);
         }
     }
-
-    public void setStudent(Student student) {
-        this.student = student;
-    }
-
-    public void setCounselor(Counselor counselor) {
-        this.counselor = counselor;
-    }
-
-    public boolean schedule() {
-        return student.scheduleAppointment(this);
-    }
-
+    
     public boolean cancel() {
-        if (!status.equals("CANCELLED")) {
-            status = "CANCELLED";
-            return true;
+        if (status == Status.CANCELLED) {
+            return false;
         }
-        return false;
+        status = Status.CANCELLED;
+        return true;
     }
 }

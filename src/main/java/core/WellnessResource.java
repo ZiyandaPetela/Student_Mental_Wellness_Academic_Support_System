@@ -1,26 +1,36 @@
 package core;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ElementCollection;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class WellnessResource {
+    @Id
     private String resourceId;
     private String title;
-    private String type; // ARTICLE, VIDEO, PODCAST
+    private String type;
+    
+    @ElementCollection
     private List<String> topics = new ArrayList<>();
 
-    public WellnessResource(String resourceId, String title, String type) {
-        this.resourceId = resourceId;
+    public WellnessResource() {} // JPA-required constructor
+
+    public WellnessResource(String id, String title, String type) {
+        this.resourceId = id;
         this.title = title;
-        setType(type);
+        setType(type); // Validation through setter
     }
 
-    // Getters/Setters
+    // Getters
     public String getResourceId() { return resourceId; }
     public String getTitle() { return title; }
     public String getType() { return type; }
     public List<String> getTopics() { return new ArrayList<>(topics); }
 
+    // Setters/Validation
     private void setType(String type) {
         String upperType = type.toUpperCase();
         if (List.of("ARTICLE", "VIDEO", "PODCAST").contains(upperType)) {
@@ -30,6 +40,7 @@ public class WellnessResource {
         }
     }
 
+    // Business methods
     public void addTopic(String topic) {
         topics.add(topic);
     }

@@ -3,14 +3,18 @@ package services;
 import core.Appointment;
 import core.Counselor;
 import core.Student;
+import exceptions.*;
 import repositories.AppointmentRepository;
 import repositories.CounselorRepository;
 import repositories.StudentRepository;
-
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+@Service
+@Transactional
 public class AppointmentService {
     private final AppointmentRepository appointmentRepository;
     private final StudentRepository studentRepository;
@@ -49,109 +53,97 @@ public class AppointmentService {
         return appointmentRepository.findByDateRange(start, end);
     }
 
+    @Transactional
     public Appointment createAppointment(String appointmentId, LocalDateTime dateTime, 
                                          String studentId, String counselorId) {
         // Validate inputs
         if (appointmentId == null || appointmentId.trim().isEmpty()) {
-            throw new IllegalArgumentException("Appointment ID cannot be empty");
+            throw new InvalidDataException("Appointment ID cannot be empty");
         }
         
         if (dateTime == null) {
-            throw new IllegalArgumentException("Appointment date/time cannot be empty");
+            throw new InvalidDataException("Appointment date/time cannot be empty");
         }
         
         if (dateTime.isBefore(LocalDateTime.now())) {
-            throw new IllegalArgumentException("Appointment cannot be scheduled in the past");
+            throw new InvalidDataException("Appointment cannot be scheduled in the past");
         }
         
-        // Check if appointment with same ID exists
-        if (appointmentRepository.findById(appointmentId).isPresent()) {
-            throw new IllegalArgumentException("Appointment with ID " + appointmentId + " already exists");
+        // Check duplicate appointment
+        if (appointmentRepository.existsById(appointmentId)) {
+            throw new DuplicateAppointmentException("Appointment with ID " + appointmentId + " already exists");
         }
         
         // Retrieve student and counselor
         Student student = studentRepository.findById(studentId)
-            .orElseThrow(() -> new IllegalArgumentException("Student with ID " + studentId + " not found"));
+            .orElseThrow(() -> new StudentNotFoundException("Student not found with ID: " + studentId));
         
         Counselor counselor = counselorRepository.findById(counselorId)
-            .orElseThrow(() -> new IllegalArgumentException("Counselor with ID " + counselorId + " not found"));
+            .orElseThrow(() -> new CounselorNotFoundException("Counselor not found with ID: " + counselorId));
         
-        // Check if student already has 3 appointments
+        // Check student's appointment limit
         if (student.getAppointments().size() >= 3) {
-            throw new IllegalArgumentException("Student has reached the maximum limit of 3 appointments");
+            throw new AppointmentLimitExceededException("Student has reached the maximum limit of 3 appointments");
         }
         
         // Create appointment
         Appointment appointment = new Appointment(appointmentId, dateTime);
-        appointment.setStudent(student);
-        appointment.setCounselor(counselor);
         
         // Schedule appointment for student
-        boolean scheduled = student.scheduleAppointment(appointment);
+        boolean scheduled = student.addAppointment(appointment);
         if (!scheduled) {
-            throw new IllegalStateException("Failed to schedule appointment for student");
+            throw new AppointmentSchedulingException("Failed to schedule appointment for student");
         }
         
         // Confirm appointment for counselor
         boolean confirmed = counselor.confirmAppointment(appointment);
         if (!confirmed) {
-            throw new IllegalStateException("Failed to confirm appointment with counselor");
+            throw new AppointmentSchedulingException("Failed to confirm appointment with counselor");
         }
         
-        // Save updated entities
+        // Save entities
         studentRepository.save(student);
         counselorRepository.save(counselor);
         
         return appointmentRepository.save(appointment);
     }
 
+    @Transactional
     public Appointment updateAppointmentStatus(String id, String status) {
-        // Validate appointment exists
         Appointment appointment = appointmentRepository.findById(id)
-            .orElseThrow(() -> new IllegalArgumentException("Appointment with ID " + id + " not found"));
+            .orElseThrow(() -> new AppointmentNotFoundException("Appointment not found with ID: " + id));
         
-        // Update status
         appointment.setStatus(status);
-        
         return appointmentRepository.save(appointment);
     }
 
+    @Transactional
     public Appointment rescheduleAppointment(String id, LocalDateTime newDateTime) {
-        // Validate appointment exists
         Appointment appointment = appointmentRepository.findById(id)
-            .orElseThrow(() -> new IllegalArgumentException("Appointment with ID " + id + " not found"));
+            .orElseThrow(() -> new AppointmentNotFoundException("Appointment not found with ID: " + id));
         
-        // Validate new date/time
         if (newDateTime == null) {
-            throw new IllegalArgumentException("New appointment date/time cannot be empty");
+            throw new InvalidDataException("New appointment date/time cannot be empty");
         }
         
         if (newDateTime.isBefore(LocalDateTime.now())) {
-            throw new IllegalArgumentException("Appointment cannot be rescheduled to a past date/time");
+            throw new InvalidDataException("Appointment cannot be rescheduled to a past date/time");
         }
         
-        // Cancel current appointment
-        appointment.cancel();
-        
-        // Create new appointment with same IDs but new date/time
-        Appointment newAppointment = new Appointment(appointment.getAppointmentId(), newDateTime);
-        newAppointment.setStudent(appointment.getStudent());
-        newAppointment.setCounselor(appointment.getCounselor());
-        
-        return appointmentRepository.save(newAppointment);
+        appointment.setDateTime(newDateTime);
+        return appointmentRepository.save(appointment);
     }
 
-    public void cancelAppointment(String id) {
-        // Validate appointment exists
+    @Transactional
+    public Appointment cancelAppointment(String id) {
         Appointment appointment = appointmentRepository.findById(id)
-            .orElseThrow(() -> new IllegalArgumentException("Appointment with ID " + id + " not found"));
+            .orElseThrow(() -> new AppointmentNotFoundException("Appointment not found with ID: " + id));
         
-        // Cancel the appointment
         boolean cancelled = appointment.cancel();
         if (!cancelled) {
-            throw new IllegalStateException("Failed to cancel appointment - it may already be cancelled");
+            throw new AppointmentCancellationException("Appointment is already cancelled");
         }
         
-        appointmentRepository.save(appointment);
+        return appointmentRepository.save(appointment);
     }
 }

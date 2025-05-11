@@ -1,50 +1,65 @@
 package core;
 
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Student {
+    
+    @Id
     private String studentId;
+    
+    private String name;
     private String email;
     private String academicYear;
     private String major;
-    private List<MentalHealthAssessment> assessments = new ArrayList<>();
-    private List<Appointment> appointments = new ArrayList<>(3); // Max 3
-
-    public Student(String studentId, String email) {
+    
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Appointment> appointments = new ArrayList<>();
+    
+    // Required no-arg constructor
+    public Student() {}
+    
+    public Student(String studentId, String name, String email, String academicYear, String major) {
         this.studentId = studentId;
-        setEmail(email); // Validation in setter
+        this.name = name;
+        this.email = email;
+        this.academicYear = academicYear;
+        this.major = major;
     }
-
-    // Getters/Setters
+     // Constructor for builder
+    public Student(String studentId, String academicYear) {
+        this.studentId = studentId;
+        this.academicYear = academicYear;
+    }
+    
+    // Getters
     public String getStudentId() { return studentId; }
+    public String getName() { return name; }
     public String getEmail() { return email; }
     public String getAcademicYear() { return academicYear; }
     public String getMajor() { return major; }
-    public List<Appointment> getAppointments() { return new ArrayList<>(appointments); }
-
-    public void setEmail(String email) {
-        if (!email.matches("^[\\w.-]+@[\\w.-]+\\.\\w{2,}$")) {
-            throw new IllegalArgumentException("Invalid email format");
-        }
-        this.email = email;
-    }
-
+    public List<Appointment> getAppointments() { return appointments; }
+    
+    // Setters
+    public void setStudentId(String studentId) { this.studentId = studentId; }
+    public void setName(String name) { this.name = name; }
+    public void setEmail(String email) { this.email = email; }
     public void setAcademicYear(String academicYear) { this.academicYear = academicYear; }
     public void setMajor(String major) { this.major = major; }
-
-    // Core methods
-    public boolean register() { return true; }
-    public boolean login() { return true; }
     
-    public boolean completeAssessment(MentalHealthAssessment assessment) {
-        return assessments.add(assessment);
+    // Appointment management
+    public boolean addAppointment(Appointment appointment) {
+        if (appointments.size() >= 3) {
+            return false;
+        }
+        
+        appointment.setStudent(this);
+        return appointments.add(appointment);
     }
     
-    public boolean scheduleAppointment(Appointment appointment) {
-        if (appointments.size() < 3) {
-            return appointments.add(appointment);
-        }
-        return false;
+    public boolean removeAppointment(Appointment appointment) {
+        return appointments.remove(appointment);
     }
 }

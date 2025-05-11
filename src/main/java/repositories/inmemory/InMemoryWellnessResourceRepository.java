@@ -5,7 +5,7 @@ import repositories.WellnessResourceRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class InMemoryWellnessResourceRepository extends InMemoryRepository<WellnessResource, String> 
+public class InMemoryWellnessResourceRepository extends JpaRepository<WellnessResource, String> 
         implements WellnessResourceRepository {
     
     @Override
