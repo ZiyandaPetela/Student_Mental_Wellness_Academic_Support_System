@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # (optional: allows manual run)
+  workflow_dispatch:
 
 jobs:
   release:
@@ -32,4 +32,3 @@ jobs:
         with:
           name: release-jar
           path: target/*.jar
-
