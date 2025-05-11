@@ -79,4 +79,4 @@ Once completed, the system will feature:
  # Implementing CI/CD with GitHub Actions
 - [Protection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/PROTECTION.md)
 - [Branch protection screenshot-1](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-1.png)
-- [Branch protection screenshot-2]()
+- [Branch protection screenshot-2](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
