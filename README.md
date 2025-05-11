@@ -80,6 +80,7 @@ Once completed, the system will feature:
 - [Protection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/PROTECTION.md)
 - [Branch protection screenshot-1](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-1.png)
 - [Branch protection screenshot-2](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
+-[.github/workflows](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/.github/workflows)
 
 
 This project is a Student Wellness management system developed in Java using Maven. It follows domain-driven design principles and implements a layered architecture with domain models, repositories, services, and a REST API.
