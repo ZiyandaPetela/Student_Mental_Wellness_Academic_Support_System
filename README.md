@@ -103,3 +103,19 @@ mvn clean test
 - Execute all unit and integration tests.
 - Display the test results in your terminal.
 #### All tests must pass before committing or creating a Pull Request
+
+## Known Issue (In-Memory Repository Conflict)
+
+- During the CI/CD setup, I encountered persistent issues related to the in-memory repository implementation.
+
+-I initially switched to using the JPA repository, which is a generic interface and comes with built-in methods like `save()`, `findAll()`, and `deleteById()`. This change improved parts of my code, but it created **naming and implementation conflicts** with the existing in-memory repository.
+
+-As a result:
+- The in-memory repository now shows unresolved references and underlined file names.
+- There are compatibility issues between the JPA-based service and the in-memory repository structure.
+- Despite extensive searching and attempts to fix the issue, it remains unresolved at this time.
+
+> I’ve genuinely tried multiple approaches to resolve this, including renaming, restructuring, and reviewing the repository pattern, but the issue persists.
+
+= is the current reason why some test cases are failing or the build may not complete successfully in the CI/CD pipeline. I am continuing to work on resolving it and appreciate your understanding.
+
