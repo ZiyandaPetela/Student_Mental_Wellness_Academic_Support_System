@@ -67,14 +67,16 @@ Once completed, the system will feature:
 - [Reflection](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/Domain%20Modeling%20and%20Class%20Diagram%20Document/Reflection.md)
 
 # Class Diagrams to Code with All Creational Patterns Document
-[src (Creational Patterns)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
+- [src (Creational Patterns)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
 
  # Implementing a Persistence Repository Layer
- [src (Repository Layer)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
+-  [src (Repository Layer)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
 
  # Service Layer and REST API Implementation
- [src (Service Layer and REST API)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
+-  [src (Service Layer and REST API)](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/src)
 
 
  # Implementing CI/CD with GitHub Actions
-###### Protection.md
+- [Protection.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/PROTECTION.md)
+- [Branch protection screenshot-1](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-1.png)
+- [Branch protection screenshot-2](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
