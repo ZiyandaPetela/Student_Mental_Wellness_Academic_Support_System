@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  workflow_dispatch:     # ← Enables the “Run workflow” button on any branch
 
 jobs:
   release:
-    name: Package & Upload Release JAR
+    name: Build & Upload Release JAR
     runs-on: ubuntu-latest
 
     steps:
@@ -21,11 +21,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build project (skip tests)
+      # Build without running tests
+      - name: Package Application (skip tests)
         run: mvn clean package -DskipTests
-
-      - name: Debug: show target folder contents
-        run: ls -R target
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
