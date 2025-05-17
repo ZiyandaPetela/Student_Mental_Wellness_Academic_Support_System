@@ -122,7 +122,7 @@ mvn clean test
 
 # ⚠️ Notice
 
-This repository is public so others can view, learn from, star ⭐, or fork 🍴 it.
+This repository is public so others can view, learn from, star ⭐, or fork it.
 
 However:
 - ❌ This repository is **not open to contributions**
