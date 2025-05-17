@@ -120,3 +120,15 @@ mvn clean test
 
 = is the current reason why some test cases are failing or the build may not complete successfully in the CI/CD pipeline. I am continuing to work on resolving it and appreciate your understanding.
 
+# ⚠️ Notice
+
+This repository is public so others can view, learn from, star ⭐, or fork 🍴 it.
+
+However:
+- ❌ This repository is **not open to contributions**
+- ❌ Pull requests and issues will not be accepted
+- ✅ You may fork for personal reference only
+
+Please do not submit any changes or use modified versions publicly without permission.
+
+
