@@ -243,10 +243,6 @@ I welcome contributions! Here are some other areas where you can help:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Design patterns based on "Design Patterns: Elements of Reusable Object-Oriented Software" by the Gang of Four
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/LICENSE) file for details.
 
 
