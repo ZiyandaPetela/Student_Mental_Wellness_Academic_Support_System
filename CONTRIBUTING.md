@@ -45,14 +45,14 @@ mvn test
 ### Submitting a Pull Request (PR)
 - Create a branch
 ```bash
-- git checkout -b Write tests for AppointmentBuilder
+- git checkout -b Write tests for AppointmentBuilder-30
 ```
 ### Commit changes:
 
 ```bash
-git commit -m "feat: Write tests for AppointmentBuilde (closes #123)" 
+git commit -m "feat: Write tests for AppointmentBuilde (closes #30)" 
 ```
 ### Push to your fork:
 ```bash
-git push origin fix-issue-123
+git push origin Write tests for AppointmentBuilder-30
 ```
