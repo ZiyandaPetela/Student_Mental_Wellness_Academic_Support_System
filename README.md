@@ -116,19 +116,20 @@ mvn clean test
 - There are compatibility issues between the JPA-based service and the in-memory repository structure.
 - Despite extensive searching and attempts to fix the issue, it remains unresolved at this time.
 
-> I’ve genuinely tried multiple approaches to resolve this, including renaming, restructuring, and reviewing the repository pattern, but the issue persists.
+> I’ve tried multiple approaches to resolve this, including renaming, restructuring, and reviewing the repository pattern, but the issue persists.
 
 = is the current reason why some test cases are failing or the build may not complete successfully in the CI/CD pipeline. I am continuing to work on resolving it and appreciate your understanding.
+# Assignment 14
+## Features for Contribution
 
-# ⚠️ Notice
-
-This repository is public so others can view, learn from, star ⭐, or fork it.
-
-However:
-- ❌ This repository is **not open to contributions**
-- ❌ Pull requests and issues will not be accepted
-- ✅ You may fork for personal reference only
-
-Please do not submit any changes or use modified versions publicly without permission.
-
+| Issue | Label                 | Description                                   |
+|-------|-----------------------|-----------------------------------------------|
+| #12   | `good-first-issue`    | Add Javadocs to Repository interfaces         |
+| #15   | `good-first-issue`    | Implement email validation for Student class  |
+| #18   | `good-first-issue`    | Write tests for AppointmentBuilder            |
+| #22   | `good-first-issue`    | Improve MentalHealthAssessment toString()     |
+| #25   | `good-first-issue`    | Add null checks in EmergencyResponseSystem    |
+| #31   | `feature-request`     | Implement PostgreSQL repository integration   |
+| #37   | `feature-request`     | Create Spring Boot web interface for counselors |
+| #42   | `feature-request`     | Add GAD-7 anxiety assessment implementation   |
 
