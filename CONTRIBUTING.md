@@ -1,14 +1,59 @@
 # Contributing Guide
+Welcome! 👋 I am excited you want to contribute to this Java project.  
+Follow these steps to set up, code, and submit changes.
 
-## 1. Setup Instructions
-### Prerequisites
-- **Java JDK 17+**
-- **Maven** or **Gradle** (whichever your project uses)
-- **Git**
+## Prerequisites
 
-### Installation
-1. **Fork** this repository.
-2. **Clone your fork**:
+- **Java JDK 17+** 
+- **Maven** 
+- **Git** (Version control)
+
+## Setup Instructions
+
+### 1. Fork and Clone the Repository
+1. **Fork** this repository using the "Fork" button at the top-right of this page.
+2. **Clone your fork** locally:
    ```bash
-   git clone 
-   cd YOUR-REPO
+   git clone https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main
+   cd https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main
+
+## Coding Rules
+- Follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
+- Write **JUnit tests** for new features.
+  
+## How to Code
+Build the project:
+```bash
+Maven:
+
+bash
+mvn clean install
+```
+### Running Tests
+```bash
+# For Maven projects
+mvn test
+
+```
+## Dependency Setup  
+- Maven: Dependencies are in `pom.xml`.  
+  
+## How to Contribute
+### Picking Issues
+- Choose issues labeled good-first-issue.
+- For advanced tasks, pick feature-request issues.
+
+### Submitting a Pull Request (PR)
+- Create a branch
+```bash
+- git checkout -b fix-issue-123  # Replace "123" with the issue number
+```
+### Commit changes:
+
+```bash
+git commit -m "fix: resolve login bug (closes #123)"
+```
+### Push to your fork:
+```bash
+git push origin fix-issue-123
+```
