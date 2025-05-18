@@ -124,12 +124,12 @@ mvn clean test
 
 | Issue | Label                 | Description                                   |
 |-------|-----------------------|-----------------------------------------------|
-| #12   | `good-first-issue`    | Add Javadocs to Repository interfaces         |
-| #15   | `good-first-issue`    | Implement email validation for Student class  |
-| #18   | `good-first-issue`    | Write tests for AppointmentBuilder            |
-| #22   | `good-first-issue`    | Improve MentalHealthAssessment toString()     |
-| #25   | `good-first-issue`    | Add null checks in EmergencyResponseSystem    |
-| #31   | `feature-request`     | Implement PostgreSQL repository integration   |
-| #37   | `feature-request`     | Create Spring Boot web interface for counselors |
-| #42   | `feature-request`     | Add GAD-7 anxiety assessment implementation   |
+| #29   | `good-first-issue`    | Add Javadocs to Repository interfaces         |
+| #30   | `good-first-issue`    | Implement email validation for Student class  |
+| #31   | `good-first-issue`    | Write tests for AppointmentBuilder            |
+| #32   | `good-first-issue`    | Improve MentalHealthAssessment toString()     |
+| #33   | `good-first-issue`    | Add null checks in EmergencyResponseSystem    |
+| #34   | `feature-request`     | Implement PostgreSQL repository integration   |
+| #35   | `feature-request`     | Create Spring Boot web interface for counselors |
+| #36   | `feature-request`     | Add GAD-7 anxiety assessment implementation   |
 
