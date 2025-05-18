@@ -120,6 +120,14 @@ mvn clean test
 
 = is the current reason why some test cases are failing or the build may not complete successfully in the CI/CD pipeline. I am continuing to work on resolving it and appreciate your understanding.
 # Assignment 14
+- [CONTRIBUTING.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/PROTECTION.md)
+- [ROADMAP.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-1.png)
+- [labeled issues](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
+- [license](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
+- [VOTING_RESULTS.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/.github/workflows)
+- [REFLECTION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/.github/workflows)
+
+
 ## Features for Contribution
 
 | Issue | Label                 | Description                                   |
