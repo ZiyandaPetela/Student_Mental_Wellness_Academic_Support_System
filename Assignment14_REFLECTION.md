@@ -1,6 +1,4 @@
-# Reflection on Open-Source Collaboration
-
-*Note: This is a template. Fill in your personal reflections after completing the peer review process.*
+# Reflection 
 
 ## Repository Improvements
 
