@@ -50,9 +50,30 @@ mvn test
 ### Commit changes:
 
 ```bash
-git commit -m "feat: Write tests for AppointmentBuilde (closes #30)" 
+git commit -m "feat: Write tests for AppointmentBuilder (closes #30)" 
 ```
 ### Push to your fork:
 ```bash
 git push origin Write tests for AppointmentBuilder-30
 ```
+## How to Pick Issues
+
+1. Browse the issues labeled `good-first-issue` for beginner-friendly tasks
+2. Check `feature-request` for new features to implement
+3. Comment on the issue you want to work on to let maintainers know
+4. Wait for the assignment or confirmation before starting work
+
+## Code Review Process
+
+1. All PRs require at least one review before merging
+2. Address all feedback from reviews
+3. Make sure all tests pass before requesting a review
+4. Keep PRs focused on a single issue or feature
+
+## Additional Resources
+
+- [Java Code Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-introduction.html)
+- [Design Patterns Book](https://refactoring.guru/design-patterns)
+- [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
+
+Thank you for contributing to the Student Mental Health System!
