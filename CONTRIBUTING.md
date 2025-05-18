@@ -5,8 +5,9 @@ Follow these steps to set up, code, and submit changes.
 ## Prerequisites
 
 - **Java JDK 17+** 
-- **Maven** 
-- **Git** (Version control)
+- **Maven 3.8+** 
+- **Git 2.25+**
+ 
 
 ## Setup Instructions
 
