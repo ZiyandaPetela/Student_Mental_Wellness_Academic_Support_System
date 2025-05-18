@@ -114,17 +114,16 @@ mvn clean test
 -As a result:
 - The in-memory repository now shows unresolved references and underlined file names.
 - There are compatibility issues between the JPA-based service and the in-memory repository structure.
-- Despite extensive searching and attempts to fix the issue, it remains unresolved at this time.
+- Despite extensive searching and attempts to fix the issue, it remains unresolved.
 
 > I’ve tried multiple approaches to resolve this, including renaming, restructuring, and reviewing the repository pattern, but the issue persists.
-
-= is the current reason why some test cases are failing or the build may not complete successfully in the CI/CD pipeline. I am continuing to work on resolving it and appreciate your understanding.
+- This is the current reason why some test cases are failing, or the build may not complete successfully in the CI/CD pipeline. I am continuing to work on resolving it and appreciate your understanding.
 # Assignment 14
-- [CONTRIBUTING.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/PROTECTION.md)
-- [ROADMAP.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-1.png)
+- [CONTRIBUTING.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/CONTRIBUTING.md)
+- [ROADMAP.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/ROADMAP.md))
 - [labeled issues](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/issues)
-- [license](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
-- [VOTING_RESULTS.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/.github/workflows)
+- [license](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/LICENSE))
+- [VOTING_RESULTS.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/VOTING_RESULTS.md)
 - [REFLECTION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/.github/workflows)
 
 
