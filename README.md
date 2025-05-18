@@ -122,7 +122,7 @@ mvn clean test
 # Assignment 14
 - [CONTRIBUTING.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/PROTECTION.md)
 - [ROADMAP.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-1.png)
-- [labeled issues](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
+- [labeled issues](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/issues)
 - [license](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/blob/main/branch-protection-2.png)
 - [VOTING_RESULTS.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/.github/workflows)
 - [REFLECTION.md](https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main/.github/workflows)
