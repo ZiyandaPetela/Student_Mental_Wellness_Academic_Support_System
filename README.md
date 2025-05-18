@@ -133,3 +133,113 @@ mvn clean test
 | #35   | `feature-request`     | Create Spring Boot web interface for counselors |
 | #36   | `feature-request`     | Add GAD-7 anxiety assessment implementation   |
 
+## Getting Started
+
+### Prerequisites
+
+- Java 11 or higher
+- Maven or Gradle
+- Git
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/student-mental-health-system.git
+cd student-mental-health-system
+```
+
+2. Build the project
+
+```bash
+# Using Maven
+mvn clean install
+
+# Using Gradle
+gradle build
+```
+
+3. Run the tests
+
+```bash
+mvn test
+```
+
+### Usage Example
+
+```java
+// Get repositories using the factory
+StudentRepository studentRepo = RepositoryFactory.getStudentRepository("MEMORY");
+CounselorRepository counselorRepo = RepositoryFactory.getCounselorRepository("MEMORY");
+
+// Create a new student
+Student student = new Student("S123", "John Doe", "john@example.com", "Computer Science", "Junior");
+studentRepo.save(student);
+
+// Create a counselor
+Counselor counselor = new Counselor("C101", "Dr. Smith", "Anxiety Disorders");
+counselorRepo.save(counselor);
+
+// Create an appointment using Builder pattern
+Appointment appointment = new AppointmentBuilder("A001")
+    .withStudent(student)
+    .withCounselor(counselor)
+    .withDateTime(LocalDateTime.now().plusDays(1))
+    .withStatus("SCHEDULED")
+    .build();
+
+// Use the singleton EmergencyResponseSystem
+EmergencyResponseSystem.getInstance().processAlert(new EmergencyAlert(student, "HIGH", "Urgent assistance needed"));
+```
+
+## Architecture
+
+The system follows clean architecture principles with:
+
+- Core domain models (Student, Counselor, etc.)
+- Repository interfaces for data access abstraction
+- In-memory implementations for development and testing
+- Design pattern implementations in separate packages
+
+### Design Patterns
+
+This project implements all six creational design patterns:
+
+1. **Simple Factory**: `WellnessResourceFactory` for creating wellness resources
+2. **Factory Method**: `AssessmentCreator` hierarchy for specialized assessment creation
+3. **Abstract Factory**: `NotificationFactory` hierarchy for notification systems
+4. **Builder**: `AppointmentBuilder` for simplified appointment creation
+5. **Prototype**: `ResourcePrototype` for cloning pre-configured resources
+6. **Singleton**: `EmergencyResponseSystem` for centralized emergency handling
+
+## Features for Contribution
+I welcome contributions! Here are some other areas where you can help:
+
+| Feature | Description | Difficulty | Status |
+|---------|-------------|------------|--------|
+| Database Integration | Implement repository implementations for MySQL/PostgreSQL | Medium | Open |
+| File-Based Storage | Complete file system repository implementations | Easy | In Progress |
+| Notification System | Add email and SMS notification functionality | Medium | Open |
+| Resource Recommendation | Develop algorithm to suggest resources based on assessment results | Hard | Open |
+| Web Interface | Create a simple web interface for the system | Medium | Open |
+| API Development | Create RESTful endpoints for core functionality | Medium | Open |
+| Mobile App | Develop a companion mobile application | Hard | Planned |
+| Test Improvements | Enhance test coverage and add integration tests | Easy | Open |
+
+## Documentation
+
+- JavaDocs: Generated API documentation available in the `/docs` directory
+
+- Contributing: See the [CONTRIBUTING.md](CONTRIBUTING.md) file
+- Roadmap: See the [ROADMAP.md](ROADMAP.md) file
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Design patterns based on "Design Patterns: Elements of Reusable Object-Oriented Software" by the Gang of Four
+
+
