@@ -45,12 +45,12 @@ mvn test
 ### Submitting a Pull Request (PR)
 - Create a branch
 ```bash
-- git checkout -b fix-issue-123  # Replace "123" with the issue number
+- git checkout -b Write tests for AppointmentBuilder
 ```
 ### Commit changes:
 
 ```bash
-git commit -m "feat: add anxiety assessment validation (closes #123)" 
+git commit -m "feat: Write tests for AppointmentBuilde (closes #123)" 
 ```
 ### Push to your fork:
 ```bash
