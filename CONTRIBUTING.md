@@ -15,21 +15,19 @@ Follow these steps to set up, code, and submit changes.
 1. **Fork** this repository using the "Fork" button at the top-right of this page.
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main
-   cd https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System/tree/main
+   git clone https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System.git
+   cd https://github.com/ZiyandaPetela/Student_Mental_Wellness_Academic_Support_System.git
 
-## Coding Rules
-- Follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
-- Write **JUnit tests** for new features.
-  
 ## How to Code
 Build the project:
 ```bash
 Maven:
-
-bash
 mvn clean install
 ```
+## Coding Standards
+- Follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
+- Write **JUnit tests** for new features.
+  
 ### Running Tests
 ```bash
 # For Maven projects
@@ -52,7 +50,7 @@ mvn test
 ### Commit changes:
 
 ```bash
-git commit -m "fix: resolve login bug (closes #123)"
+git commit -m "feat: add anxiety assessment validation (closes #123)" 
 ```
 ### Push to your fork:
 ```bash
