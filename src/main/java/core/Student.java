@@ -1,8 +1,11 @@
 package core;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Entity
 public class Student {
@@ -11,6 +14,9 @@ public class Student {
     private String studentId;
     
     private String name;
+
+    @NotBlank(message = "Email is required")
+    @jakarta.validation.constraints.Pattern(regexp = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$", message = "Invalid email format")
     private String email;
     private String academicYear;
     private String major;
